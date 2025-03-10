@@ -6,108 +6,39 @@
      </title>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js@1.0.12/fasthtml.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/surreal@main/surreal.js"></script><script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>     <link rel="stylesheet" href="https://unpkg.com/franken-ui@2.0.0-internal.45/dist/css/core.min.css">
-<script type="module" src="https://unpkg.com/franken-ui@2.0.0-internal.45/dist/js/core.iife.js"></script><script type="module" src="https://unpkg.com/franken-ui@2.0.0-internal.45/dist/js/icon.iife.js"></script><script src="https://cdn.tailwindcss.com"></script><script>
-    tailwind.config = {
-        darkMode: 'selector',
-    }
-    </script><script>
+<script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js@1.0.12/fasthtml.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/surreal@main/surreal.js"></script><script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>     <link rel="stylesheet" href="https://unpkg.com/franken-ui@1.1.0/dist/css/core.min.css">
+<script type="module" src="https://unpkg.com/franken-ui@1.1.0/dist/js/core.iife.js"></script><script type="module" src="https://cdn.jsdelivr.net/gh/answerdotai/monsterui@main/monsterui/icon.iife.js"></script><script src="https://cdn.tailwindcss.com"></script><script>
         const htmlElement = document.documentElement;
         
-          
-          const __FRANKEN__ = JSON.parse(localStorage.getItem("__FRANKEN__") || "{}");
-    
-          if (
-            __FRANKEN__.mode === "dark" ||
-            (!__FRANKEN__.mode &&
-              window.matchMedia("(prefers-color-scheme: dark)").matches)
-          ) {
-            htmlElement.classList.add("dark");
-          } else {
-            htmlElement.classList.remove("dark");
-          }
+            if (
+                localStorage.getItem("mode") === "dark" ||
+                (!("mode" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                htmlElement.classList.add("dark");
+            } else {
+                htmlElement.classList.remove("dark");
+            }
         
-          htmlElement.classList.add("uk-theme-blue");
-          htmlElement.classList.add(__FRANKEN__.theme || "uk-theme-blue");
-          htmlElement.classList.add(__FRANKEN__.radii || "uk-radii-sm");
-          htmlElement.classList.add(__FRANKEN__.shadows || "uk-shadows-sm");
-          htmlElement.classList.add(__FRANKEN__.font || "uk-font-sm");
-    </script>     <style>
-.monster-navbar.navbar-bold a {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.monster-navbar.navbar-bold a.uk-active {
-    transform: scale(1.15) ;
-    font-weight: bold;
-    text-shadow: 0 0 12px rgba(var(--p-rgb), 0.4);
-    letter-spacing: 0.02em;
-    color: hsl(var(--p) / 1);
-}
-.monster-navbar.navbar-underline a.uk-active { position: relative; }
-.monster-navbar.navbar-underline a.uk-active::after {
-    content: &#x27;&#x27;;
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background: currentColor;
-    animation: slideIn 0.3s ease forwards;
-}
-@keyframes slideIn {
-    from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
-}
-</style>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css">
+        htmlElement.classList.add(localStorage.getItem("theme") || "uk-theme-blue");
+    </script>     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css">
      <style>
 :root {
-  --b1: from hsl(var(--background)) l c h;
-  --bc: from hsl(var(--foreground)) l c h;
-  --m: from hsl(var(--muted)) l c h;
-  --mc: from hsl(var(--muted-foreground)) l c h;
-  --po: from hsl(var(--popover)) l c h;
-  --poc: from hsl(var(--popover-foreground)) l c h;
-  --b2: from hsl(var(--card)) l c h;
-  --b2c: from hsl(var(--card-foreground)) l c h;
-  --br: from hsl(var(--border)) l c h;
-  --in: from hsl(var(--input)) l c h;
   --p: from hsl(var(--primary)) l c h;
   --pc: from hsl(var(--primary-foreground)) l c h;
   --s: from hsl(var(--secondary)) l c h;
   --sc: from hsl(var(--secondary-foreground)) l c h;
-  --a: from hsl(var(--accent)) l c h;
-  --ac: from hsl(var(--accent-foreground)) l c h;
+  --b2: from hsl(var(--card-background)) l c h;
+  --b1: from hsl(var(--background)) l c h;
+  --bc: from hsl(var(--foreground)) l c h;
+  --b3: from hsl(var(--ring)) l c h;
   --er: from hsl(var(--destructive)) l c h;
   --erc: from hsl(var(--destructive-foreground)) l c h;
-  --b3: from hsl(var(--ring)) l c h;
-  --ch1: from hsl(var(--chart-1)) l c h;
-  --ch2: from hsl(var(--chart-2)) l c h;
-  --ch3: from hsl(var(--chart-3)) l c h;
-  --ch4: from hsl(var(--chart-4)) l c h;
-  --ch5: from hsl(var(--chart-5)) l c h;
-  --rd: var(--radius);
 }
 </style>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
-<script type="module">
-                import katex from 'https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.mjs';
-                import autoRender from 'https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.mjs';
-                const options = {
-                  delimiters: [
-                    {left: '$$', right: '$$', display: true},
-                    {left: '$', right: '$', display: false}
-                  ],
-                  ignoredClasses: ['nomath']
-                };
-
-                document.addEventListener('htmx:load', evt => {
-                  const element = evt.detail.elt || document.body;
-                  autoRender(element,options);
-                });
-                </script>   </head>
+   </head>
    <body class=" bg-background text-foreground">
-<main>       <div class="uk-container uk-container-xl">
+<main>       <div class="uk-container uk-container-xlarge">
          <h1 class="uk-h1 ">
            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
          </h1>
@@ -130,6 +61,7 @@
 
         /* Effet de papier ligné */
         body {
+            overflow-x: hidden; /* Added to prevent horizontal scroll */
             background-color: #0f172a !important;
             color: #f8fafc !important;
             background-image: 
@@ -200,7 +132,7 @@
             width: 100%;
             z-index: 1000;
             transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-           
+            padding: 0 1.5rem; /* Ajout de marge sur les bords */
         }
 
         .nav-scrolled {
@@ -208,8 +140,75 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
+        /* Logo navbar */
+        .nav-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        /* Style du bouton hamburger */
+        .hamburger-button {
+            display: none; /* Caché par défaut */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Afficher uniquement sur mobile */
+        @media (max-width: 767px) {
+            .hamburger-button {
+                display: flex;
+            }
+        }
+
+        .hamburger-button:hover {
+            background-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .hamburger-line {
+            width: 24px;
+            height: 2px;
+            background-color: white;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+
         body {
             padding-top: 64px;
+        }
+
+        /* Contact section with logo background */
+        .contact-section {
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background-image: url('./image/logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
         }
 
         @media (max-width: 768px) {
@@ -223,21 +222,52 @@
         }
 
         .full-bleed-section {
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        overflow: hidden;
-    }
-
-    @media (max-width: 768px) {
-        .full-bleed-section {
-            margin-left: -1rem;
-            margin-right: -1rem;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
         }
-    }
+
+        /* Fix footer overflow */
+        .footer-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Fix marquee container */
+        .footer-marquee-container {
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Fixed marquee wrapper */
+        .footer-marquee-wrapper {
+            display: inline-flex;
+            position: relative;
+            white-space: nowrap;
+            width: auto;
+        }
+
+        /* Responsive text sizes for footer */
+        @media (max-width: 768px) {
+            .footer-marquee-text {
+                font-size: 4rem !important; /* Smaller text on mobile */
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .footer-marquee-text {
+                font-size: 6rem !important; /* Medium text on tablet */
+            }
+        }
     
         </style>
         <script>
@@ -277,13 +307,15 @@
         <style>
         </style>
          <div class="fixed-navbar">
-           <div class="uk-container border-b smax-w-7xl mx-auto px-4">
-             <div class="flex justify-between items-center py-4 flex items-center justify-between">
-<a href="#" class="text-xl font-bold text-white">CN</a>               <div class="hidden md:flex">
-                 <div class="flex flex-row items-center gap-2">
+           <div class="uk-container max-w-7xl mx-auto px-4">
+             <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
+<a href="#" class="flex items-center"><img src="./image/logo.png" alt="Logo" class="nav-logo"></a>               <div class="hidden md:flex">
+                 <div class="uk-flex uk-flex-row uk-flex-middle gap-2">
 <a href="#work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="#contact" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Contact</a>                 </div>
                </div>
-<button type="submit" id="mobile-menu-button" class="uk-btn md:hidden focus:outline-none" name="mobile-menu-button"><span class="block h-0.5 w-6 bg-white mb-1"></span><span class="block h-0.5 w-6 bg-white mb-1"></span><span class="block h-0.5 w-6 bg-white"></span></button>             </div>
+<button type="submit" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" name="mobile-menu-button">                 <div class="flex flex-col justify-center items-center">
+<span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>                 </div>
+</button>             </div>
            </div>
            <div id="mobile-menu" class="hidden bg-slate-900 md:hidden">
              <div class="py-2">
@@ -292,39 +324,14 @@
          </div>
          <div class="dark bg-slate-900 text-slate-100">
            <div class="uk-section hero-bg">
-             <div class="flex flex-col items-center justify-center min-h-screen flex items-center justify-center py-20 hero-content">
+             <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center min-h-screen flex items-center justify-center py-20 hero-content">
                <h1 class="uk-h1 text-6xl font-bold mb-6 text-center text-white animate__animated animate__fadeInDown">Hello, I&#x27;m Chilavert N&#x27;dah</h1>
                <p class="text-xl text-blue-100 mb-8 animate__animated animate__fadeInUp">Software Developer </p>
              </div>
            </div>
            <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xl">
-               <div class="flex flex-col items-center justify-center py-32" id="work">
-                 <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn text-slate-100">Projects</h2>
-                 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-                   <div class="uk-card hover:scale-[1.01] transition-transform hover:shadow-2xl animate__animated animate__fadeInLeft bg-slate-800/50 backdrop-blur-sm border-0">
-                     <div class="uk-card-body space-y-6">
-<img src="https://picsum.photos/600/800?grayscale&amp;blur=1" loading="lazy">                       <div class="uk-card-body ">
-                         <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">Vision Pro Experience</h3>
-                         <p class="text-slate-400 text-sm">Spatial computing interface...</p>
-                       </div>
-                     </div>
-                   </div>
-                   <div class="uk-card hover:scale-[1.01] transition-transform hover:shadow-2xl animate__animated animate__fadeInRight bg-slate-800/50 backdrop-blur-sm border-0">
-                     <div class="uk-card-body space-y-6">
-<img src="https://picsum.photos/600/800?blur=1" loading="lazy">                       <div class="uk-card-body ">
-                         <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">iOS App Redesign</h3>
-                         <p class="text-slate-400 text-sm">Mobile interface overhaul...</p>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xl">
-               <div class="flex flex-col items-center justify-center py-32" id="about">
+             <div class="uk-container mt-5 uk-container-xlarge">
+               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="about">
                  <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn text-slate-100">About Me</h2>
                  <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                    <div class="flex items-center justify-center">
@@ -336,16 +343,16 @@
                             Outside of coding, I enjoy playing basketball, listening to music, and traveling. 
                             Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅
                         </p>
-                     <div class="flex flex-row items-center space-x-4">
-<button href="..." type="submit" class="uk-btn text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate__animated animate__fadeInLeft">Resume</button>                     </div>
+                     <div class="uk-flex uk-flex-row uk-flex-middle space-x-4">
+<button href="..." type="submit" class="uk-button text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate__animated animate__fadeInLeft">Resume</button>                     </div>
                    </div>
                  </div>
                </div>
              </div>
            </div>
            <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xl">
-               <div class="flex flex-col items-center justify-center py-32 " id="skills">
+             <div class="uk-container mt-5 uk-container-xlarge">
+               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32 " id="skills">
                  <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn">Things I Can Do Without Googling... Mostly</h2>
                  <div class="flex flex-wrap justify-center gap-4">
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn">                 </div>
@@ -353,8 +360,8 @@
              </div>
            </div>
            <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xl">
-               <div class="flex flex-col items-center justify-center py-32" id="github">
+             <div class="uk-container mt-5 uk-container-xlarge">
+               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="github">
                  <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn text-slate-100">GitHub Stats (Proof I Actually Code)</h2>
                  <div class="github-triangle-layout flex flex-col gap-12 h-full">
 <img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" class="w-full mb-8 rounded-lg animate__animated animate__fadeInDown">                   <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
@@ -365,22 +372,26 @@
                </div>
              </div>
            </div>
-           <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xl">
-               <div class="flex flex-col items-center justify-center py-32" id="contact">
+           <div class="uk-section contact-section">
+             <div class="uk-container mt-5 uk-container-xlarge">
+               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32 contact-content" id="contact">
                  <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn">Let&#x27;s Connect</h2>
                  <p class="text-xl text-center mb-8 animate__animated animate__fadeInUp">Feel free to reach out to me via email.</p>
 <a href="mailto:chilavertndah99@gmail.com" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate__animated animate__fadeIn">Send Email</a>               </div>
              </div>
            </div>
-           <div class="uk-section full-bleed-section">
-             <div class="uk-container mt-5 uk-container-xl">
-               <div class="flex flex-col items-center justify-center text-center">
-<hr class="mb-12 border-blue-500/20">                 <div class="flex flex-row items-center gap-4 mb-6">
-<a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" class="h-8 w-8 animate__animated animate__bounce"></a>                 </div>
-                 <div class="whitespace-nowrap overflow-hidden w-full">
-                   <p class="text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
-                   <p class="text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+           <div class="uk-section py-0 full-bleed-section">
+             <div class="footer-container w-full">
+               <div class="w-full">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-16">
+<hr class="mb-12 border-blue-500/20">                   <div class="uk-flex uk-flex-row uk-flex-middle gap-4 mb-6 justify-center">
+<a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" class="h-8 w-8 animate__animated animate__bounce"></a>                   </div>
+                   <div class="footer-marquee-container w-screen">
+                     <div class="footer-marquee-wrapper">
+                       <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                       <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                     </div>
+                   </div>
                  </div>
                </div>
              </div>
