@@ -268,6 +268,36 @@
                 font-size: 6rem !important; /* Medium text on tablet */
             }
         }
+
+        /* Project card styles */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .project-tech-badge {
+            display: inline-block;
+            background-color: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
     
         </style>
         <script>
@@ -326,7 +356,40 @@
            <div class="uk-section hero-bg">
              <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center min-h-screen flex items-center justify-center py-20 hero-content">
                <h1 class="uk-h1 text-6xl font-bold mb-6 text-center text-white animate__animated animate__fadeInDown">Hello, I&#x27;m Chilavert N&#x27;dah</h1>
-               <p class="text-xl text-blue-100 mb-8 animate__animated animate__fadeInUp">Software Developer </p>
+               <p class="text-xl text-blue-100 mb-8 animate__animated animate__fadeInUp">Software Developer</p>
+             </div>
+           </div>
+           <div class="uk-section ">
+             <div class="uk-container mt-5 uk-container-xlarge">
+               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="work">
+                 <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn text-slate-100">Projects</h2>
+                 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                   <div class="uk-card project-card hover:shadow-2xl animate__animated animate__fadeInLeft bg-slate-800/50 backdrop-blur-sm border-0">
+                     <div class="uk-card-body space-y-6">
+                       <div class="overflow-hidden">
+<img src="./image/mc-agence.png" class="w-full h-auto transition-transform">                       </div>
+                       <div class="uk-card-body flex flex-col">
+                         <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MC Agence Website</h3>
+                         <p class="text-slate-400 text-sm mb-4">A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.</p>
+                         <div class="flex flex-wrap mt-2">
+<span class="project-tech-badge">Webflow</span><span class="project-tech-badge">Responsive Design</span><span class="project-tech-badge">UI/UX</span>                         </div>
+<a href="https://mc-agence.webflow.io" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">Visit Website</a>                       </div>
+                     </div>
+                   </div>
+                   <div class="uk-card project-card hover:shadow-2xl animate__animated animate__fadeInRight bg-slate-800/50 backdrop-blur-sm border-0">
+                     <div class="uk-card-body space-y-6">
+                       <div class="overflow-hidden">
+<img src="./image/monsterui.png" class="w-full h-auto transition-transform">                       </div>
+                       <div class="uk-card-body flex flex-col">
+                         <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MonsterUI Library Contribution</h3>
+                         <p class="text-slate-400 text-sm mb-4">Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.</p>
+                         <div class="flex flex-wrap mt-2">
+<span class="project-tech-badge">Python</span><span class="project-tech-badge">Open Source</span><span class="project-tech-badge">UI Components</span>                         </div>
+<a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">View PR on GitHub</a>                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
              </div>
            </div>
            <div class="uk-section ">
@@ -352,7 +415,7 @@
            </div>
            <div class="uk-section ">
              <div class="uk-container mt-5 uk-container-xlarge">
-               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32 " id="skills">
+               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="skills">
                  <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn">Things I Can Do Without Googling... Mostly</h2>
                  <div class="flex flex-wrap justify-center gap-4">
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn">                 </div>
@@ -365,7 +428,7 @@
                  <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn text-slate-100">GitHub Stats (Proof I Actually Code)</h2>
                  <div class="github-triangle-layout flex flex-col gap-12 h-full">
 <img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" class="w-full mb-8 rounded-lg animate__animated animate__fadeInDown">                   <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" class=" rounded-lg animate__animated animate__fadeInRight">                     <div class="h-full">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" class="rounded-lg animate__animated animate__fadeInRight">                     <div class="h-full">
 <img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" class="w-full h-full rounded-lg animate__animated animate__fadeInRight object-contain">                     </div>
                    </div>
                  </div>
