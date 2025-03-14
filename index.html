@@ -251,7 +251,8 @@
             position: absolute;
             top: 50%;
             left: 0.5rem;
-            transform: translateY(-50%) rotate(-90deg) !important; /* !important pour tester les surcharges */
+            transform: translateY(-50%) rotate(-90deg);
+            -webkit-transform: translateY(-50%) rotate(-90deg); /* Compatibilité mobile */
             transform-origin: left center;
             white-space: nowrap;
             z-index: 10;
@@ -262,10 +263,14 @@
             display: block;
         }
 
+        /* Media query ajusté pour mobile */
         @media (max-width: 767px) {
             .hero-content .vertical-logo {
                 font-size: 1.5rem;
                 left: 0.6rem;
+                transform: translateY(-50%) rotate(-90deg); /* Explicitement répété */
+                -webkit-transform: translateY(-50%) rotate(-90deg); /* Compatibilité mobile */
+                transform-origin: left center; /* Réaffirmé */
             }
         }
 
