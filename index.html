@@ -246,16 +246,14 @@
             box-sizing: border-box;
         }
 
-        /* Nouvelle approche avec writing-mode */
+        /* Positionnement ajusté pour placer le logo en haut */
         .hero-bg .vertical-logo {
             position: absolute;
-            top: 50%;
+            top: 1rem; /* Placé près du haut */
             left: 0.5rem;
-            writing-mode: vertical-rl; /* Texte vertical de droite à gauche */
-            -webkit-writing-mode: vertical-rl; /* Compatibilité iOS */
-            text-orientation: mixed; /* Assure une orientation correcte */
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
+            writing-mode: vertical-rl;
+            -webkit-writing-mode: vertical-rl;
+            text-orientation: mixed;
             white-space: nowrap;
             z-index: 10;
             font-size: 2.5rem;
@@ -270,11 +268,10 @@
             .hero-bg .vertical-logo {
                 font-size: 1.5rem;
                 left: 0.6rem;
+                top: 1rem; /* Maintenu en haut */
                 writing-mode: vertical-rl;
                 -webkit-writing-mode: vertical-rl;
                 text-orientation: mixed;
-                transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
             }
         }
 
