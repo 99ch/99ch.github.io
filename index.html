@@ -246,13 +246,13 @@
             box-sizing: border-box;
         }
 
-        /* Style renforcé pour .vertical-logo */
-        .hero-content .vertical-logo {
+        /* Style pour .vertical-logo, déplacé dans .hero-bg */
+        .hero-bg .vertical-logo {
             position: absolute;
             top: 50%;
             left: 0.5rem;
-            transform: translateY(-50%) rotate(-90deg);
-            -webkit-transform: translateY(-50%) rotate(-90deg); /* Compatibilité mobile */
+            transform: translateY(-50%) rotate(-90deg) !important;
+            -webkit-transform: translateY(-50%) rotate(-90deg) !important; /* Pour iOS */
             transform-origin: left center;
             white-space: nowrap;
             z-index: 10;
@@ -263,14 +263,14 @@
             display: block;
         }
 
-        /* Media query ajusté pour mobile */
+        /* Media query pour mobile */
         @media (max-width: 767px) {
-            .hero-content .vertical-logo {
+            .hero-bg .vertical-logo {
                 font-size: 1.5rem;
                 left: 0.6rem;
-                transform: translateY(-50%) rotate(-90deg); /* Explicitement répété */
-                -webkit-transform: translateY(-50%) rotate(-90deg); /* Compatibilité mobile */
-                transform-origin: left center; /* Réaffirmé */
+                transform: translateY(-50%) rotate(-90deg) !important;
+                -webkit-transform: translateY(-50%) rotate(-90deg) !important; /* Pour iOS */
+                transform-origin: left center;
             }
         }
 
@@ -548,8 +548,8 @@
                </div>
              </div>
              <div class="uk-section hero-bg">
-               <div class="hero-content">
-<span data-animation="fadeInLeft" class="vertical-logo animate-on-scroll">Think different</span>                 <div class="hero-title">
+<span data-animation="fadeInLeft" class="vertical-logo animate-on-scroll">Think different</span>               <div class="hero-content">
+                 <div class="hero-title">
                    <h1 data-animation="fadeInDown" class="uk-h1 text-5xl font-bold text-white animate-on-scroll">Chilavert N&#x27;dah</h1>
                    <p data-animation="fadeInUp" class="text-xl text-blue-100 animate-on-scroll">Software Developer</p>
                  </div>
