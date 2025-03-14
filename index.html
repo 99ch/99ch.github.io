@@ -36,6 +36,7 @@
   --erc: from hsl(var(--destructive-foreground)) l c h;
 }
 </style>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
    </head>
    <body class=" bg-background text-foreground">
 <main>       <div class="uk-container uk-container-xlarge">
@@ -48,82 +49,98 @@
             100% { transform: translateX(-50%); }
         }
 
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .animate__animated {
+            opacity: 1;
+            visibility: visible;
+        }
+
         html {
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
         }
 
-        .animate-marquee {
-            display: inline-block;
-            animation: marquee 10s linear infinite;
-            white-space: nowrap;
-            width: max-content;
-        }
-
-        /* Effet de papier ligné */
         body {
-            overflow-x: hidden; /* Added to prevent horizontal scroll */
+            overflow-x: hidden;
             background-color: #0f172a !important;
             color: #f8fafc !important;
+            font-family: 'Montserrat', sans-serif;
             background-image: 
                 linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px) !important;
             background-size: 100% 24px, 24px 100% !important;
             background-position: 0 0 !important;
-        }
-
-        /* Hero Section */
-        .hero-bg {
-            position: relative;
-            min-height: 100vh;
-            margin-top: -64px;
+            margin: 0 !important;
+            padding: 0 !important;
             padding-top: 64px;
-            width: 100vw;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
         }
 
-        .hero-bg::before {
-            content: '';
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #0f172a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .splash-logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        .splash-greeting {
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            height: 3rem;
+            text-align: center;
+        }
+
+        .splash-loading {
+            margin-top: 2rem;
+            width: 100px;
+            height: 3px;
+            background-color: rgba(59, 130, 246, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loading-progress {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
             height: 100%;
-            background-image: 
-                url('image/background.png');
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
-            z-index: 0;
-            filter: saturate(0.8) brightness(0.9);
-            /* Add a dark blue overlay */
-            background-color: rgba(15, 23, 42, 0.7);
-            background-blend-mode: overlay;
+            width: 0;
+            background-color: #3b82f6;
+            transition: width 2s ease-in-out;
         }
 
-        @media (max-width: 768px) {
-            .hero-bg::before {
-                background-position: center top 20%; /* Ajustement mobile */
-            }
-        }
-
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Transparence pour voir les rayures */
-        .dark.bg-slate-900 {
-            background-color: transparent !important;
-        }
-
-        /* Navbar */
         .fixed-navbar {
             position: fixed !important;
             top: 0;
@@ -132,7 +149,7 @@
             width: 100%;
             z-index: 1000;
             transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-            padding: 0 1.5rem; /* Ajout de marge sur les bords */
+            padding: 0 1.5rem;
         }
 
         .nav-scrolled {
@@ -140,15 +157,13 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
-        /* Logo navbar */
         .nav-logo {
             height: 40px;
             width: auto;
         }
 
-        /* Style du bouton hamburger */
         .hamburger-button {
-            display: none; /* Caché par défaut */
+            display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -162,7 +177,6 @@
             transition: background-color 0.3s;
         }
 
-        /* Afficher uniquement sur mobile */
         @media (max-width: 767px) {
             .hamburger-button {
                 display: flex;
@@ -181,43 +195,118 @@
             transition: all 0.3s ease;
         }
 
-        body {
-            padding-top: 64px;
-        }
-
-        /* Contact section with logo background */
-        .contact-section {
+        .hero-bg {
             position: relative;
+            min-height: 100vh;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            overflow: hidden;
         }
 
-        .contact-section::before {
+        .hero-bg::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
-            background-image: url('./image/logo.png');
-            background-size: contain;
-            background-position: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image/background.png');
+            background-size: cover;
+            background-position: top center;
             background-repeat: no-repeat;
-            opacity: 0.5;
             z-index: 0;
-        }
-
-        .contact-content {
-            position: relative;
-            z-index: 1;
+            filter: saturate(0.8) brightness(0.9);
+            background-color: rgba(15, 23, 42, 0.7);
+            background-blend-mode: overlay;
         }
 
         @media (max-width: 768px) {
             .hero-bg::before {
-                background-position: 60% center;
+                background-position: top center;
             }
+        }
 
-            .hero-content h1 {
-                font-size: 2.5rem !important;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Style renforcé pour .vertical-logo */
+        .hero-content .vertical-logo {
+            position: absolute;
+            top: 50%;
+            left: 0.5rem;
+            transform: translateY(-50%) rotate(-90deg) !important; /* !important pour tester les surcharges */
+            transform-origin: left center;
+            white-space: nowrap;
+            z-index: 10;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1;
+            display: block;
+        }
+
+        @media (max-width: 767px) {
+            .hero-content .vertical-logo {
+                font-size: 1.5rem;
+                left: 0.6rem;
+            }
+        }
+
+        .hero-title {
+            position: relative;
+            text-align: right;
+            z-index: 10;
+            margin-right: 2rem;
+        }
+
+        .contact-button {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 10;
+            animation: blink 1s infinite;
+        }
+
+        .services-section {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 10;
+            background-color: rgba(30, 41, 59, 1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .hero-title {
+                margin-right: 1rem;
+                font-size: 2rem;
+            }
+            .contact-button {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            .services-section {
+                bottom: 1rem;
+                left: 1rem;
+                padding: 0.5rem;
             }
         }
 
@@ -231,14 +320,12 @@
             overflow: hidden;
         }
 
-        /* Fix footer overflow */
         .footer-container {
             width: 100%;
             overflow: hidden;
             position: relative;
         }
 
-        /* Fix marquee container */
         .footer-marquee-container {
             width: 100%;
             overflow: hidden;
@@ -248,7 +335,6 @@
             justify-content: center;
         }
 
-        /* Fixed marquee wrapper */
         .footer-marquee-wrapper {
             display: inline-flex;
             position: relative;
@@ -256,20 +342,25 @@
             width: auto;
         }
 
-        /* Responsive text sizes for footer */
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+            white-space: nowrap;
+            width: max-content;
+        }
+
         @media (max-width: 768px) {
             .footer-marquee-text {
-                font-size: 4rem !important; /* Smaller text on mobile */
+                font-size: 4rem !important;
             }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
             .footer-marquee-text {
-                font-size: 6rem !important; /* Medium text on tablet */
+                font-size: 6rem !important;
             }
         }
 
-        /* Project card styles */
         .project-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
@@ -298,10 +389,81 @@
             margin-right: 0.5rem;
             margin-bottom: 0.5rem;
         }
+
+        .contact-section {
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background-image: url('./image/logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .dark.bg-slate-900 {
+            background-color: transparent !important;
+        }
     
         </style>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
+                const splashScreen = document.getElementById('splash-screen');
+                const loadingBar = document.getElementById('loading-progress');
+                const splashGreeting = document.getElementById('splash-greeting');
+                const mainContent = document.getElementById('main-content');
+
+                if (!splashScreen || !loadingBar || !splashGreeting || !mainContent) {
+                    console.error('Splash screen elements missing');
+                    return;
+                }
+
+                splashScreen.style.opacity = '1';
+                mainContent.style.opacity = '0';
+
+                const greetings = [
+                    "Hello", "Bonjour", "Hola", "Ciao", "Olá", 
+                    "Привет", "こんにちは", "你好", "안녕하세요", 
+                    "مرحبا", "नमस्ते", "Hallo", "Γειά σου", "Salve"
+                ];
+
+                let currentGreetingIndex = 0;
+
+                function cycleGreetings() {
+                    splashGreeting.textContent = greetings[currentGreetingIndex];
+                    currentGreetingIndex = (currentGreetingIndex + 1) % greetings.length;
+                }
+
+                let greetingInterval = setInterval(cycleGreetings, 600);
+                cycleGreetings();
+
+                setTimeout(() => {
+                    loadingBar.style.width = '100%';
+                }, 100);
+
+                setTimeout(() => {
+                    splashScreen.style.opacity = '0';
+                    mainContent.style.opacity = '1';
+                    clearInterval(greetingInterval);
+                    setTimeout(() => {
+                        splashScreen.style.display = 'none';
+                    }, 500);
+                }, 3000);
+
                 const navbar = document.querySelector('.fixed-navbar');
                 let lastScrollY = window.scrollY;
 
@@ -317,7 +479,6 @@
                     lastScrollY = currentScrollY;
                 });
 
-                // Mobile menu toggle
                 const mobileMenuButton = document.getElementById('mobile-menu-button');
                 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -325,134 +486,173 @@
                     mobileMenu.classList.toggle('hidden');
                 });
 
-                // Close mobile menu when clicking on a link
                 const mobileMenuLinks = mobileMenu.querySelectorAll('a');
                 mobileMenuLinks.forEach(link => {
                     link.addEventListener('click', function() {
                         mobileMenu.classList.add('hidden');
                     });
                 });
+
+                function createScrollAnimations() {
+                    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const animation = entry.target.getAttribute('data-animation');
+                                entry.target.classList.add('animate__animated', `animate__${animation}`);
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        threshold: 0.1
+                    });
+
+                    animatedElements.forEach(element => {
+                        observer.observe(element);
+                    });
+                }
+
+                createScrollAnimations();
             });
         </script>
         <style>
-        </style>
-         <div class="fixed-navbar">
-           <div class="uk-container max-w-7xl mx-auto px-4">
-             <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
-<a href="#" class="flex items-center"><img src="./image/logo.png" alt="Logo" class="nav-logo"></a>               <div class="hidden md:flex">
-                 <div class="uk-flex uk-flex-row uk-flex-middle gap-2">
-<a href="#work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="#contact" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Contact</a>                 </div>
-               </div>
-<button type="submit" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" name="mobile-menu-button">                 <div class="flex flex-col justify-center items-center">
-<span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>                 </div>
-</button>             </div>
-           </div>
-           <div id="mobile-menu" class="hidden bg-slate-900 md:hidden">
-             <div class="py-2">
-<a href="#work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a><a href="#about" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a><a href="#contact" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3">Contact</a>             </div>
-           </div>
-         </div>
-         <div class="dark bg-slate-900 text-slate-100">
-           <div class="uk-section hero-bg">
-             <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center min-h-screen flex items-center justify-center py-20 hero-content">
-               <h1 class="uk-h1 text-6xl font-bold mb-6 text-center text-white animate__animated animate__fadeInDown">Hello, I&#x27;m Chilavert N&#x27;dah</h1>
-               <p class="text-xl text-blue-100 mb-8 animate__animated animate__fadeInUp">Software Developer</p>
+    </style>
+         <div>
+           <div id="splash-screen" class="splash-screen">
+<img src="./image/logo.png" alt="Logo" class="splash-logo">             <div id="splash-greeting" class="splash-greeting"></div>
+             <div class="splash-loading">
+               <div id="loading-progress" class="loading-progress"></div>
              </div>
            </div>
-           <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xlarge">
-               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="work">
-                 <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn text-slate-100">Projects</h2>
-                 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-                   <div class="uk-card project-card hover:shadow-2xl animate__animated animate__fadeInLeft bg-slate-800/50 backdrop-blur-sm border-0">
-                     <div class="uk-card-body space-y-6">
-                       <div class="overflow-hidden">
-<img src="./image/mc-agence.png" class="w-full h-auto transition-transform">                       </div>
-                       <div class="uk-card-body flex flex-col">
-                         <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MC Agence Website</h3>
-                         <p class="text-slate-400 text-sm mb-4">A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.</p>
-                         <div class="flex flex-wrap mt-2">
-<span class="project-tech-badge">Webflow</span><span class="project-tech-badge">Responsive Design</span><span class="project-tech-badge">UI/UX</span>                         </div>
-<a href="https://mc-agence.webflow.io" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">Visit Website</a>                       </div>
-                     </div>
+           <div id="main-content" class="dark bg-slate-900 text-slate-100" style="opacity: 0; transition: opacity 1s ease-in-out;">
+             <div class="fixed-navbar">
+               <div class="uk-container max-w-7xl mx-auto px-4">
+                 <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
+<a href="#" class="flex items-center"><img src="./image/logo.png" alt="Logo" class="nav-logo"></a>                   <div class="hidden md:flex">
+                     <div class="uk-flex uk-flex-row uk-flex-middle gap-2">
+<a href="#work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="#contact" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Contact</a>                     </div>
                    </div>
-                   <div class="uk-card project-card hover:shadow-2xl animate__animated animate__fadeInRight bg-slate-800/50 backdrop-blur-sm border-0">
-                     <div class="uk-card-body space-y-6">
-                       <div class="overflow-hidden">
-<img src="./image/monsterui.png" class="w-full h-auto transition-transform">                       </div>
-                       <div class="uk-card-body flex flex-col">
-                         <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MonsterUI Library Contribution</h3>
-                         <p class="text-slate-400 text-sm mb-4">Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.</p>
-                         <div class="flex flex-wrap mt-2">
-<span class="project-tech-badge">Python</span><span class="project-tech-badge">Open Source</span><span class="project-tech-badge">UI Components</span>                         </div>
-<a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">View PR on GitHub</a>                       </div>
+<button type="submit" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" name="mobile-menu-button">                     <div class="flex flex-col justify-center items-center">
+<span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>                     </div>
+</button>                 </div>
+               </div>
+               <div id="mobile-menu" class="hidden bg-slate-900 md:hidden">
+                 <div class="py-2">
+<a href="#work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a><a href="#about" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a><a href="#contact" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3">Contact</a>                 </div>
+               </div>
+             </div>
+             <div class="uk-section hero-bg">
+               <div class="hero-content">
+<span data-animation="fadeInLeft" class="vertical-logo animate-on-scroll">Think different</span>                 <div class="hero-title">
+                   <h1 data-animation="fadeInDown" class="uk-h1 text-5xl font-bold text-white animate-on-scroll">Chilavert N&#x27;dah</h1>
+                   <p data-animation="fadeInUp" class="text-xl text-blue-100 animate-on-scroll">Software Developer</p>
+                 </div>
+<button onclick="location.href='#contact'" data-animation="fadeIn" type="submit" class="uk-button contact-button bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors animate-on-scroll">Contact</button>                 <div class="services-section">
+                   <h3 data-animation="fadeInLeft" class="uk-h3 text-white text-lg mb-2 animate-on-scroll">Services</h3>
+                   <ul class="list-none">
+                     <li data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Full-Stack Development</li>
+                     <li data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Open Source Contributions</li>
+                     <li data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">UI/UX Design</li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="work">
+                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Projects</h2>
+                   <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                     <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="./image/mc-agence.png" class="w-full h-auto transition-transform">                         </div>
+                         <div class="uk-card-body flex flex-col">
+                           <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MC Agence Website</h3>
+                           <p class="text-slate-400 text-sm mb-4">A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.</p>
+                           <div class="flex flex-wrap mt-2">
+<span class="project-tech-badge">Webflow</span><span class="project-tech-badge">Responsive Design</span><span class="project-tech-badge">UI/UX</span>                           </div>
+<a href="https://mc-agence.webflow.io" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">Visit Website</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="./image/monsterui.png" class="w-full h-auto transition-transform">                         </div>
+                         <div class="uk-card-body flex flex-col">
+                           <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MonsterUI Library Contribution</h3>
+                           <p class="text-slate-400 text-sm mb-4">Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.</p>
+                           <div class="flex flex-wrap mt-2">
+<span class="project-tech-badge">Python</span><span class="project-tech-badge">Open Source</span><span class="project-tech-badge">UI Components</span>                           </div>
+<a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">View PR on GitHub</a>                         </div>
+                       </div>
                      </div>
                    </div>
                  </div>
                </div>
              </div>
-           </div>
-           <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xlarge">
-               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="about">
-                 <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn text-slate-100">About Me</h2>
-                 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                   <div class="flex items-center justify-center">
-<img src="image/full_profil.png" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-slate-700/20 animate__animated animate__fadeInLeft" style="max-width: 500px;">                   </div>
-                   <div class="flex flex-col items-start">
-                     <p class="text-xl max-w-2xl leading-relaxed text-slate-300 animate__animated animate__fadeInRight mb-12">
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="about">
+                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">About Me</h2>
+                   <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                     <div class="flex items-center justify-center">
+<img src="image/full_profil.png" data-animation="fadeInLeft" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-slate-700/20 animate-on-scroll" style="max-width: 500px;">                     </div>
+                     <div class="flex flex-col items-start">
+                       <p data-animation="fadeInRight" class="text-xl max-w-2xl leading-relaxed text-slate-300 animate-on-scroll mb-12">
                             I&#x27;m a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and 
                             actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. 
                             Outside of coding, I enjoy playing basketball, listening to music, and traveling. 
                             Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅
                         </p>
-                     <div class="uk-flex uk-flex-row uk-flex-middle space-x-4">
-<button href="..." type="submit" class="uk-button text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate__animated animate__fadeInLeft">Resume</button>                     </div>
+                       <div class="uk-flex uk-flex-row uk-flex-middle space-x-4">
+<button href="..." data-animation="fadeInLeft" type="submit" class="uk-button text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Resume</button>                       </div>
+                     </div>
                    </div>
                  </div>
                </div>
              </div>
-           </div>
-           <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xlarge">
-               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="skills">
-                 <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn">Things I Can Do Without Googling... Mostly</h2>
-                 <div class="flex flex-wrap justify-center gap-4">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate__animated animate__fadeIn">                 </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="skills">
+                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Things I Can Do Without Googling... Mostly</h2>
+                   <div class="flex flex-wrap justify-center gap-4">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll">                   </div>
+                 </div>
                </div>
              </div>
-           </div>
-           <div class="uk-section ">
-             <div class="uk-container mt-5 uk-container-xlarge">
-               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="github">
-                 <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn text-slate-100">GitHub Stats (Proof I Actually Code)</h2>
-                 <div class="github-triangle-layout flex flex-col gap-12 h-full">
-<img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" class="w-full mb-8 rounded-lg animate__animated animate__fadeInDown">                   <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" class="rounded-lg animate__animated animate__fadeInRight">                     <div class="h-full">
-<img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" class="w-full h-full rounded-lg animate__animated animate__fadeInRight object-contain">                     </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="github">
+                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats (Proof I Actually Code)</h2>
+                   <div class="github-triangle-layout flex flex-col gap-12 h-full">
+<img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" data-animation="fadeInDown" class="w-full mb-8 rounded-lg animate-on-scroll">                     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" data-animation="fadeInRight" class="rounded-lg animate-on-scroll">                       <div class="h-full">
+<img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" data-animation="fadeInRight" class="w-full h-full rounded-lg animate-on-scroll object-contain">                       </div>
+                     </div>
                    </div>
                  </div>
                </div>
              </div>
-           </div>
-           <div class="uk-section contact-section">
-             <div class="uk-container mt-5 uk-container-xlarge">
-               <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32 contact-content" id="contact">
-                 <h2 class="uk-h2 text-4xl font-semibold mb-12 animate__animated animate__fadeIn">Let&#x27;s Connect</h2>
-                 <p class="text-xl text-center mb-8 animate__animated animate__fadeInUp">Feel free to reach out to me via email.</p>
-<a href="mailto:chilavertndah99@gmail.com" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate__animated animate__fadeIn">Send Email</a>               </div>
+             <div class="uk-section contact-section">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32 contact-content" id="contact">
+                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Let&#x27;s Connect</h2>
+                   <p data-animation="fadeInUp" class="text-xl text-center mb-8 animate-on-scroll">Feel free to reach out to me via email.</p>
+<a href="mailto:chilavertndah99@gmail.com" data-animation="fadeIn" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Send Email</a>                 </div>
+               </div>
              </div>
-           </div>
-           <div class="uk-section py-0 full-bleed-section">
-             <div class="footer-container w-full">
-               <div class="w-full">
-                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-16">
-<hr class="mb-12 border-blue-500/20">                   <div class="uk-flex uk-flex-row uk-flex-middle gap-4 mb-6 justify-center">
-<a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" class="h-8 w-8 animate__animated animate__bounce"></a>                   </div>
-                   <div class="footer-marquee-container w-screen">
-                     <div class="footer-marquee-wrapper">
-                       <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
-                       <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+             <div class="uk-section py-0 full-bleed-section">
+               <div class="footer-container w-full">
+                 <div class="w-full">
+                   <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-16">
+<hr class="mb-12 border-blue-500/20">                     <div class="uk-flex uk-flex-row uk-flex-middle gap-4 mb-6 justify-center">
+<a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" class="h-8 w-8 animate__animated animate__bounce"></a>                     </div>
+                     <div class="footer-marquee-container w-screen">
+                       <div class="footer-marquee-wrapper">
+                         <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                         <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                       </div>
                      </div>
                    </div>
                  </div>
