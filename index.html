@@ -1,9 +1,7 @@
  <!doctype html>
  <html>
    <head>
-     <title>
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-     </title>
+     <title></title>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js@1.0.12/fasthtml.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/surreal@main/surreal.js"></script><script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>     <link rel="stylesheet" href="https://unpkg.com/franken-ui@1.1.0/dist/css/core.min.css">
@@ -40,9 +38,9 @@
    </head>
    <body class=" bg-background text-foreground">
 <main>       <div class="uk-container uk-container-xlarge">
-         <h1 class="uk-h1 ">
-           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-         </h1>
+         <h1 class="uk-h1 "></h1>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+         <link rel="icon" href="/favicon.ico" type="image/x-icon">
          <style>
         @keyframes marquee {
             0% { transform: translateX(0%); }
@@ -58,6 +56,11 @@
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .animate-on-scroll {
@@ -89,6 +92,7 @@
             margin: 0 !important;
             padding: 0 !important;
             padding-top: 64px;
+            margin-bottom: 0 !important;
         }
 
         .splash-screen {
@@ -138,7 +142,7 @@
             height: 100%;
             width: 0;
             background-color: #3b82f6;
-            transition: width 2s ease-in-out;
+            transition: width 1.5s ease-in-out;
         }
 
         .fixed-navbar {
@@ -150,6 +154,11 @@
             z-index: 1000;
             transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
             padding: 0 1.5rem;
+        }
+
+        .fixed-navbar a:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
         }
 
         .nav-scrolled {
@@ -246,10 +255,9 @@
             box-sizing: border-box;
         }
 
-        /* Positionnement ajusté pour placer le logo en haut */
         .hero-bg .vertical-logo {
             position: absolute;
-            top: 1rem; /* Placé près du haut */
+            top: 1rem;
             left: 0.5rem;
             writing-mode: vertical-rl;
             -webkit-writing-mode: vertical-rl;
@@ -261,14 +269,14 @@
             color: #ffffff;
             line-height: 1;
             display: block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        /* Media query pour mobile */
         @media (max-width: 767px) {
             .hero-bg .vertical-logo {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 left: 0.6rem;
-                top: 1rem; /* Maintenu en haut */
+                top: 1rem;
                 writing-mode: vertical-rl;
                 -webkit-writing-mode: vertical-rl;
                 text-orientation: mixed;
@@ -287,7 +295,13 @@
             bottom: 2rem;
             right: 2rem;
             z-index: 10;
-            animation: blink 1s infinite;
+            animation: float 3s ease-in-out infinite, blink 3s infinite;
+            background: linear-gradient(135deg, #facc15, #f59e0b);
+            transition: background 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: linear-gradient(135deg, #fde047, #fb923c);
         }
 
         .services-section {
@@ -330,6 +344,8 @@
             width: 100%;
             overflow: hidden;
             position: relative;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
         }
 
         .footer-marquee-container {
@@ -339,6 +355,8 @@
             position: relative;
             display: flex;
             justify-content: center;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
         }
 
         .footer-marquee-wrapper {
@@ -355,9 +373,13 @@
             width: max-content;
         }
 
+        .footer-marquee-text {
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
         @media (max-width: 768px) {
             .footer-marquee-text {
-                font-size: 4rem !important;
+                font-size: 3rem !important;
             }
         }
 
@@ -371,6 +393,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
+            background: rgba(30, 41, 59, 0.9);
         }
 
         .project-card:hover {
@@ -424,8 +447,29 @@
         .dark.bg-slate-900 {
             background-color: transparent !important;
         }
+
+        .skills img {
+            position: relative;
+        }
+
+        .skills img:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            z-index: 10;
+        }
     
         </style>
+        <meta name="description" content="Portfolio de Chilavert N'dah, développeur logiciel spécialisé en full-stack et open-source">
+        <meta name="keywords" content="Chilavert N'dah, portfolio, développeur, full-stack, open-source, logiciel">
+        <meta name="author" content="Chilavert N'dah">
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const splashScreen = document.getElementById('splash-screen');
@@ -468,17 +512,16 @@
                     setTimeout(() => {
                         splashScreen.style.display = 'none';
                     }, 500);
-                }, 3000);
+                }, 1500);
 
                 const navbar = document.querySelector('.fixed-navbar');
                 let lastScrollY = window.scrollY;
 
                 navbar && window.addEventListener('scroll', function() {
                     const currentScrollY = window.scrollY;
-
                     if (currentScrollY > lastScrollY && currentScrollY > 100) {
                         navbar.style.transform = 'translateY(-100%)';
-                    } else {
+                    } else if (currentScrollY < lastScrollY || currentScrollY <= 100) {
                         navbar.style.transform = 'translateY(0)';
                         navbar.classList.toggle('nav-scrolled', currentScrollY > 50);
                     }
@@ -526,7 +569,7 @@
     </style>
          <div>
            <div id="splash-screen" class="splash-screen">
-<img src="./image/logo.png" alt="Logo" class="splash-logo">             <div id="splash-greeting" class="splash-greeting"></div>
+<img src="./image/logo.png" alt="Logo" loading="lazy" class="splash-logo">             <div id="splash-greeting" class="splash-greeting"></div>
              <div class="splash-loading">
                <div id="loading-progress" class="loading-progress"></div>
              </div>
@@ -535,17 +578,17 @@
              <div class="fixed-navbar">
                <div class="uk-container max-w-7xl mx-auto px-4">
                  <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
-<a href="#" class="flex items-center"><img src="./image/logo.png" alt="Logo" class="nav-logo"></a>                   <div class="hidden md:flex">
+<a href="#" class="flex items-center"><img src="./image/logo.png" alt="Logo" loading="lazy" class="nav-logo"></a>                   <div class="hidden md:flex">
                      <div class="uk-flex uk-flex-row uk-flex-middle gap-2">
-<a href="#work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="#contact" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Contact</a>                     </div>
+<a href="#work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="https://github.com/99ch" target="_blank" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">GitHub</a>                     </div>
                    </div>
-<button type="submit" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" name="mobile-menu-button">                     <div class="flex flex-col justify-center items-center">
+<button aria-label="Toggle mobile menu" type="submit" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" name="mobile-menu-button">                     <div class="flex flex-col justify-center items-center">
 <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>                     </div>
 </button>                 </div>
                </div>
                <div id="mobile-menu" class="hidden bg-slate-900 md:hidden">
                  <div class="py-2">
-<a href="#work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a><a href="#about" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a><a href="#contact" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3">Contact</a>                 </div>
+<a href="#work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a><a href="#about" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a><a href="https://github.com/99ch" target="_blank" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3">GitHub</a>                 </div>
                </div>
              </div>
              <div class="uk-section hero-bg">
@@ -572,7 +615,7 @@
                      <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
                        <div class="uk-card-body space-y-6">
                          <div class="overflow-hidden">
-<img src="./image/mc-agence.png" class="w-full h-auto transition-transform">                         </div>
+<img src="./image/mc-agence.png" loading="lazy" class="w-full h-auto transition-transform">                         </div>
                          <div class="uk-card-body flex flex-col">
                            <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MC Agence Website</h3>
                            <p class="text-slate-400 text-sm mb-4">A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.</p>
@@ -584,7 +627,7 @@
                      <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
                        <div class="uk-card-body space-y-6">
                          <div class="overflow-hidden">
-<img src="./image/monsterui.png" class="w-full h-auto transition-transform">                         </div>
+<img src="./image/monsterui.png" loading="lazy" class="w-full h-auto transition-transform">                         </div>
                          <div class="uk-card-body flex flex-col">
                            <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MonsterUI Library Contribution</h3>
                            <p class="text-slate-400 text-sm mb-4">Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.</p>
@@ -603,7 +646,7 @@
                    <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">About Me</h2>
                    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                      <div class="flex items-center justify-center">
-<img src="image/full_profil.png" data-animation="fadeInLeft" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-slate-700/20 animate-on-scroll" style="max-width: 500px;">                     </div>
+<img src="image/full_profil.png" loading="lazy" data-animation="fadeInLeft" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-slate-700/20 animate-on-scroll" style="max-width: 500px;">                     </div>
                      <div class="flex flex-col items-start">
                        <p data-animation="fadeInRight" class="text-xl max-w-2xl leading-relaxed text-slate-300 animate-on-scroll mb-12">
                             I&#x27;m a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and 
@@ -612,7 +655,7 @@
                             Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅
                         </p>
                        <div class="uk-flex uk-flex-row uk-flex-middle space-x-4">
-<button href="..." data-animation="fadeInLeft" type="submit" class="uk-button text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Resume</button>                       </div>
+<a href="https://drive.google.com/drive/folders/1lI8KVnN6aZ6uaj7JpwG91GhEB3we0iIX?usp=drive_link" target="_blank" data-animation="fadeInLeft" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Resume</a>                       </div>
                      </div>
                    </div>
                  </div>
@@ -622,19 +665,19 @@
                <div class="uk-container mt-5 uk-container-xlarge">
                  <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="skills">
                    <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Things I Can Do Without Googling... Mostly</h2>
-                   <div class="flex flex-wrap justify-center gap-4">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll">                   </div>
+                   <div class="flex flex-wrap justify-center gap-4 skills">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Python"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Django"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="C++"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="HTML"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="CSS"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Bootstrap"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="JavaScript"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Firebase"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Dart"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Flutter"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="LaTeX"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Git"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="TensorFlow"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="VS Code">                   </div>
                  </div>
                </div>
              </div>
              <div class="uk-section ">
                <div class="uk-container mt-5 uk-container-xlarge">
                  <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="github">
-                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats (Proof I Actually Code)</h2>
+                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats &amp; Contributions</h2>
                    <div class="github-triangle-layout flex flex-col gap-12 h-full">
-<img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" data-animation="fadeInDown" class="w-full mb-8 rounded-lg animate-on-scroll">                     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" data-animation="fadeInRight" class="rounded-lg animate-on-scroll">                       <div class="h-full">
-<img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" data-animation="fadeInRight" class="w-full h-full rounded-lg animate-on-scroll object-contain">                       </div>
+<img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" loading="lazy" data-animation="fadeInDown" class="w-full mb-8 rounded-lg animate-on-scroll">                     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="rounded-lg animate-on-scroll">                       <div class="h-full">
+<img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="w-full h-full rounded-lg animate-on-scroll object-contain">                       </div>
                      </div>
                    </div>
                  </div>
@@ -651,9 +694,9 @@
              <div class="uk-section py-0 full-bleed-section">
                <div class="footer-container w-full">
                  <div class="w-full">
-                   <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-16">
+                   <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-0">
 <hr class="mb-12 border-blue-500/20">                     <div class="uk-flex uk-flex-row uk-flex-middle gap-4 mb-6 justify-center">
-<a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" class="h-8 w-8 animate__animated animate__bounce"></a>                     </div>
+<a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" loading="lazy" class="h-8 w-8 animate__animated animate__bounce"></a>                     </div>
                      <div class="footer-marquee-container w-screen">
                        <div class="footer-marquee-wrapper">
                          <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
