@@ -35,6 +35,7 @@
 }
 </style>
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    </head>
    <body class=" bg-background text-foreground">
 <main>       <div class="uk-container uk-container-xlarge">
@@ -304,6 +305,20 @@
             background: linear-gradient(135deg, #fde047, #fb923c);
         }
 
+        .whatsapp-button {
+            position: absolute;
+            bottom: 6rem; /* Positionné au-dessus du bouton Call */
+            right: 2rem;
+            z-index: 10;
+            animation: float 3s ease-in-out infinite;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            transition: background 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background: linear-gradient(135deg, #2ecc71, #1abc9c);
+        }
+
         .services-section {
             position: absolute;
             bottom: 2rem;
@@ -321,6 +336,10 @@
             }
             .contact-button {
                 bottom: 1rem;
+                right: 1rem;
+            }
+            .whatsapp-button {
+                bottom: 4rem; /* Ajusté pour mobile */
                 right: 1rem;
             }
             .services-section {
@@ -465,6 +484,33 @@
             font-size: 0.75rem;
             z-index: 10;
         }
+
+        .language-selector {
+            padding: 0.5rem;
+            background-color: rgba(59, 130, 246, 0.2);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+        .language-selector:hover {
+            background-color: rgba(59, 130, 246, 0.4);
+        }
+
+        @media (max-width: 767px) {
+            .language-selector {
+                width: auto;
+                margin: 0.5rem 1rem;
+            }
+        }
+
+        .contact-button i, .whatsapp-button i {
+            margin-right: 8px;
+        }
     
         </style>
         <meta name="description" content="Portfolio de Chilavert N'dah, développeur logiciel spécialisé en full-stack et open-source">
@@ -501,22 +547,18 @@
                 let greetingInterval = setInterval(cycleGreetings, 600);
                 cycleGreetings();
 
-                // Démarrer la progression de la barre immédiatement
                 setTimeout(() => {
                     loadingBar.style.width = '100%';
                 }, 100);
 
-                // Attendre que la page soit complètement chargée
-                window.onload = function() {
+                setTimeout(() => {
+                    splashScreen.style.opacity = '0';
+                    mainContent.style.opacity = '1';
+                    clearInterval(greetingInterval);
                     setTimeout(() => {
-                        splashScreen.style.opacity = '0';
-                        mainContent.style.opacity = '1';
-                        clearInterval(greetingInterval);
-                        setTimeout(() => {
-                            splashScreen.style.display = 'none';
-                        }, 500); // Délai pour la transition d'opacité
-                    }, 500); // Délai minimum après chargement complet
-                };
+                        splashScreen.style.display = 'none';
+                    }, 500);
+                }, 3000);
 
                 const navbar = document.querySelector('.fixed-navbar');
                 let lastScrollY = window.scrollY;
@@ -567,6 +609,98 @@
                 }
 
                 createScrollAnimations();
+
+                // Gestion de la traduction
+                const translations = {
+                    en: {
+                        "Work": "Work",
+                        "About": "About",
+                        "GitHub": "GitHub",
+                        "Think different": "Think different",
+                        "Chilavert N'dah": "Chilavert N'dah",
+                        "Software Developer": "Software Developer",
+                        "Call": "Call",
+                        "Text": "Text",
+                        "Services": "Services",
+                        "Web Site": "Web Site",
+                        "Web App": "Web App",
+                        "Mobile App": "Mobile App",
+                        "Projects": "Projects",
+                        "MC Agence Website": "MC Agence Website",
+                        "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.": "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.",
+                        "Visit Website": "Visit Website",
+                        "MonsterUI Library Contribution": "MonsterUI Library Contribution",
+                        "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.": "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.",
+                        "View PR on GitHub": "View PR on GitHub",
+                        "About Me": "About Me",
+                        "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅": "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅",
+                        "Resume": "Resume",
+                        "Things I Can Do Without Googling... Mostly": "Things I Can Do Without Googling... Mostly",
+                        "GitHub Stats & Contributions": "GitHub Stats & Contributions",
+                        "Let's Connect": "Let's Connect",
+                        "Feel free to reach out to me via email.": "Feel free to reach out to me via email.",
+                        "Send Email": "Send Email",
+                        "© 2025 Chilavert N'dah": "© 2025 Chilavert N'dah"
+                    },
+                    fr: {
+                        "Work": "Travaux",
+                        "About": "À propos",
+                        "GitHub": "GitHub",
+                        "Think different": "Pensez différemment",
+                        "Chilavert N'dah": "Chilavert N'dah",
+                        "Software Developer": "Développeur Logiciel",
+                        "Call": "Appeler",
+                        "Text": "Texte",
+                        "Services": "Services",
+                        "Web Site": "Site Web",
+                        "Web App": "Application Web",
+                        "Mobile App": "Application Mobile",
+                        "Projects": "Projets",
+                        "MC Agence Website": "Site Web MC Agence",
+                        "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.": "Un design de site web responsive pour une agence de marketing construit avec Webflow. Inclut des principes de design UI/UX modernes, des animations fluides et une approche centrée sur le client.",
+                        "Visit Website": "Visiter le site",
+                        "MonsterUI Library Contribution": "Contribution à la bibliothèque MonsterUI",
+                        "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.": "J'ai contribué à la bibliothèque open-source MonsterUI, qui fournit des composants UI pour les applications web Python. Ma pull request #30 a ajouté de nouvelles fonctionnalités et améliorations à la bibliothèque.",
+                        "View PR on GitHub": "Voir la PR sur GitHub",
+                        "About Me": "À propos de moi",
+                        "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅": "Je suis diplômé en informatique de l'UCAO à Cotonou. Actuellement, je travaille comme développeur logiciel freelance et contribue activement à divers projets open-source pour améliorer mes compétences en développement full-stack et technologies cloud. En dehors du codage, j'aime jouer au basketball, écouter de la musique et voyager. Anecdote amusante : j'ai passé 3 heures à déboguer pour réaliser que j'avais oublié de sauvegarder le fichier. 😅",
+                        "Resume": "CV",
+                        "Things I Can Do Without Googling... Mostly": "Choses que je peux faire sans Googler... en grande partie",
+                        "GitHub Stats & Contributions": "Statistiques et contributions GitHub",
+                        "Let's Connect": "Connectons-nous",
+                        "Feel free to reach out to me via email.": "N'hésitez pas à me contacter par email.",
+                        "Send Email": "Envoyer un email",
+                        "© 2025 Chilavert N'dah": "© 2025 Chilavert N'dah"
+                    }
+                };
+
+                let currentLang = 'en';
+
+                function updateLanguage(lang) {
+                    currentLang = lang;
+                    document.querySelectorAll('[data-translate]').forEach(element => {
+                        const key = element.getAttribute('data-translate');
+                        if (translations[lang][key]) {
+                            element.textContent = translations[lang][key];
+                        }
+                    });
+                }
+
+                const langSelector = document.getElementById('language-selector');
+                const mobileLangSelector = document.getElementById('mobile-language-selector');
+
+                langSelector.addEventListener('change', function() {
+                    updateLanguage(this.value);
+                    mobileLangSelector.value = this.value; // Synchroniser avec le mobile
+                });
+
+                mobileLangSelector.addEventListener('change', function() {
+                    updateLanguage(this.value);
+                    langSelector.value = this.value; // Synchroniser avec le desktop
+                });
+
+                // Initialisation en anglais
+                updateLanguage('en');
             });
         </script>
         <style>
@@ -583,8 +717,8 @@
                <div class="uk-container max-w-7xl mx-auto px-4">
                  <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
 <a href="#" class="flex items-center"><img src="./image/logo.png" alt="Logo" loading="lazy" class="nav-logo"></a>                   <div class="hidden md:flex">
-                     <div class="uk-flex uk-flex-row uk-flex-middle gap-2">
-<a href="#work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="https://github.com/99ch" target="_blank" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">GitHub</a>                     </div>
+                     <div class="uk-flex uk-flex-row uk-flex-middle gap-2 items-center">
+<a href="#work" data-translate="Work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" data-translate="About" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="https://github.com/99ch" target="_blank" data-translate="GitHub" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">GitHub</a><select id="language-selector" class="uk-select language-selector" name="language-selector"><option value="en">English</option><option value="fr">Français</option></select>                     </div>
                    </div>
 <button aria-label="Toggle mobile menu" type="submit" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" name="mobile-menu-button">                     <div class="flex flex-col justify-center items-center">
 <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>                     </div>
@@ -592,21 +726,21 @@
                </div>
                <div id="mobile-menu" class="hidden bg-slate-900 md:hidden">
                  <div class="py-2">
-<a href="#work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a><a href="#about" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a><a href="https://github.com/99ch" target="_blank" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3">GitHub</a>                 </div>
+<a href="#work" data-translate="Work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a><a href="#about" data-translate="About" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a><a href="https://github.com/99ch" target="_blank" data-translate="GitHub" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">GitHub</a><select id="mobile-language-selector" class="uk-select language-selector" name="mobile-language-selector"><option value="en">English</option><option value="fr">Français</option></select>                 </div>
                </div>
              </div>
              <div class="uk-section hero-bg">
-<span data-animation="fadeInLeft" class="vertical-logo animate-on-scroll">Think different</span>               <div class="hero-content">
+<span data-translate="Think different" data-animation="fadeInLeft" class="vertical-logo animate-on-scroll">Think different</span>               <div class="hero-content">
                  <div class="hero-title">
-                   <h1 data-animation="fadeInDown" class="uk-h1 text-5xl font-bold text-white animate-on-scroll">Chilavert N&#x27;dah</h1>
-                   <p data-animation="fadeInUp" class="text-xl text-blue-100 animate-on-scroll">Software Developer</p>
+                   <h1 data-translate="Chilavert N'dah" data-animation="fadeInDown" class="uk-h1 text-5xl font-bold text-white animate-on-scroll">Chilavert N&#x27;dah</h1>
+                   <p data-translate="Software Developer" data-animation="fadeInUp" class="text-xl text-blue-100 animate-on-scroll">Software Developer</p>
                  </div>
-<button onclick="location.href='#contact'" data-animation="fadeIn" type="submit" class="uk-button contact-button bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors animate-on-scroll">Contact</button>                 <div class="services-section">
-                   <h3 data-animation="fadeInLeft" class="uk-h3 text-white text-lg mb-2 animate-on-scroll">Services</h3>
+<a href="tel:+2290144432820" data-animation="fadeIn" class="contact-button bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors animate-on-scroll"><i class="fas fa-phone"></i><span data-translate="Call">Call</span></a><a href="https://wa.me/+2290144432820" target="_blank" data-animation="fadeIn" class="whatsapp-button text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors animate-on-scroll"><i class="fab fa-whatsapp"></i><span data-translate="Text">Text</span></a>                 <div class="services-section">
+                   <h3 data-translate="Services" data-animation="fadeInLeft" class="uk-h3 text-white text-lg mb-2 animate-on-scroll">Services</h3>
                    <ul class="list-none">
-                     <li data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Full-Stack Development</li>
-                     <li data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Open Source Contributions</li>
-                     <li data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">UI/UX Design</li>
+                     <li data-translate="Web Site" data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Web Site</li>
+                     <li data-translate="Web Application" data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Web Application</li>
+                     <li data-translate="Mobile Application" data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Mobile Application</li>
                    </ul>
                  </div>
                </div>
@@ -614,18 +748,18 @@
              <div class="uk-section ">
                <div class="uk-container mt-5 uk-container-xlarge">
                  <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="work">
-                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Projects</h2>
+                   <h2 data-translate="Projects" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Projects</h2>
                    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8">
                      <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
                        <div class="uk-card-body space-y-6">
                          <div class="overflow-hidden">
 <img src="./image/mc-agence.png" loading="lazy" class="w-full h-auto transition-transform">                         </div>
                          <div class="uk-card-body flex flex-col">
-                           <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MC Agence Website</h3>
-                           <p class="text-slate-400 text-sm mb-4">A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.</p>
+                           <h3 data-translate="MC Agence Website" class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MC Agence Website</h3>
+                           <p data-translate="A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach." class="text-slate-400 text-sm mb-4">A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.</p>
                            <div class="flex flex-wrap mt-2">
 <span class="project-tech-badge">Webflow</span><span class="project-tech-badge">Responsive Design</span><span class="project-tech-badge">UI/UX</span>                           </div>
-<a href="https://mc-agence.webflow.io" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">Visit Website</a>                         </div>
+<a href="https://mc-agence.webflow.io" target="_blank" data-translate="Visit Website" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">Visit Website</a>                         </div>
                        </div>
                      </div>
                      <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
@@ -633,11 +767,11 @@
                          <div class="overflow-hidden">
 <img src="./image/monsterui.png" loading="lazy" class="w-full h-auto transition-transform">                         </div>
                          <div class="uk-card-body flex flex-col">
-                           <h3 class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MonsterUI Library Contribution</h3>
-                           <p class="text-slate-400 text-sm mb-4">Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.</p>
+                           <h3 data-translate="MonsterUI Library Contribution" class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MonsterUI Library Contribution</h3>
+                           <p data-translate="Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library." class="text-slate-400 text-sm mb-4">Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.</p>
                            <div class="flex flex-wrap mt-2">
 <span class="project-tech-badge">Python</span><span class="project-tech-badge">Open Source</span><span class="project-tech-badge">UI Components</span>                           </div>
-<a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">View PR on GitHub</a>                         </div>
+<a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" data-translate="View PR on GitHub" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">View PR on GitHub</a>                         </div>
                        </div>
                      </div>
                    </div>
@@ -647,19 +781,19 @@
              <div class="uk-section ">
                <div class="uk-container mt-5 uk-container-xlarge">
                  <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="about">
-                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">About Me</h2>
+                   <h2 data-translate="About Me" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">About Me</h2>
                    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                      <div class="flex items-center justify-center">
 <img src="image/full_profil.png" loading="lazy" data-animation="fadeInLeft" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-slate-700/20 animate-on-scroll" style="max-width: 500px;">                     </div>
                      <div class="flex flex-col items-start">
-                       <p data-animation="fadeInRight" class="text-xl max-w-2xl leading-relaxed text-slate-300 animate-on-scroll mb-12">
+                       <p data-translate="I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅" data-animation="fadeInRight" class="text-xl max-w-2xl leading-relaxed text-slate-300 animate-on-scroll mb-12">
                             I&#x27;m a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and 
                             actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. 
                             Outside of coding, I enjoy playing basketball, listening to music, and traveling. 
                             Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅
                         </p>
                        <div class="uk-flex uk-flex-row uk-flex-middle space-x-4">
-<a href="https://drive.google.com/drive/folders/1lI8KVnN6aZ6uaj7JpwG91GhEB3we0iIX?usp=drive_link" target="_blank" data-animation="fadeInLeft" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Resume</a>                       </div>
+<a href="https://drive.google.com/drive/folders/1lI8KVnN6aZ6uaj7JpwG91GhEB3we0iIX?usp=drive_link" target="_blank" data-translate="Resume" data-animation="fadeInLeft" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Resume</a>                       </div>
                      </div>
                    </div>
                  </div>
@@ -668,7 +802,7 @@
              <div class="uk-section ">
                <div class="uk-container mt-5 uk-container-xlarge">
                  <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="skills">
-                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Things I Can Do Without Googling... Mostly</h2>
+                   <h2 data-translate="Things I Can Do Without Googling... Mostly" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Things I Can Do Without Googling... Mostly</h2>
                    <div class="flex flex-wrap justify-center gap-4 skills">
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Python"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Django"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="C++"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="HTML"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="CSS"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Bootstrap"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="JavaScript"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Firebase"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Dart"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Flutter"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="LaTeX"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Git"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="TensorFlow"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="VS Code">                   </div>
                  </div>
@@ -677,7 +811,7 @@
              <div class="uk-section ">
                <div class="uk-container mt-5 uk-container-xlarge">
                  <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="github">
-                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats &amp; Contributions</h2>
+                   <h2 data-translate="GitHub Stats &amp; Contributions" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats &amp; Contributions</h2>
                    <div class="github-triangle-layout flex flex-col gap-12 h-full">
 <img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" loading="lazy" data-animation="fadeInDown" class="w-full mb-8 rounded-lg animate-on-scroll">                     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="rounded-lg animate-on-scroll">                       <div class="h-full">
@@ -690,9 +824,9 @@
              <div class="uk-section contact-section">
                <div class="uk-container mt-5 uk-container-xlarge">
                  <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32 contact-content" id="contact">
-                   <h2 data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Let&#x27;s Connect</h2>
-                   <p data-animation="fadeInUp" class="text-xl text-center mb-8 animate-on-scroll">Feel free to reach out to me via email.</p>
-<a href="mailto:chilavertndah99@gmail.com" data-animation="fadeIn" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Send Email</a>                 </div>
+                   <h2 data-translate="Let's Connect" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Let&#x27;s Connect</h2>
+                   <p data-translate="Feel free to reach out to me via email." data-animation="fadeInUp" class="text-xl text-center mb-8 animate-on-scroll">Feel free to reach out to me via email.</p>
+<a href="mailto:chilavertndah99@gmail.com" data-translate="Send Email" data-animation="fadeIn" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Send Email</a>                 </div>
                </div>
              </div>
              <div class="uk-section py-0 full-bleed-section">
@@ -703,8 +837,8 @@
 <a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" loading="lazy" class="h-8 w-8 animate__animated animate__bounce"></a>                     </div>
                      <div class="footer-marquee-container w-screen">
                        <div class="footer-marquee-wrapper">
-                         <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
-                         <p class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                         <p data-translate="© 2025 Chilavert N'dah" class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                         <p data-translate="© 2025 Chilavert N'dah" class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
                        </div>
                      </div>
                    </div>
