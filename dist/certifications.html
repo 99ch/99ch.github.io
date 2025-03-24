@@ -1,0 +1,588 @@
+ <!doctype html>
+ <html>
+   <head>
+     <title></title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js@1.0.12/fasthtml.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/surreal@main/surreal.js"></script><script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>     <link rel="stylesheet" href="https://unpkg.com/franken-ui@1.1.0/dist/css/core.min.css">
+<script type="module" src="https://unpkg.com/franken-ui@1.1.0/dist/js/core.iife.js"></script><script type="module" src="https://cdn.jsdelivr.net/gh/answerdotai/monsterui@main/monsterui/icon.iife.js"></script><script src="https://cdn.tailwindcss.com"></script><script>
+        const htmlElement = document.documentElement;
+        
+            if (
+                localStorage.getItem("mode") === "dark" ||
+                (!("mode" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                htmlElement.classList.add("dark");
+            } else {
+                htmlElement.classList.remove("dark");
+            }
+        
+        htmlElement.classList.add(localStorage.getItem("theme") || "uk-theme-blue");
+    </script>     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css">
+     <style>
+:root {
+  --p: from hsl(var(--primary)) l c h;
+  --pc: from hsl(var(--primary-foreground)) l c h;
+  --s: from hsl(var(--secondary)) l c h;
+  --sc: from hsl(var(--secondary-foreground)) l c h;
+  --b2: from hsl(var(--card-background)) l c h;
+  --b1: from hsl(var(--background)) l c h;
+  --bc: from hsl(var(--foreground)) l c h;
+  --b3: from hsl(var(--ring)) l c h;
+  --er: from hsl(var(--destructive)) l c h;
+  --erc: from hsl(var(--destructive-foreground)) l c h;
+}
+</style>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   </head>
+   <body class=" bg-background text-foreground">
+<main>       <div class="uk-container uk-container-xlarge">
+         <h1 class="uk-h1 "></h1>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+         <link rel="icon" href="/favicon.ico" type="image/x-icon">
+         <style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .animate__animated {
+            opacity: 1;
+            visibility: visible;
+        }
+        html {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            overflow-x: hidden;
+            background-color: #0f172a !important;
+            color: #f8fafc !important;
+            font-family: 'Montserrat', sans-serif;
+            background-image: 
+                linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px) !important;
+            background-size: 100% 24px, 24px 100% !important;
+            background-position: 0 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            padding-top: 64px;
+            margin-bottom: 0 !important;
+        }
+        .fixed-navbar {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            padding: 0 1.5rem;
+        }
+        .fixed-navbar a:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+        .nav-scrolled {
+            background-color: rgba(15, 23, 42, 0.95) !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .nav-logo {
+            height: 40px;
+            width: auto;
+        }
+        .hamburger-button {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        @media (max-width: 767px) {
+            .hamburger-button {
+                display: flex;
+            }
+        }
+        .hamburger-button:hover {
+            background-color: rgba(59, 130, 246, 0.2);
+        }
+        .hamburger-line {
+            width: 24px;
+            height: 2px;
+            background-color: white;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+        .full-bleed-section {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+        }
+        .footer-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .footer-marquee-container {
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .footer-marquee-wrapper {
+            display: inline-flex;
+            position: relative;
+            white-space: nowrap;
+            width: auto;
+        }
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+            white-space: nowrap;
+            width: max-content;
+        }
+        .footer-marquee-text {
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+        @media (max-width: 768px) {
+            .footer-marquee-text {
+                font-size: 3rem !important;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .footer-marquee-text {
+                font-size: 6rem !important;
+            }
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: rgba(30, 41, 59, 0.9);
+            border-radius: 8px;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .project-card img {
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover img {
+            transform: scale(1.03);
+        }
+        /* Grille pour toutes les tailles d'écran */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* 1 colonne sur mobile */
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .certifications-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur desktop */
+            }
+        }
+        .cert-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .dark.bg-slate-900 {
+            background-color: transparent !important;
+        }
+        .language-selector {
+            padding: 0.5rem;
+            background-color: rgba(59, 130, 246, 0.2);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+        .language-selector:hover {
+            background-color: rgba(59, 130, 246, 0.4);
+        }
+        @media (max-width: 767px) {
+            .language-selector {
+                width: auto;
+                margin: 0.5rem 1rem;
+            }
+        }
+    
+        </style>
+        <meta name="description" content="Certifications de Chilavert N'dah">
+        <meta name="keywords" content="Chilavert N'dah, certifications, développeur, full-stack">
+        <meta name="author" content="Chilavert N'dah">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const navbar = document.querySelector('.fixed-navbar');
+                let lastScrollY = window.scrollY;
+
+                navbar && window.addEventListener('scroll', function() {
+                    const currentScrollY = window.scrollY;
+                    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                        navbar.style.transform = 'translateY(-100%)';
+                    } else if (currentScrollY < lastScrollY || currentScrollY <= 100) {
+                        navbar.style.transform = 'translateY(0)';
+                        navbar.classList.toggle('nav-scrolled', currentScrollY > 50);
+                    }
+                    lastScrollY = currentScrollY;
+                });
+
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                mobileMenuButton && mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+
+                function createScrollAnimations() {
+                    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const animation = entry.target.getAttribute('data-animation');
+                                entry.target.classList.add('animate__animated', `animate__${animation}`);
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        threshold: 0.1
+                    });
+                    animatedElements.forEach(element => {
+                        observer.observe(element);
+                    });
+                }
+
+                createScrollAnimations();
+
+                const translations = {
+                    en: {
+                        "Home": "Home",
+                        "Work": "Work",
+                        "About": "About",
+                        "Certifications": "Certifications",
+                        "GitHub": "GitHub",
+                        "Microsoft Excel": "Microsoft Excel",
+                        "Microsoft through Coursera - Issued: Feb 2024": "Microsoft through Coursera - Issued: Feb 2024",
+                        "Think Like a Computer: The Logic of Programming": "Think Like a Computer: The Logic of Programming",
+                        "OpenClassrooms - Issued: Jan 2024": "OpenClassrooms - Issued: Jan 2024",
+                        "Foundations of Cybersecurity": "Foundations of Cybersecurity",
+                        "Google through Coursera - Issued: Jan 2024": "Google through Coursera - Issued: Jan 2024",
+                        "Artificial Intelligence": "Artificial Intelligence",
+                        "Cheikh Hamidou Kane Digital University - Issued: Mar 2024": "Cheikh Hamidou Kane Digital University - Issued: Mar 2024",
+                        "Data Security": "Data Security",
+                        "Cisco through Coursera - Issued: Jul 2024": "Cisco through Coursera - Issued: Jul 2024",
+                        "Visual Elements of User Interface Design": "Visual Elements of User Interface Design",
+                        "California Institute of the Arts through Coursera - Issued: Jul 2024": "California Institute of the Arts through Coursera - Issued: Jul 2024",
+                        "Software Design and Project Management": "Software Design and Project Management",
+                        "The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024": "The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024",
+                        "Responsive Web Design": "Responsive Web Design",
+                        "freeCodeCamp - Issued: Aug 2024": "freeCodeCamp - Issued: Aug 2024",
+                        "Programming in Python": "Programming in Python",
+                        "Meta through Coursera - Issued: Jul 2024": "Meta through Coursera - Issued: Jul 2024",
+                        "Introduction to Git": "Introduction to Git",
+                        "Microsoft Learn - Issued: Aug 2024": "Microsoft Learn - Issued: Aug 2024",
+                        "JavaScript Algorithms and Data Structures": "JavaScript Algorithms and Data Structures",
+                        "freeCodeCamp - Issued: Sep 2024": "freeCodeCamp - Issued: Sep 2024",
+                        "Introduction to GitHub": "Introduction to GitHub",
+                        "Microsoft Learn - Issued: Aug 2024": "Microsoft Learn - Issued: Aug 2024",
+                        "Verify": "Verify",
+                        "Back": "Back",
+                        "© 2025 Chilavert N'dah": "© 2025 Chilavert N'dah"
+                    },
+                    fr: {
+                        "Home": "Accueil",
+                        "Work": "Travaux",
+                        "About": "À propos",
+                        "Certifications": "Certifications",
+                        "GitHub": "GitHub",
+                        "Microsoft Excel": "Microsoft Excel",
+                        "Microsoft through Coursera - Issued: Feb 2024": "Microsoft via Coursera - Délivré : Fév 2024",
+                        "Think Like a Computer: The Logic of Programming": "Penser comme un ordinateur : La logique de la programmation",
+                        "OpenClassrooms - Issued: Jan 2024": "OpenClassrooms - Délivré : Jan 2024",
+                        "Foundations of Cybersecurity": "Fondations de la cybersécurité",
+                        "Google through Coursera - Issued: Jan 2024": "Google via Coursera - Délivré : Jan 2024",
+                        "Artificial Intelligence": "Intelligence artificielle",
+                        "Cheikh Hamidou Kane Digital University - Issued: Mar 2024": "Université Numérique Cheikh Hamidou Kane - Délivré : Mar 2024",
+                        "Data Security": "Sécurité des données",
+                        "Cisco through Coursera - Issued: Jul 2024": "Cisco via Coursera - Délivré : Juil 2024",
+                        "Visual Elements of User Interface Design": "Éléments visuels de la conception d'interface utilisateur",
+                        "California Institute of the Arts through Coursera - Issued: Jul 2024": "California Institute of the Arts via Coursera - Délivré : Juil 2024",
+                        "Software Design and Project Management": "Conception de logiciels et gestion de projets",
+                        "The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024": "Université des Sciences et Technologies de Hong Kong via Coursera - Délivré : Juil 2024",
+                        "Responsive Web Design": "Conception Web responsive",
+                        "freeCodeCamp - Issued: Aug 2024": "freeCodeCamp - Délivré : Août 2024",
+                        "Programming in Python": "Programmation en Python",
+                        "Meta through Coursera - Issued: Jul 2024": "Meta via Coursera - Délivré : Juil 2024",
+                        "Introduction to Git": "Introduction à Git",
+                        "Microsoft Learn - Issued: Aug 2024": "Microsoft Learn - Délivré : Août 2024",
+                        "JavaScript Algorithms and Data Structures": "Algorithmes et structures de données JavaScript",
+                        "freeCodeCamp - Issued: Sep 2024": "freeCodeCamp - Délivré : Sep 2024",
+                        "Introduction to GitHub": "Introduction à GitHub",
+                        "Microsoft Learn - Issued: Aug 2024": "Microsoft Learn - Délivré : Août 2024",
+                        "Verify": "Vérifier",
+                        "Back": "Retour",
+                        "© 2025 Chilavert N'dah": "© 2025 Chilavert N'dah"
+                    }
+                };
+
+                let currentLang = 'en';
+
+                function updateLanguage(lang) {
+                    currentLang = lang;
+                    document.querySelectorAll('[data-translate]').forEach(element => {
+                        const key = element.getAttribute('data-translate');
+                        if (translations[lang][key]) {
+                            element.textContent = translations[lang][key];
+                        }
+                    });
+                }
+
+                const langSelector = document.getElementById('language-selector');
+                const mobileLangSelector = document.getElementById('mobile-language-selector');
+
+                langSelector.addEventListener('change', function() {
+                    updateLanguage(this.value);
+                    mobileLangSelector.value = this.value;
+                });
+
+                mobileLangSelector.addEventListener('change', function() {
+                    updateLanguage(this.value);
+                    langSelector.value = this.value;
+                });
+
+                updateLanguage('en');
+
+                // Sauvegarder la position de défilement avant de quitter la page
+                document.querySelectorAll('a[href="/certifications"]').forEach(link => {
+                    link.addEventListener('click', function() {
+                        sessionStorage.setItem('scrollPosition', window.scrollY);
+                    });
+                });
+
+                // Restaurer la position de défilement après retour
+                const savedPosition = sessionStorage.getItem('scrollPosition');
+                if (savedPosition) {
+                    window.scrollTo(0, parseInt(savedPosition));
+                    sessionStorage.removeItem('scrollPosition'); // Nettoyer après utilisation
+                }
+            });
+        </script>
+        <style>
+    </style>
+         <div>
+           <div id="main-content" class="dark bg-slate-900 text-slate-100">
+             <div class="fixed-navbar">
+               <div class="uk-container max-w-7xl mx-auto px-4">
+                 <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
+<a href="/" class="flex items-center"><img src="./image/logo.png" alt="Logo" loading="lazy" class="nav-logo"></a>                   <div class="hidden md:flex">
+                     <div class="uk-flex uk-flex-row uk-flex-middle gap-2 items-center">
+<a href="/" data-translate="Home" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Home</a><a href="#work" data-translate="Work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" data-translate="About" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="/certifications" data-translate="Certifications" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Certifications</a><a href="https://github.com/99ch" target="_blank" data-translate="GitHub" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">GitHub</a><select id="language-selector" class="uk-select language-selector" name="language-selector"><option value="en">English</option><option value="fr">Français</option></select>                     </div>
+                   </div>
+<button aria-label="Toggle mobile menu" type="submit" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" name="mobile-menu-button">                     <div class="flex flex-col justify-center items-center">
+<span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>                     </div>
+</button>                 </div>
+               </div>
+               <div id="mobile-menu" class="hidden bg-slate-900 md:hidden">
+                 <div class="py-2">
+<a href="/" data-translate="Home" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Home</a><a href="#work" data-translate="Work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a><a href="#about" data-translate="About" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a><a href="/certifications" data-translate="Certifications" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Certifications</a><a href="https://github.com/99ch" target="_blank" data-translate="GitHub" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">GitHub</a><select id="mobile-language-selector" class="uk-select language-selector" name="mobile-language-selector"><option value="en">English</option><option value="fr">Français</option></select>                 </div>
+               </div>
+             </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="certifications">
+                   <h2 data-translate="Certifications" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Certifications</h2>
+                   <div class="certifications-grid">
+                     <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert1.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Programming in Python" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Programming in Python</h3>
+                           <p data-translate="Meta through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Meta through Coursera - Issued: Jul 2024</p>
+<a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert2.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="JavaScript Algorithms and Data Structures" class="uk-h3 text-xl font-medium mb-2 text-slate-100">JavaScript Algorithms and Data Structures</h3>
+                           <p data-translate="freeCodeCamp - Issued: Sep 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Sep 2024</p>
+<a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert3.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Artificial Intelligence" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Artificial Intelligence</h3>
+                           <p data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024" class="text-slate-400 text-sm mb-4">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</p>
+<a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert4.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Microsoft Excel" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Microsoft Excel</h3>
+                           <p data-translate="Microsoft through Coursera - Issued: Feb 2024" class="text-slate-400 text-sm mb-4">Microsoft through Coursera - Issued: Feb 2024</p>
+<a href="https://coursera.org/verify/D25B5LG4WQCF" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert5.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Think Like a Computer: The Logic of Programming" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Think Like a Computer: The Logic of Programming</h3>
+                           <p data-translate="OpenClassrooms - Issued: Jan 2024" class="text-slate-400 text-sm mb-4">OpenClassrooms - Issued: Jan 2024</p>
+<a href="#" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert6.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Foundations of Cybersecurity" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Foundations of Cybersecurity</h3>
+                           <p data-translate="Google through Coursera - Issued: Jan 2024" class="text-slate-400 text-sm mb-4">Google through Coursera - Issued: Jan 2024</p>
+<a href="https://coursera.org/verify/6GN7VCA2WMAX" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert7.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Data Security" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Data Security</h3>
+                           <p data-translate="Cisco through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Cisco through Coursera - Issued: Jul 2024</p>
+<a href="https://coursera.org/verify/7H8GLGF5TGUC" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert8.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Visual Elements of User Interface Design" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Visual Elements of User Interface Design</h3>
+                           <p data-translate="California Institute of the Arts through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">California Institute of the Arts through Coursera - Issued: Jul 2024</p>
+<a href="https://coursera.org/verify/S63NWXR2XG4J" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert9.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Software Design and Project Management" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Software Design and Project Management</h3>
+                           <p data-translate="The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024</p>
+<a href="https://coursera.org/verify/MRTJ7J8UA3AA" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert10.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Responsive Web Design" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Responsive Web Design</h3>
+                           <p data-translate="freeCodeCamp - Issued: Aug 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Aug 2024</p>
+<a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/responsive-web-design" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert11.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Introduction to Git" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Introduction to Git</h3>
+                           <p data-translate="Microsoft Learn - Issued: Aug 2024" class="text-slate-400 text-sm mb-4">Microsoft Learn - Issued: Aug 2024</p>
+<a href="https://learn.microsoft.com/en-us/users/chilavertndah-3078/achievements/9fc7nyxu?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="image/certifications/cert12.png" loading="lazy" class="cert-image">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="Introduction to GitHub" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Introduction to GitHub</h3>
+                           <p data-translate="Microsoft Learn - Issued: Aug 2024" class="text-slate-400 text-sm mb-4">Microsoft Learn - Issued: Aug 2024</p>
+<a href="https://learn.microsoft.com/en-us/users/chilavertndah-3078/achievements/pse97um4?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                         </div>
+                       </div>
+                     </div>
+                   </div>
+<a href="javascript:history.back()" data-translate="Back" data-animation="fadeIn" class="inline-block bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg mt-8 transition-colors animate-on-scroll">Back</a>                 </div>
+               </div>
+             </div>
+             <div class="uk-section py-0 full-bleed-section">
+               <div class="footer-container w-full">
+                 <div class="w-full">
+                   <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-0">
+<hr class="mb-12 border-blue-500/20">                     <div class="uk-flex uk-flex-row uk-flex-middle gap-4 mb-6 justify-center">
+<a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" loading="lazy" class="h-8 w-8 animate__animated animate__bounce"></a>                     </div>
+                     <div class="footer-marquee-container w-screen">
+                       <div class="footer-marquee-wrapper">
+                         <p data-translate="© 2025 Chilavert N'dah" class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                         <p data-translate="© 2025 Chilavert N'dah" class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+</main>   </body>
+ </html>
