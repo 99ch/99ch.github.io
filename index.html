@@ -1,409 +1,964 @@
-<!doctype html>
-<html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>Chilavert N'dah | Full-Stack Developer & Open Source Contributor</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <meta name="description" content="Portfolio of Chilavert N'dah, full-stack developer and open-source contributor crafting immersive digital experiences.">
-      <meta name="keywords" content="Chilavert N'dah, developer, freelance, full-stack, cloud, open source, portfolio">
-      <meta name="author" content="Chilavert N'dah">
-      <link rel="canonical" href="https://chilavertndah.com/">
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="https://chilavertndah.com/">
-      <meta property="og:title" content="Chilavert N'dah | Full-Stack Developer & Open Source Contributor">
-      <meta property="og:description" content="Building human-centric web apps, performant cloud backends, and impactful open-source contributions.">
-      <meta property="og:image" content="https://chilavertndah.com/image/full_profil.webp">
-      <meta property="og:image:alt" content="Portrait of Chilavert N'dah smiling in front of a geometric background">
-      <meta property="og:locale" content="en_US">
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Chilavert N'dah">
-      <meta name="twitter:description" content="Full-stack developer and open-source contributor available for freelance work.">
-      <meta name="twitter:image" content="https://chilavertndah.com/image/full_profil.webp">
-      <meta name="theme-color" content="#0f172a">
-      <link rel="icon" href="/favicon.ico" type="image/x-icon">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://unpkg.com/franken-ui@1.1.0/dist/css/core.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-      <link rel="stylesheet" href="/assets/css/main.css">
-      <script src="https://cdn.tailwindcss.com"></script>
-      <script defer src="/assets/js/main.js"></script>
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Chilavert N'dah",
-          "jobTitle": "Software Developer",
-          "url": "https://chilavertndah.com/",
-          "sameAs": [
-            "https://github.com/99ch",
-            "https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"
-          ],
-          "knowsAbout": ["Full-stack development", "Cloud", "Open Source"],
-          "image": "https://chilavertndah.com/image/full_profil.webp",
-          "email": "mailto:chilavertndah99@gmail.com"
+ <!doctype html>
+ <html>
+   <head>
+     <title></title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js@1.0.12/fasthtml.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/surreal@main/surreal.js"></script><script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script>     <link rel="stylesheet" href="https://unpkg.com/franken-ui@1.1.0/dist/css/core.min.css">
+<script type="module" src="https://unpkg.com/franken-ui@1.1.0/dist/js/core.iife.js"></script><script type="module" src="https://cdn.jsdelivr.net/gh/answerdotai/monsterui@main/monsterui/icon.iife.js"></script><script src="https://cdn.tailwindcss.com"></script><script>
+        const htmlElement = document.documentElement;
+        
+            if (
+                localStorage.getItem("mode") === "dark" ||
+                (!("mode" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                htmlElement.classList.add("dark");
+            } else {
+                htmlElement.classList.remove("dark");
+            }
+        
+        htmlElement.classList.add(localStorage.getItem("theme") || "uk-theme-blue");
+    </script>     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css">
+     <style>
+:root {
+  --p: from hsl(var(--primary)) l c h;
+  --pc: from hsl(var(--primary-foreground)) l c h;
+  --s: from hsl(var(--secondary)) l c h;
+  --sc: from hsl(var(--secondary-foreground)) l c h;
+  --b2: from hsl(var(--card-background)) l c h;
+  --b1: from hsl(var(--background)) l c h;
+  --bc: from hsl(var(--foreground)) l c h;
+  --b3: from hsl(var(--ring)) l c h;
+  --er: from hsl(var(--destructive)) l c h;
+  --erc: from hsl(var(--destructive-foreground)) l c h;
+}
+</style>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   </head>
+   <body class=" bg-background text-foreground">
+<main>       <div class="uk-container uk-container-xlarge">
+         <h1 class="uk-h1 "></h1>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+         <link rel="icon" href="/favicon.ico" type="image/x-icon">
+         <style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
         }
-      </script>
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Chilavert N'dah Portfolio",
-          "url": "https://chilavertndah.com/",
-          "potentialAction": {
-            "@type": "ContactAction",
-            "target": "mailto:chilavertndah99@gmail.com",
-            "name": "Contact Chilavert"
-          }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
-      </script>
-    </head>
-    <body class="page-home bg-background text-foreground">
-      <div id="splash-screen" class="splash-screen" role="dialog" aria-live="polite" aria-label="Loading portfolio">
-        <picture>
-          <source srcset="/image/logo.webp" type="image/webp">
-          <img src="/image/logo.png" alt="Logo Chilavert N'dah" class="splash-logo" width="180" height="180" data-priority="true">
-        </picture>
-        <div id="splash-greeting" class="splash-greeting" role="status" aria-live="polite"></div>
-        <div class="splash-loading" aria-hidden="true">
-          <div id="loading-progress" class="loading-progress"></div>
-        </div>
-      </div>
-      <main id="main-content" class="dark bg-slate-900 text-slate-100" style="opacity: 0; transition: opacity 1s ease-in-out;" aria-hidden="true">
-        <div data-partial="navbar" data-swap="outer">
-          <noscript>
-            <header class="fixed-navbar">
-              <div class="uk-container max-w-7xl mx-auto px-4">
-                <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
-                  <a href="/" class="flex items-center" aria-label="Aller à l'accueil">
-                    <picture>
-                      <source srcset="/image/logo.webp" type="image/webp">
-                      <img src="/image/logo.png" alt="Logo Chilavert N'dah" width="120" height="48" class="nav-logo" decoding="async">
-                    </picture>
-                  </a>
-                  <div class="hidden md:flex">
-                    <nav class="uk-flex uk-flex-row uk-flex-middle gap-2 items-center" aria-label="Navigation principale">
-                      <a href="/" data-translate="Home" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Home</a>
-                      <a href="/work.html" data-translate="Work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a>
-                      <a href="/about.html" data-translate="About" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a>
-                      <a href="/certifications" data-translate="Certifications" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Certifications</a>
-                      <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="GitHub" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">GitHub</a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-            </header>
-          </noscript>
-        </div>
-        <section class="uk-section hero-bg" id="hero" aria-labelledby="hero-heading">
-          <span data-translate="Think different" data-animation="fadeInLeft" class="vertical-logo animate-on-scroll">Think different</span>
-          <div class="hero-content">
-            <div class="hero-title">
-              <p class="text-sm uppercase tracking-[0.4rem] text-blue-200 animate-on-scroll" data-animation="fadeIn">Full-stack • Cloud • Open Source</p>
-              <h1 id="hero-heading" data-translate="Chilavert N'Dah" data-animation="fadeInDown" class="uk-h1 text-5xl md:text-6xl font-bold text-white animate-on-scroll">Chilavert N'dah</h1>
-              <p data-translate="Software Developer" data-animation="fadeInUp" class="text-xl md:text-2xl text-blue-100 animate-on-scroll">Software Developer</p>
-              <p class="mt-6 max-w-2xl text-right text-slate-200 animate-on-scroll" data-animation="fadeInUp">I design resilient software, craft buttery-smooth web experiences, and make sure every release ships with purpose.</p>
-            </div>
-            <a href="tel:+2290149674848" data-animation="fadeIn" class="contact-button px-6 py-3 rounded-lg transition-colors animate-on-scroll" aria-label="Call Chilavert">
-              <i class="fas fa-phone"></i><span data-translate="Call">Call</span>
-            </a>
-            <a href="https://wa.me/+2290149674848" target="_blank" rel="noreferrer" data-animation="fadeIn" class="whatsapp-button px-6 py-3 rounded-lg transition-colors animate-on-scroll" aria-label="Send a WhatsApp message">
-              <i class="fab fa-whatsapp"></i><span data-translate="Text">Text</span>
-            </a>
-            <div class="services-section" aria-label="Services">
-              <h3 data-translate="Services" data-animation="fadeInLeft" class="uk-h3 text-white text-lg mb-2 animate-on-scroll">Services</h3>
-              <ul class="list-none space-y-1 text-sm">
-                <li data-translate="Web Site" data-animation="fadeInLeft" class="text-white/90 hover:text-blue-300 animate-on-scroll">Web Site</li>
-                <li data-translate="Web Application" data-animation="fadeInLeft" class="text-white/90 hover:text-blue-300 animate-on-scroll">Web Application</li>
-                <li data-translate="Mobile Application" data-animation="fadeInLeft" class="text-white/90 hover:text-blue-300 animate-on-scroll">Mobile Application</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section class="uk-section" id="work" aria-labelledby="projects-heading">
-          <div class="uk-container uk-container-xlarge">
-            <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-24">
-              <p class="text-sm uppercase tracking-[0.4rem] text-blue-300 mb-3" data-animation="fadeIn">Selected work</p>
-              <h2 id="projects-heading" data-translate="Projects" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Projects</h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
-                <article class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0" data-animation="fadeInLeft">
-                  <picture>
-                    <source srcset="/image/mc-agence.webp" type="image/webp">
-                    <source srcset="/image/mc-agence.png" type="image/png">
-                    <img src="/image/mc-agence.png" alt="Homepage mockup of MC Agence" class="w-full h-auto transition-transform" width="640" height="360">
-                  </picture>
-                  <div class="uk-card-body space-y-4">
-                    <h3 data-translate="MC Agence Website" class="uk-h3 text-2xl font-medium text-slate-100">MC Agence Website</h3>
-                    <p data-translate="MC Agence Summary" class="text-slate-300">Localized a marketing site with human copy, cinematic scroll animations, and analytics-ready forms that drive leads on autopilot.</p>
-                    <ul class="text-sm text-slate-300 space-y-1">
-                      <li><strong data-translate="Role">Role</strong>: <span data-translate="MC Role">Lead designer & Webflow developer</span></li>
-                      <li><strong data-translate="Stack">Stack</strong>: Webflow, GSAP, Fathom Analytics</li>
-                      <li><strong data-translate="Impact">Impact</strong>: <span data-translate="MC Impact">+42% qualified demos in 8 weeks</span></li>
-                    </ul>
-                    <div class="flex flex-wrap mt-2">
-                      <span class="project-tech-badge">Webflow</span>
-                      <span class="project-tech-badge">Responsive UI</span>
-                      <span class="project-tech-badge">A/B Testing</span>
-                    </div>
-                    <a href="https://mc-agence.webflow.io" target="_blank" rel="noreferrer" data-translate="Visit Website" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-2 transition-colors">Visit Website<i class="fas fa-arrow-up-right-from-square text-sm"></i></a>
-                  </div>
-                </article>
-                <article class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0" data-animation="fadeInRight">
-                  <picture>
-                    <source srcset="/image/monsterui.webp" type="image/webp">
-                    <source srcset="/image/monsterui.png" type="image/png">
-                    <img src="/image/monsterui.png" alt="Components contributed to MonsterUI" class="w-full h-auto transition-transform" width="640" height="360">
-                  </picture>
-                  <div class="uk-card-body space-y-4">
-                    <h3 data-translate="MonsterUI Library Contribution" class="uk-h3 text-2xl font-medium text-slate-100">MonsterUI Library Contribution</h3>
-                    <p data-translate="Monster Summary" class="text-slate-300">Extended MonsterUI with accessible overlays, keyboard tooling, and snapshot tests powering Python micro-frontends.</p>
-                    <ul class="text-sm text-slate-300 space-y-1">
-                      <li><strong data-translate="Role">Role</strong>: <span data-translate="Monster Role">Open-source maintainer</span></li>
-                      <li><strong data-translate="Stack">Stack</strong>: Python, FastHTML, Playwright, Vitest</li>
-                      <li><strong data-translate="Impact">Impact</strong>: <span data-translate="Monster Impact">Reduced UI regressions by 30% across adopters</span></li>
-                    </ul>
-                    <div class="flex flex-wrap mt-2">
-                      <span class="project-tech-badge">Python</span>
-                      <span class="project-tech-badge">Components</span>
-                      <span class="project-tech-badge">Testing</span>
-                    </div>
-                    <a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" rel="noreferrer" data-translate="View PR on GitHub" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-2 transition-colors">View PR on GitHub<i class="fas fa-code-branch text-sm"></i></a>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="uk-section" id="about" aria-labelledby="about-heading">
-        <div class="uk-container uk-container-xlarge">
-          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-24">
-            <h2 id="about-heading" data-translate="About Me" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">About Me</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full items-center">
-              <div class="flex items-center justify-center">
-                <picture>
-                  <source srcset="/image/full_profil.webp" type="image/webp">
-                  <source srcset="/image/full_profil.png" type="image/png">
-                  <img src="/image/full_profil.png" alt="Portrait of Chilavert smiling" class="rounded-3xl border border-slate-700/40 shadow-2xl" width="520" height="640" loading="lazy">
-                </picture>
-              </div>
-              <div class="flex flex-col space-y-6 text-slate-200">
-                <p data-translate="About Paragraph" class="text-xl leading-relaxed">Computer Science graduate from UCAO, freelance builder, and relentless open-source learner. I thrive at the intersection of product strategy, inclusive design, and cloud automation.</p>
-                <p data-translate="About Paragraph 2">When I&apos;m not refactoring or reviewing PRs, you can find me on a basketball court, curating playlists, or experimenting with travel photography.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div class="rounded-2xl bg-slate-800/60 border border-slate-700/40 p-4">
-                    <p class="text-3xl font-bold text-white">20+</p>
-                    <p class="text-slate-400 text-sm" data-translate="Production Deployments">Production deployments</p>
-                  </div>
-                  <div class="rounded-2xl bg-slate-800/60 border border-slate-700/40 p-4">
-                    <p class="text-3xl font-bold text-white">5</p>
-                    <p class="text-slate-400 text-sm" data-translate="Open Source Projects">Open source projects</p>
-                  </div>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                  <a href="https://drive.google.com/drive/folders/1U5WnFJoznvbjn5cFtCkWaqCLff0av-R-?usp=sharing" target="_blank" rel="noreferrer" data-translate="Resume" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors">Resume</a>
-                  <a href="#contact" class="text-lg border border-blue-500 text-blue-200 hover:bg-blue-500/20 px-6 py-3 rounded-lg transition-colors" data-translate="Let's Connect">Let&apos;s Connect</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="uk-section" id="skills" aria-labelledby="skills-heading">
-        <div class="uk-container uk-container-xlarge">
-          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-24">
-            <h2 id="skills-heading" data-translate="Things I Can Do Without Googling... Mostly" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-10 animate-on-scroll">Things I Can Do Without Googling... Mostly</h2>
-            <div class="flex flex-wrap justify-center gap-4 skills" aria-label="Tech stack">
-              <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python logo" loading="lazy" class="h-16 w-16 mx-2 animate-on-scroll" data-animation="fadeIn" title="Python">
-              <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" alt="Django logo" loading="lazy" class="h-16 w-16 mx-2 animate-on-scroll" data-animation="fadeIn" title="Django">
-              <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JavaScript logo" loading="lazy" class="h-16 w-16 mx-2 animate-on-scroll" data-animation="fadeIn" title="JavaScript">
-              <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React logo" loading="lazy" class="h-16 w-16 mx-2 animate-on-scroll" data-animation="fadeIn" title="React">
-              <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" alt="Flutter logo" loading="lazy" class="h-16 w-16 mx-2 animate-on-scroll" data-animation="fadeIn" title="Flutter">
-              <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png" alt="Docker logo" loading="lazy" class="h-16 w-16 mx-2 animate-on-scroll" data-animation="fadeIn" title="Docker">
-              <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/aws/aws.png" alt="AWS logo" loading="lazy" class="h-16 w-16 mx-2 animate-on-scroll" data-animation="fadeIn" title="AWS">
-              <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="Git logo" loading="lazy" class="h-16 w-16 mx-2 animate-on-scroll" data-animation="fadeIn" title="Git">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="uk-section" id="testimonials" aria-labelledby="testimonials-heading">
-        <div class="uk-container uk-container-xlarge">
-          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-24">
-            <h2 id="testimonials-heading" data-translate="Testimonials" class="uk-h2 text-4xl font-semibold mb-4 text-slate-100">Testimonials</h2>
-            <p data-translate="Testimonials Subtitle" class="text-slate-300 mb-10">What founders and teammates say after shipping together.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-              <figure class="project-card p-8" data-animation="fadeInLeft">
-                <blockquote class="text-lg text-slate-100">“We launched ahead of schedule because Chilavert anticipated every blocked dependency before it landed on my desk.”</blockquote>
-                <figcaption class="mt-6 text-slate-400">
-                  <strong class="text-white">Meryem K.</strong> · Growth Lead, MC Agence
-                </figcaption>
-              </figure>
-              <figure class="project-card p-8" data-animation="fadeInRight">
-                <blockquote class="text-lg text-slate-100">“His MonsterUI contribution raised our accessibility score overnight. Precise, polite, and pragmatic.”</blockquote>
-                <figcaption class="mt-6 text-slate-400">
-                  <strong class="text-white">Answer.Dev reviewer</strong>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="uk-section" id="insights" aria-labelledby="insights-heading">
-        <div class="uk-container uk-container-xlarge">
-          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-24">
-            <h2 id="insights-heading" data-translate="Latest Articles" class="uk-h2 text-4xl font-semibold mb-4 text-slate-100">Latest Articles</h2>
-            <p data-translate="Latest Articles Subtitle" class="text-slate-300 mb-10">Writing about delivery frameworks, developer experience, and freelancing lessons.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-              <article class="project-card p-8">
-                <p class="text-xs tracking-[0.4rem] text-blue-300 uppercase">Strategy</p>
-                <h3 class="text-2xl font-semibold text-white mt-2">Design hand-offs that engineers applaud</h3>
-                <p class="text-slate-300 mt-3">Checklist I use to move from Figma to production without back-and-forth or scope drift.</p>
-                <a href="https://github.com/99ch" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 mt-4 text-blue-300 hover:text-white">Read notes <i class="fas fa-arrow-right"></i></a>
-              </article>
-              <article class="project-card p-8">
-                <p class="text-xs tracking-[0.4rem] text-blue-300 uppercase">DX</p>
-                <h3 class="text-2xl font-semibold text-white mt-2">Reducing pull-request anxiety with better templates</h3>
-                <p class="text-slate-300 mt-3">Small automation I ship on client repos to keep reviewers focused on logic instead of logistics.</p>
-                <a href="https://github.com/99ch" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 mt-4 text-blue-300 hover:text-white">Read notes <i class="fas fa-arrow-right"></i></a>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="uk-section" id="certifications" aria-labelledby="certifications-heading">
-        <div class="uk-container uk-container-xlarge">
-          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-24">
-            <h2 id="certifications-heading" data-translate="Certifications" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Certifications</h2>
-            <div class="hidden md:block w-full">
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 certifications-grid">
-                <article class="project-card animate-on-scroll" data-animation="fadeInLeft">
-                  <picture>
-                    <source srcset="/image/certifications/cert1.webp" type="image/webp">
-                    <img src="/image/certifications/cert1.webp" alt="Programming in Python certificate" class="cert-image" width="480" height="340" loading="lazy">
-                  </picture>
-                  <div class="uk-card-body">
-                    <h3 data-translate="Programming in Python" class="uk-h3 text-xl font-medium text-slate-100">Programming in Python</h3>
-                    <p data-translate="Meta through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Meta through Coursera - Issued: Jul 2024</p>
-                    <a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                  </div>
-                </article>
-                <article class="project-card animate-on-scroll" data-animation="fadeIn">
-                  <picture>
-                    <source srcset="/image/certifications/cert2.webp" type="image/webp">
-                    <img src="/image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures certificate" class="cert-image" width="480" height="340" loading="lazy">
-                  </picture>
-                  <div class="uk-card-body">
-                    <h3 data-translate="JavaScript Algorithms and Data Structures" class="uk-h3 text-xl font-medium text-slate-100">JavaScript Algorithms and Data Structures</h3>
-                    <p data-translate="freeCodeCamp - Issued: Sep 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Sep 2024</p>
-                    <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                  </div>
-                </article>
-                <article class="project-card animate-on-scroll" data-animation="fadeInRight">
-                  <picture>
-                    <source srcset="/image/certifications/cert3.webp" type="image/webp">
-                    <img src="/image/certifications/cert3.webp" alt="Artificial Intelligence certificate" class="cert-image" width="480" height="340" loading="lazy">
-                  </picture>
-                  <div class="uk-card-body">
-                    <h3 data-translate="Artificial Intelligence" class="uk-h3 text-xl font-medium text-slate-100">Artificial Intelligence</h3>
-                    <p data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024" class="text-slate-400 text-sm mb-4">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</p>
-                    <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div class="md:hidden w-full">
-              <div class="certifications-carousel">
-                <article class="project-card" data-animation="fadeInLeft">
-                  <picture>
-                    <source srcset="/image/certifications/cert1.webp" type="image/webp">
-                    <img src="/image/certifications/cert1.webp" alt="Programming in Python certificate" class="cert-image" width="320" height="220" loading="lazy">
-                  </picture>
-                  <div class="uk-card-body">
-                    <h3 data-translate="Programming in Python" class="uk-h3 text-xl font-medium text-slate-100">Programming in Python</h3>
-                    <p data-translate="Meta through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Meta through Coursera - Issued: Jul 2024</p>
-                    <a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                  </div>
-                </article>
-                <article class="project-card" data-animation="fadeIn">
-                  <picture>
-                    <source srcset="/image/certifications/cert2.webp" type="image/webp">
-                    <img src="/image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures certificate" class="cert-image" width="320" height="220" loading="lazy">
-                  </picture>
-                  <div class="uk-card-body">
-                    <h3 data-translate="JavaScript Algorithms and Data Structures" class="uk-h3 text-xl font-medium text-slate-100">JavaScript Algorithms and Data Structures</h3>
-                    <p data-translate="freeCodeCamp - Issued: Sep 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Sep 2024</p>
-                    <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                  </div>
-                </article>
-                <article class="project-card" data-animation="fadeInRight">
-                  <picture>
-                    <source srcset="/image/certifications/cert3.webp" type="image/webp">
-                    <img src="/image/certifications/cert3.webp" alt="Artificial Intelligence certificate" class="cert-image" width="320" height="220" loading="lazy">
-                  </picture>
-                  <div class="uk-card-body">
-                    <h3 data-translate="Artificial Intelligence" class="uk-h3 text-xl font-medium text-slate-100">Artificial Intelligence</h3>
-                    <p data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024" class="text-slate-400 text-sm mb-4">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</p>
-                    <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <a href="/certifications.html" data-translate="See More" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg mt-8 transition-colors">See More<i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </section>
-      <section class="uk-section" id="github" aria-labelledby="github-heading">
-        <div class="uk-container uk-container-xlarge">
-          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-24">
-            <h2 id="github-heading" data-translate="GitHub Stats & Contributions" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats &amp; Contributions</h2>
-            <div class="flex flex-col gap-10 w-full">
-              <img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" alt="GitHub contribution streak" loading="lazy" class="rounded-xl animate-on-scroll" data-animation="fadeInDown">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a" alt="Most used languages" loading="lazy" class="rounded-xl animate-on-scroll" data-animation="fadeInUp">
-                <img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a" alt="GitHub stats" loading="lazy" class="rounded-xl animate-on-scroll" data-animation="fadeInUp">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="uk-section contact-section" id="contact" aria-labelledby="contact-heading">
-        <div class="uk-container uk-container-xlarge">
-          <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-24 contact-content">
-            <h2 id="contact-heading" data-translate="Let's Connect" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-6 animate-on-scroll">Let&apos;s Connect</h2>
-            <p data-translate="Feel free to reach out to me via email." data-animation="fadeInUp" class="text-xl text-center mb-12 animate-on-scroll">I answer within a day, usually faster.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-              <a href="mailto:chilavertndah99@gmail.com" class="project-card p-6 flex flex-col gap-3" data-animation="fadeInUp" aria-label="Email Chilavert">
-                <i class="fas fa-envelope text-3xl text-blue-300"></i>
-                <p class="text-lg font-semibold text-white">Email</p>
-                <p class="text-slate-300">chilavertndah99@gmail.com</p>
-              </a>
-              <a href="tel:+2290149674848" class="project-card p-6 flex flex-col gap-3" data-animation="fadeInUp" aria-label="Call Chilavert">
-                <i class="fas fa-phone text-3xl text-blue-300"></i>
-                <p class="text-lg font-semibold text-white">Phone</p>
-                <p class="text-slate-300">+229 014 967 4848</p>
-              </a>
-              <a href="https://wa.me/+2290149674848" target="_blank" rel="noreferrer" class="project-card p-6 flex flex-col gap-3" data-animation="fadeInUp" aria-label="Message on WhatsApp">
-                <i class="fab fa-whatsapp text-3xl text-blue-300"></i>
-                <p class="text-lg font-semibold text-white">WhatsApp</p>
-                <p class="text-slate-300">Instant chats &amp; quick briefs</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div data-partial="footer" data-swap="outer">
-        <noscript>
-          <footer class="uk-section py-12">
-            <div class="uk-container uk-container-xlarge text-center text-slate-400">
-              <p>© 2025 Chilavert N&apos;dah · Crafted with accessibility-first principles.</p>
-              <a href="https://github.com/99ch" target="_blank" rel="noreferrer" class="text-blue-300 hover:text-white">GitHub</a>
-            </div>
-          </footer>
-        </noscript>
-      </div>
-    </main>
-  </body>
-</html>
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .animate__animated {
+            opacity: 1;
+            visibility: visible;
+        }
+        html {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            overflow-x: hidden;
+            background-color: #0f172a !important;
+            color: #f8fafc !important;
+            font-family: 'Montserrat', sans-serif;
+            background-image: 
+                linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px) !important;
+            background-size: 100% 24px, 24px 100% !important;
+            background-position: 0 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            padding-top: 64px;
+            margin-bottom: 0 !important;
+        }
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #0f172a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        .splash-logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+        .splash-greeting {
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+            height: 3rem;
+            text-align: center;
+        }
+        .splash-loading {
+            margin-top: 2rem;
+            width: 100px;
+            height: 3px;
+            background-color: rgba(59, 130, 246, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+        .loading-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #3b82f6;
+            transition: width 1.5s ease-in-out;
+        }
+        .fixed-navbar {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            padding: 0 1.5rem;
+        }
+        .fixed-navbar a:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
+        .nav-scrolled {
+            background-color: rgba(15, 23, 42, 0.95) !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .nav-logo {
+            height: 40px;
+            width: auto;
+        }
+        .hamburger-button {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        @media (max-width: 767px) {
+            .hamburger-button {
+                display: flex;
+            }
+        }
+        .hamburger-button:hover {
+            background-color: rgba(59, 130, 246, 0.2);
+        }
+        .hamburger-line {
+            width: 24px;
+            height: 2px;
+            background-color: white;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+        .hero-bg {
+            position: relative;
+            min-height: 100vh;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image/background.png');
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            filter: saturate(0.8) brightness(0.9);
+            background-color: rgba(15, 23, 42, 0.7);
+            background-blend-mode: overlay;
+        }
+        @media (max-width: 768px) {
+            .hero-bg::before {
+                background-position: top center;
+            }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .hero-bg .vertical-logo {
+            position: absolute;
+            top: 1rem;
+            left: 0.5rem;
+            writing-mode: vertical-rl;
+            -webkit-writing-mode: vertical-rl;
+            text-orientation: mixed;
+            white-space: nowrap;
+            z-index: 10;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1;
+            display: block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 767px) {
+            .hero-bg .vertical-logo {
+                font-size: 1.25rem;
+                left: 0.6rem;
+                top: 1rem;
+                writing-mode: vertical-rl;
+                -webkit-writing-mode: vertical-rl;
+                text-orientation: mixed;
+            }
+        }
+        .hero-title {
+            position: relative;
+            text-align: right;
+            z-index: 10;
+            margin-right: 2rem;
+        }
+        .contact-button {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 10;
+            animation: float 3s ease-in-out infinite, blink 3s infinite;
+            background: linear-gradient(135deg, #facc15, #f59e0b);
+            transition: background 0.3s ease;
+        }
+        .contact-button:hover {
+            background: linear-gradient(135deg, #fde047, #fb923c);
+        }
+        .whatsapp-button {
+            position: absolute;
+            bottom: 6rem;
+            right: 2rem;
+            z-index: 10;
+            animation: float 3s ease-in-out infinite;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            transition: background 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            background: linear-gradient(135deg, #2ecc71, #1abc9c);
+        }
+        .services-section {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 10;
+            background-color: rgba(30, 41, 59, 1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        @media (max-width: 767px) {
+            .hero-title {
+                margin-right: 1rem;
+                font-size: 2rem;
+            }
+            .contact-button {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            .whatsapp-button {
+                bottom: 5rem;
+                right: 1rem;
+            }
+            .services-section {
+                bottom: 1rem;
+                left: 1rem;
+                padding: 0.5rem;
+            }
+        }
+        .full-bleed-section {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+        }
+        .footer-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .footer-marquee-container {
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .footer-marquee-wrapper {
+            display: inline-flex;
+            position: relative;
+            white-space: nowrap;
+            width: auto;
+        }
+        .animate-marquee {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+            white-space: nowrap;
+            width: max-content;
+        }
+        .footer-marquee-text {
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+        @media (max-width: 768px) {
+            .footer-marquee-text {
+                font-size: 3rem !important;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .footer-marquee-text {
+                font-size: 6rem !important;
+            }
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: rgba(30, 41, 59, 0.9);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .project-card img {
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover img {
+            transform: scale(1.03);
+        }
+        .project-tech-badge {
+            display: inline-block;
+            background-color: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Grille pour desktop */
+        .certifications-grid {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .certifications-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        /* Carrousel pour mobile */
+        .certifications-carousel {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 1rem;
+            padding: 1rem 0;
+            width: 100%;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            min-height: 200px;
+        }
+
+        .certifications-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .certifications-carousel .project-card {
+            flex: 0 0 80%;
+            max-width: 300px;
+            min-width: 250px;
+            height: auto;
+            scroll-snap-align: start;
+            background: rgba(30, 41, 59, 0.9);
+            border-radius: 8px;
+            padding: 1rem;
+            box-sizing: border-box;
+            overflow: visible;
+        }
+
+        @media (min-width: 768px) {
+            .certifications-carousel {
+                display: none;
+            }
+        }
+
+        /* Surcharge pour éviter les conflits avec .project-card général */
+        .certifications-carousel .project-card {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cert-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .debug-text {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section {
+            position: relative;
+        }
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background-image: url('./image/logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: 0;
+        }
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+        .dark.bg-slate-900 {
+            background-color: transparent !important;
+        }
+        .skills img {
+            position: relative;
+        }
+        .skills img:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            z-index: 10;
+        }
+        .language-selector {
+            padding: 0.5rem;
+            background-color: rgba(59, 130, 246, 0.2);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+        .language-selector:hover {
+            background-color: rgba(59, 130, 246, 0.4);
+        }
+        @media (max-width: 767px) {
+            .language-selector {
+                width: auto;
+                margin: 0.5rem 1rem;
+            }
+        }
+        .contact-button i, .whatsapp-button i {
+            margin-right: 8px;
+        }
+    
+ </style>
+ <meta name="description" content="Portfolio de Chilavert N'dah, développeur logiciel spécialisé en full-stack et open-source">
+ <meta name="keywords" content="Chilavert N'dah, portfolio, développeur, full-stack, open-source, logiciel">
+ <meta name="author" content="Chilavert N'dah">
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+ const splashScreen = document.getElementById('splash-screen');
+ const loadingBar = document.getElementById('loading-progress');
+ const splashGreeting = document.getElementById('splash-greeting');
+ const mainContent = document.getElementById('main-content');
+
+ if (!splashScreen || !loadingBar || !splashGreeting || !mainContent) {
+ console.error('Splash screen elements missing');
+ return;
+ }
+
+ splashScreen.style.opacity = '1';
+ mainContent.style.opacity = '0';
+
+ const greetings = [
+ "Hello", "Bonjour", "Hola", "Ciao", "Olá", 
+ "Привет", "こんにちは", "你好", "안녕하세요", 
+ "مرحبا", "नमस्ते", "Hallo", "Γειά σου", "Salve"
+ ];
+
+ let currentGreetingIndex = 0;
+
+ function cycleGreetings() {
+ splashGreeting.textContent = greetings[currentGreetingIndex];
+ currentGreetingIndex = (currentGreetingIndex + 1) % greetings.length;
+ }
+
+ let greetingInterval = setInterval(cycleGreetings, 600);
+ cycleGreetings();
+
+ setTimeout(() => {
+ loadingBar.style.width = '100%';
+ }, 100);
+
+ setTimeout(() => {
+ splashScreen.style.opacity = '0';
+ mainContent.style.opacity = '1';
+ clearInterval(greetingInterval);
+ setTimeout(() => {
+ splashScreen.style.display = 'none';
+ }, 500);
+ }, 3000);
+
+ const navbar = document.querySelector('.fixed-navbar');
+ let lastScrollY = window.scrollY;
+
+ navbar && window.addEventListener('scroll', function() {
+ const currentScrollY = window.scrollY;
+ if (currentScrollY > lastScrollY && currentScrollY > 100) {
+ navbar.style.transform = 'translateY(-100%)';
+ } else if (currentScrollY < lastScrollY || currentScrollY <= 100) {
+ navbar.style.transform = 'translateY(0)';
+ navbar.classList.toggle('nav-scrolled', currentScrollY > 50);
+ }
+ lastScrollY = currentScrollY;
+ });
+
+ const mobileMenuButton = document.getElementById('mobile-menu-button');
+ const mobileMenu = document.getElementById('mobile-menu');
+
+ mobileMenuButton && mobileMenuButton.addEventListener('click', function() {
+ mobileMenu.classList.toggle('hidden');
+ });
+
+ const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+ mobileMenuLinks.forEach(link => {
+ link.addEventListener('click', function() {
+ mobileMenu.classList.add('hidden');
+ });
+ });
+
+ function createScrollAnimations() {
+ const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+ const observer = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ const animation = entry.target.getAttribute('data-animation');
+ entry.target.classList.add('animate__animated', `animate__${animation}`);
+ observer.unobserve(entry.target);
+ }
+ });
+ }, {
+ threshold: 0.1
+ });
+
+ animatedElements.forEach(element => {
+ observer.observe(element);
+ });
+ }
+
+ createScrollAnimations();
+
+ const translations = {
+ en: {
+ "Home": "Home",
+ "Work": "Work",
+ "About": "About",
+ "Certifications": "Certifications",
+ "GitHub": "GitHub",
+ "Think different": "Think different",
+ "Chilavert N'Dah": "Chilavert N'Dah",
+ "Software Developer": "Software Developer",
+ "Call": "Call",
+ "Text": "Text",
+ "Services": "Services",
+ "Web Site": "Web Site",
+ "Web App": "Web App",
+ "Mobile App": "Mobile App",
+ "Projects": "Projects",
+ "MC Agence Website": "MC Agence Website",
+ "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.": "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.",
+ "Visit Website": "Visit Website",
+ "MonsterUI Library Contribution": "MonsterUI Library Contribution",
+ "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.": "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.",
+ "View PR on GitHub": "View PR on GitHub",
+ "About Me": "About Me",
+ "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅": "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅",
+ "Resume": "Resume",
+ "Things I Can Do Without Googling... Mostly": "Things I Can Do Without Googling... Mostly",
+ "Programming in Python": "Programming in Python",
+ "Meta through Coursera - Issued: Jul 2024": "Meta through Coursera - Issued: Jul 2024",
+ "JavaScript Algorithms and Data Structures": "JavaScript Algorithms and Data Structures",
+ "freeCodeCamp - Issued: Sep 2024": "freeCodeCamp - Issued: Sep 2024",
+ "Artificial Intelligence": "Artificial Intelligence",
+ "Cheikh Hamidou Kane Digital University - Issued: Mar 2024": "Cheikh Hamidou Kane Digital University - Issued: Mar 2024",
+ "View Certificate": "View Certificate",
+ "See More": "See More",
+ "GitHub Stats & Contributions": "GitHub Stats & Contributions",
+ "Let's Connect": "Let's Connect",
+ "Feel free to reach out to me via email.": "Feel free to reach out to me via email.",
+ "Send Email": "Send Email",
+ "© 2025 Chilavert N'Dah": "© 2025 Chilavert N'dah"
+ },
+ fr: {
+ "Home": "Accueil",
+ "Work": "Travaux",
+ "About": "À propos",
+ "Certifications": "Certifications",
+ "GitHub": "GitHub",
+ "Think different": "Pensez différemment",
+ "Chilavert N'Dah": "Chilavert N'Dah",
+ "Software Developer": "Développeur Logiciel",
+ "Call": "Appeler",
+ "Text": "Texte",
+ "Services": "Services",
+ "Web Site": "Site Web",
+ "Web App": "Application Web",
+ "Mobile App": "Application Mobile",
+ "Projects": "Projets",
+ "MC Agence Website": "Site Web MC Agence",
+ "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.": "Un design de site web responsive pour une agence de marketing construit avec We bflow. Inclut des principes de design UI/UX modernes, des animations fluides et une approche centrée sur le client.",
+ "Visit Website": "Visiter le site",
+ "MonsterUI Library Contribution": "Contribution à la bibliothèque MonsterUI",
+ "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.": "J'ai contribué à la bibliothèque open-source MonsterUI, qui fournit des composants UI pour les applications web Python. Ma pull request #30 a ajouté de nouvelles fonctionnalités et améliorations à la bibliothèque.",
+ "View PR on GitHub": "Voir la PR sur GitHub",
+ "About Me": "À propos de moi",
+ "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅": "Je suis diplômé en informatique de l'UCAO à Cotonou. Actuellement, je travaille comme développeur logiciel freelance et contribue activement à divers projets open-source pour améliorer mes compétences en développement full-stack et technologies cloud. En dehors du codage, j'aime jouer au basketball, écouter de la musique et voyager. Anecdote amusante : j'ai passé 3 heures à déboguer pour réaliser que j'avais oublié de sauvegarder le fichier. 😅",
+ "Resume": "CV",
+ "Things I Can Do Without Googling... Mostly": "Choses que je peux faire sans Googler... en grande partie",
+ "Programming in Python": "Programmation en Python",
+ "Meta through Coursera - Issued: Jul 2024": "Meta via Coursera - Délivré : Juil 2024",
+ "JavaScript Algorithms and Data Structures": "Algorithmes et structures de données JavaScript",
+ "freeCodeCamp - Issued: Sep 2024": "freeCodeCamp - Délivré : Sep 2024",
+ "Artificial Intelligence": "Intelligence artificielle",
+ "Cheikh Hamidou Kane Digital University - Issued: Mar 2024": "Université Numérique Cheikh Hamidou Kane - Délivré : Mar 2024",
+ "View Certificate": "Voir le certificat",
+ "See More": "Voir plus",
+ "GitHub Stats & Contributions": "Statistiques et contributions GitHub",
+ "Let's Connect": "Connectons-nous",
+ "Feel free to reach out to me via email.": "N'hésitez pas à me contacter par email.",
+ "Send Email": "Envoyer un email",
+ "© 2025 Chilavert N'Dah": "© 2025 Chilavert N'dah"
+ }
+ };
+
+ let currentLang = 'en';
+
+ function updateLanguage(lang) {
+ currentLang = lang;
+ document.querySelectorAll('[data-translate]').forEach(element => {
+ const key = element.getAttribute('data-translate');
+ if (translations[lang][key]) {
+ element.textContent = translations[lang][key];
+ }
+ });
+ }
+
+ const langSelector = document.getElementById('language-selector');
+ const mobileLangSelector = document.getElementById('mobile-language-selector');
+
+ langSelector.addEventListener('change', function() {
+ updateLanguage(this.value);
+ mobileLangSelector.value = this.value;
+ });
+
+ mobileLangSelector.addEventListener('change', function() {
+ updateLanguage(this.value);
+ langSelector.value = this.value;
+ });
+
+ updateLanguage('en');
+
+ //  les éléments du carrousel pour un effet fluide
+ const carousel = document.querySelector('.certifications-carousel');
+ if (carousel) {
+ const items = carousel.innerHTML;
+ carousel.innerHTML = items;
+ }
+ });
+ </script>
+ <style>
+ </style>
+         <div>
+           <div id="splash-screen" class="splash-screen">
+<img src="./image/logo.png" alt="Logo" loading="lazy" class="splash-logo">             <div id="splash-greeting" class="splash-greeting"></div>
+             <div class="splash-loading">
+               <div id="loading-progress" class="loading-progress"></div>
+             </div>
+           </div>
+           <div id="main-content" class="dark bg-slate-900 text-slate-100" style="opacity: 0; transition: opacity 1s ease-in-out;">
+             <div class="fixed-navbar">
+               <div class="uk-container max-w-7xl mx-auto px-4">
+                 <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
+<a href="/" class="flex items-center"><img src="./image/logo.png" alt="Logo" loading="lazy" class="nav-logo"></a>                   <div class="hidden md:flex">
+                     <div class="uk-flex uk-flex-row uk-flex-middle gap-2 items-center">
+<a href="/" data-translate="Home" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Home</a><a href="#work" data-translate="Work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a><a href="#about" data-translate="About" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a><a href="/certifications" data-translate="Certifications" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Certifications</a><a href="https://github.com/99ch" target="_blank" data-translate="GitHub" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">GitHub</a><select id="language-selector" class="uk-select language-selector" name="language-selector"><option value="en">English</option><option value="fr">Français</option></select>                     </div>
+                   </div>
+<button aria-label="Toggle mobile menu" type="submit" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" name="mobile-menu-button">                     <div class="flex flex-col justify-center items-center">
+<span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>                     </div>
+</button>                 </div>
+               </div>
+               <div id="mobile-menu" class="hidden bg-slate-900 md:hidden">
+                 <div class="py-2">
+<a href="/" data-translate="Home" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Home</a><a href="#work" data-translate="Work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a><a href="#about" data-translate="About" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a><a href="/certifications" data-translate="Certifications" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Certifications</a><a href="https://github.com/99ch" target="_blank" data-translate="GitHub" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">GitHub</a><select id="mobile-language-selector" class="uk-select language-selector" name="mobile-language-selector"><option value="en">English</option><option value="fr">Français</option></select>                 </div>
+               </div>
+             </div>
+             <div class="uk-section hero-bg">
+<span data-translate="Think different" data-animation="fadeInLeft" class="vertical-logo animate-on-scroll">Think different</span>               <div class="hero-content">
+                 <div class="hero-title">
+                   <h1 data-translate="Chilavert N'dah" data-animation="fadeInDown" class="uk-h1 text-5xl font-bold text-white animate-on-scroll">Chilavert N&#x27;dah</h1>
+                   <p data-translate="Software Developer" data-animation="fadeInUp" class="text-xl text-blue-100 animate-on-scroll">Software Developer</p>
+                 </div>
+<a href="tel:+2290149674848" data-animation="fadeIn" class="contact-button bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors animate-on-scroll"><i class="fas fa-phone"></i><span data-translate="Call">Call</span></a><a href="https://wa.me/+2290149674848" target="_blank" data-animation="fadeIn" class="whatsapp-button text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors animate-on-scroll"><i class="fab fa-whatsapp"></i><span data-translate="Text">Text</span></a>                 <div class="services-section">
+                   <h3 data-translate="Services" data-animation="fadeInLeft" class="uk-h3 text-white text-lg mb-2 animate-on-scroll">Services</h3>
+                   <ul class="list-none">
+                     <li data-translate="Web Site" data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Web Site</li>
+                     <li data-translate="Web Application" data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Web Application</li>
+                     <li data-translate="Mobile Application" data-animation="fadeInLeft" class="text-white hover:text-blue-300 transition-colors animate-on-scroll">Mobile Application</li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="work">
+                   <h2 data-translate="Projects" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Projects</h2>
+                   <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                     <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="./image/mc-agence.png" loading="lazy" class="w-full h-auto transition-transform">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="MC Agence Website" class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MC Agence Website</h3>
+                           <p data-translate="A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach." class="text-slate-400 text-sm mb-4">A responsive website design for a marketing agency built with Webflow.</p>
+                           <div class="flex flex-wrap mt-2">
+<span class="project-tech-badge">Webflow</span><span class="project-tech-badge">Responsive Design</span><span class="project-tech-badge">UI/UX</span>                           </div>
+<a href="https://mc-agence.webflow.io" target="_blank" data-translate="Visit Website" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">Visit Website</a>                         </div>
+                       </div>
+                     </div>
+                     <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                       <div class="uk-card-body space-y-6">
+                         <div class="overflow-hidden">
+<img src="./image/monsterui.png" loading="lazy" class="w-full h-auto transition-transform">                         </div>
+                         <div class="uk-card-body ">
+                           <h3 data-translate="MonsterUI Library Contribution" class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MonsterUI Library Contribution</h3>
+                           <p data-translate="Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library." class="text-slate-400 text-sm mb-4">Contributed to the open-source MonsterUI library.</p>
+                           <div class="flex flex-wrap mt-2">
+<span class="project-tech-badge">Python</span><span class="project-tech-badge">Open Source</span><span class="project-tech-badge">UI Components</span>                           </div>
+<a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" data-translate="View PR on GitHub" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors">View PR on GitHub</a>                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="about">
+                   <h2 data-translate="About Me" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">About Me</h2>
+                   <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                     <div class="flex items-center justify-center">
+<img src="image/full_profil.png" loading="lazy" data-animation="fadeInLeft" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-slate-700/20 animate-on-scroll" style="max-width: 500px;">                     </div>
+                     <div class="flex flex-col items-start">
+                       <p data-translate="I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅" data-animation="fadeInRight" class="text-xl max-w-2xl leading-relaxed text-slate-300 animate-on-scroll mb-12">I&#x27;m a Computer Science graduate from UCAO in Cotonou.</p>
+                       <div class="uk-flex uk-flex-row uk-flex-middle space-x-4">
+<a href="https://drive.google.com/drive/folders/1U5WnFJoznvbjn5cFtCkWaqCLff0av-R-?usp=sharing" target="_blank" data-translate="Resume" data-animation="fadeInLeft" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Resume</a>                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="skills">
+                   <h2 data-translate="Things I Can Do Without Googling... Mostly" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Things I Can Do Without Googling... Mostly</h2>
+                   <div class="flex flex-wrap justify-center gap-4 skills">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Python"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Django"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="C++"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="HTML"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="CSS"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Bootstrap"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="JavaScript"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Firebase"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Dart"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Flutter"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/latex/latex.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="LaTeX"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="Git"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="TensorFlow"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" loading="lazy" data-animation="fadeIn" class="h-16 w-16 mx-2 hover:scale-110 transition-transform animate-on-scroll" title="VS Code">                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="certifications">
+                   <h2 data-translate="Certifications" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Certifications</h2>
+                   <div class="hidden md:block">
+                     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 certifications-grid grid-cols-1 md:grid-cols-3 gap-8">
+                       <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                         <div class="uk-card-body space-y-6">
+                           <div class="overflow-hidden">
+<img src="image/certifications/cert1.webp" alt="Programming in Python Certificate" loading="lazy" class="cert-image">                           </div>
+                           <div class="uk-card-body ">
+                             <h3 data-translate="Programming in Python" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Programming in Python</h3>
+                             <p data-translate="Meta through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Meta through Coursera - Issued: Jul 2024</p>
+<a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                           </div>
+                         </div>
+                       </div>
+                       <div data-animation="fadeIn" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                         <div class="uk-card-body space-y-6">
+                           <div class="overflow-hidden">
+<img src="image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures Certificate" loading="lazy" class="cert-image">                           </div>
+                           <div class="uk-card-body ">
+                             <h3 data-translate="JavaScript Algorithms and Data Structures" class="uk-h3 text-xl font-medium mb-2 text-slate-100">JavaScript Algorithms and Data Structures</h3>
+                             <p data-translate="freeCodeCamp - Issued: Sep 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Sep 2024</p>
+<a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                           </div>
+                         </div>
+                       </div>
+                       <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
+                         <div class="uk-card-body space-y-6">
+                           <div class="overflow-hidden">
+<img src="image/certifications/cert3.webp" alt="Artificial Intelligence Certificate" loading="lazy" class="cert-image">                           </div>
+                           <div class="uk-card-body ">
+                             <h3 data-translate="Artificial Intelligence" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Artificial Intelligence</h3>
+                             <p data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024" class="text-slate-400 text-sm mb-4">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</p>
+<a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="block md:hidden w-full">
+                     <div class="certifications-carousel">
+                       <div class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0 debug-border">
+                         <div class="uk-card-body space-y-6">
+                           <div class="overflow-hidden">
+<img src="image/certifications/cert1.webp" alt="Programming in Python Certificate" loading="lazy" class="cert-image">                           </div>
+                           <div class="uk-card-body ">
+                             <h3 data-translate="Programming in Python" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Programming in Python</h3>
+                             <p data-translate="Meta through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Meta through Coursera - Issued: Jul 2024</p>
+<a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                           </div>
+                         </div>
+                       </div>
+                       <div class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0 debug-border">
+                         <div class="uk-card-body space-y-6">
+                           <div class="overflow-hidden">
+<img src="image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures Certificate" loading="lazy" class="cert-image">                           </div>
+                           <div class="uk-card-body ">
+                             <h3 data-translate="JavaScript Algorithms and Data Structures" class="uk-h3 text-xl font-medium mb-2 text-slate-100">JavaScript Algorithms and Data Structures</h3>
+                             <p data-translate="freeCodeCamp - Issued: Sep 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Sep 2024</p>
+<a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                           </div>
+                         </div>
+                       </div>
+                       <div class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0 debug-border">
+                         <div class="uk-card-body space-y-6">
+                           <div class="overflow-hidden">
+<img src="image/certifications/cert3.webp" alt="Artificial Intelligence Certificate" loading="lazy" class="cert-image">                           </div>
+                           <div class="uk-card-body ">
+                             <h3 data-translate="Artificial Intelligence" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Artificial Intelligence</h3>
+                             <p data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024" class="text-slate-400 text-sm mb-4">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</p>
+<a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+<a href="./certifications.html" data-translate="See More" data-animation="fadeIn" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg mt-8 transition-colors animate-on-scroll">See More</a>                 </div>
+               </div>
+             </div>
+             <div class="uk-section ">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="github">
+                   <h2 data-translate="GitHub Stats &amp; Contributions" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats &amp; Contributions</h2>
+                   <div class="github-triangle-layout flex flex-col gap-12 h-full">
+<img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" loading="lazy" data-animation="fadeInDown" class="w-full mb-8 rounded-lg animate-on-scroll">                     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="rounded-lg animate-on-scroll">                       <div class="h-full">
+<img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="w-full h-full rounded-lg animate-on-scroll object-contain">                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="uk-section contact-section">
+               <div class="uk-container mt-5 uk-container-xlarge">
+                 <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32 contact-content" id="contact">
+                   <h2 data-translate="Let's Connect" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Let&#x27;s Connect</h2>
+                   <p data-translate="Feel free to reach out to me via email." data-animation="fadeInUp" class="text-xl text-center mb-8 animate-on-scroll">Feel free to reach out to me via email.</p>
+<a href="mailto:chilavertndah99@gmail.com" data-translate="Send Email" data-animation="fadeIn" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Send Email</a>                 </div>
+               </div>
+             </div>
+             <div class="uk-section py-0 full-bleed-section">
+               <div class="footer-container w-full">
+                 <div class="w-full">
+                   <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-0">
+<hr class="mb-12 border-blue-500/20">                     <div class="uk-flex uk-flex-row uk-flex-middle gap-4 mb-6 justify-center">
+<a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" loading="lazy" class="h-8 w-8 animate__animated animate__bounce"></a>                     </div>
+                     <div class="footer-marquee-container w-screen">
+                       <div class="footer-marquee-wrapper">
+                         <p data-translate="© 2025 Chilavert N'dah" class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                         <p data-translate="© 2025 Chilavert N'dah" class="footer-marquee-text text-9xl font-bold whitespace-nowrap inline-block animate-marquee">© 2025 Chilavert N&#x27;dah</p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+</main>   </body>
+ </html>
