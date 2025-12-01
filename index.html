@@ -830,8 +830,7 @@
 <img src="image/full_profil.png" loading="lazy" data-animation="fadeInLeft" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-slate-700/20 animate-on-scroll" style="max-width: 500px;">                     </div>
                      <div class="flex flex-col items-start">
                        <p data-translate="I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅" data-animation="fadeInRight" class="text-xl max-w-2xl leading-relaxed text-slate-300 animate-on-scroll mb-12">I&#x27;m a Computer Science graduate from UCAO in Cotonou.</p>
-                       <div class="uk-flex uk-flex-row uk-flex-middle space-x-4">
-<a href="https://drive.google.com/drive/folders/1U5WnFJoznvbjn5cFtCkWaqCLff0av-R-?usp=sharing" target="_blank" data-translate="Resume" data-animation="fadeInLeft" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Resume</a>                       </div>
+                      <div class="uk-flex uk-flex-row uk-flex-middle space-x-4"></div>
                       <a href="/about.html" data-translate="See More" data-animation="fadeIn" class="inline-flex items-center gap-2 border border-blue-500 text-blue-100 hover:bg-blue-500/20 px-6 py-3 rounded-lg mt-6 transition-colors animate-on-scroll">See More</a>
                      </div>
                    </div>
@@ -925,13 +924,77 @@
              <div class="uk-section ">
                <div class="uk-container mt-5 uk-container-xlarge">
                  <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32" id="github">
-                   <h2 data-translate="GitHub Stats &amp; Contributions" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats &amp; Contributions</h2>
-                   <div class="github-triangle-layout flex flex-col gap-12 h-full">
-<img src="https://github-readme-streak-stats.herokuapp.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=True&amp;background=0f172a" loading="lazy" data-animation="fadeInDown" class="w-full mb-8 rounded-lg animate-on-scroll">                     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="rounded-lg animate-on-scroll">                       <div class="h-full">
-<img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="w-full h-full rounded-lg animate-on-scroll object-contain">                       </div>
-                     </div>
-                   </div>
+                  <h2 data-translate="GitHub Stats &amp; Contributions" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-6 animate-on-scroll text-slate-100">GitHub Stats &amp; Contributions</h2>
+                  <p data-translate="GitHub Stats Subtitle" class="text-slate-300 text-center max-w-3xl mb-12">Nightly snapshots generated via GitHub Actions—no third-party badges, no rate limits.</p>
+                  <div id="github-stats-root" class="github-stats-grid" aria-live="polite" data-stats-loading="true">
+                    <div class="github-stats-skeleton" role="status">
+                      <span class="sr-only">Loading GitHub stats…</span>
+                    </div>
+                    <div class="github-stat-card-grid">
+                      <article class="github-stat-card">
+                        <p class="stat-label" data-translate="Contributions (365 days)">Contributions (365 days)</p>
+                        <p class="stat-value" data-github-stat="contributionsLast365">--</p>
+                        <p class="stat-meta" data-translate="Past 12 months">Past 12 months</p>
+                      </article>
+                      <article class="github-stat-card">
+                        <p class="stat-label" data-translate="Current Streak">Current Streak</p>
+                        <p class="stat-value" data-github-stat="currentStreakLength">--</p>
+                        <p class="stat-meta" data-github-stat-detail="currentStreakRange">--</p>
+                      </article>
+                      <article class="github-stat-card">
+                        <p class="stat-label" data-translate="Longest Streak">Longest Streak</p>
+                        <p class="stat-value" data-github-stat="longestStreakLength">--</p>
+                        <p class="stat-meta" data-github-stat-detail="longestStreakRange">--</p>
+                      </article>
+                      <article class="github-stat-card">
+                        <p class="stat-label" data-translate="Total Stars">Total Stars</p>
+                        <p class="stat-value" data-github-stat="totalStars">--</p>
+                        <p class="stat-meta" data-translate="Across public repos">Across public repos</p>
+                      </article>
+                      <article class="github-stat-card">
+                        <p class="stat-label" data-translate="Merged PRs">Merged PRs</p>
+                        <p class="stat-value" data-github-stat="mergedPullRequests">--</p>
+                        <p class="stat-meta" data-translate="Past 12 months">Past 12 months</p>
+                      </article>
+                      <article class="github-stat-card">
+                        <p class="stat-label" data-translate="Issues Closed">Issues Closed</p>
+                        <p class="stat-value" data-github-stat="issuesClosed">--</p>
+                        <p class="stat-meta" data-translate="Past 12 months">Past 12 months</p>
+                      </article>
+                      <article class="github-stat-card">
+                        <p class="stat-label" data-translate="Repos Contributed">Repos Contributed</p>
+                        <p class="stat-value" data-github-stat="reposContributedTo">--</p>
+                        <p class="stat-meta" data-translate="Open source & client">Open source & client</p>
+                      </article>
+                      <article class="github-stat-card">
+                        <p class="stat-label" data-translate="Followers">Followers</p>
+                        <p class="stat-value" data-github-stat="followers">--</p>
+                        <p class="stat-meta" data-translate="Public profile">Public profile</p>
+                      </article>
+                    </div>
+                    <div class="github-stat-panel">
+                      <div class="panel-header">
+                        <h3 data-translate="Top Languages" class="panel-title">Top Languages</h3>
+                        <p class="panel-meta" data-translate="Measured by repo size">Measured by repo size</p>
+                      </div>
+                      <ul id="github-language-list" class="language-list" aria-live="polite"></ul>
+                    </div>
+                    <div class="github-stat-panel">
+                      <div class="panel-header">
+                        <h3 data-translate="Most Starred Repos" class="panel-title">Most Starred Repos</h3>
+                        <p class="panel-meta" data-translate="Recent public work">Recent public work</p>
+                      </div>
+                      <ul id="github-repo-list" class="repo-list" aria-live="polite"></ul>
+                    </div>
+                    <div class="github-stat-panel">
+                      <div class="panel-header">
+                        <h3 data-translate="Recent Activity" class="panel-title">Recent Activity</h3>
+                        <p class="panel-meta" data-translate="Last 4 weeks of pushes">Last 4 weeks of pushes</p>
+                      </div>
+                      <div id="github-activity-bars" class="activity-bars" role="img" aria-label="Contribution trend for the last 4 weeks"></div>
+                    </div>
+                    <p id="github-stats-error" class="github-stats-error hidden" role="alert" data-translate="Stats unavailable">Stats temporarily unavailable. Please try again later.</p>
+                  </div>
                  </div>
                </div>
              </div>

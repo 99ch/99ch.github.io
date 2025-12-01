@@ -117,6 +117,26 @@ const TRANSLATIONS = {
     "View Certificate": "View Certificate",
     "See More": "See More",
     "GitHub Stats & Contributions": "GitHub Stats & Contributions",
+    "GitHub Stats Subtitle": "Nightly snapshots generated via GitHub Actions—no third-party badges, no rate limits.",
+    "Contributions (365 days)": "Contributions (365 days)",
+    "Past 12 months": "Past 12 months",
+    "Current Streak": "Current Streak",
+    "Longest Streak": "Longest Streak",
+    "Total Stars": "Total Stars",
+    "Across public repos": "Across public repos",
+    "Merged PRs": "Merged PRs",
+    "Issues Closed": "Issues Closed",
+    "Repos Contributed": "Repos Contributed",
+    "Open source & client": "Open source & client",
+    "Followers": "Followers",
+    "Public profile": "Public profile",
+    "Top Languages": "Top Languages",
+    "Measured by repo size": "Measured by repo size",
+    "Most Starred Repos": "Most Starred Repos",
+    "Recent public work": "Recent public work",
+    "Recent Activity": "Recent Activity",
+    "Last 4 weeks of pushes": "Last 4 weeks of pushes",
+    "Stats unavailable": "Stats temporarily unavailable. Please try again later.",
     "Let's Connect": "Let's Connect",
     "Feel free to reach out to me via email.": "Feel free to reach out to me via email.",
     "Send Email": "Send Email",
@@ -259,6 +279,26 @@ const TRANSLATIONS = {
     "View Certificate": "Voir le certificat",
     "See More": "Voir plus",
     "GitHub Stats & Contributions": "Statistiques & contributions GitHub",
+    "GitHub Stats Subtitle": "Instantané nocturne généré par GitHub Actions – sans badges tiers ni quotas.",
+    "Contributions (365 days)": "Contributions (365 jours)",
+    "Past 12 months": "Sur les 12 derniers mois",
+    "Current Streak": "Série en cours",
+    "Longest Streak": "Série la plus longue",
+    "Total Stars": "Total des stars",
+    "Across public repos": "Sur les dépôts publics",
+    "Merged PRs": "PR fusionnées",
+    "Issues Closed": "Issues clôturées",
+    "Repos Contributed": "Dépôts contribués",
+    "Open source & client": "Open source & client",
+    "Followers": "Abonnés",
+    "Public profile": "Profil public",
+    "Top Languages": "Langages principaux",
+    "Measured by repo size": "Mesuré par taille de dépôt",
+    "Most Starred Repos": "Dépôts les plus étoilés",
+    "Recent public work": "Travaux publics récents",
+    "Recent Activity": "Activité récente",
+    "Last 4 weeks of pushes": "4 dernières semaines de commits",
+    "Stats unavailable": "Statistiques momentanément indisponibles. Réessayez plus tard.",
     "Let's Connect": "Restons en contact",
     "Feel free to reach out to me via email.": "Contactez-moi par email.",
     "Send Email": "Envoyer un email",
@@ -306,6 +346,8 @@ const languageState = {
   current: localStorage.getItem('preferredLanguage') || 'en'
 };
 
+let githubStatsCache = null;
+
 const prefersReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 function applyTheme() {
@@ -339,6 +381,10 @@ function applyLanguage(lang) {
         selector.value = safeLang;
       }
     });
+
+  if (githubStatsCache) {
+    hydrateGithubStats(githubStatsCache);
+  }
 }
 
 function initLanguageSelectors() {
@@ -512,6 +558,226 @@ function initPrefersReducedListener() {
   });
 }
 
+function getActiveLocale() {
+  return languageState.current === 'fr' ? 'fr-FR' : 'en-US';
+}
+
+function toggleStatsLoading(isLoading) {
+  const root = document.getElementById('github-stats-root');
+  if (!root) return;
+  root.dataset.statsLoading = String(isLoading);
+  root.classList.toggle('is-ready', !isLoading);
+}
+
+function setStatsError(isVisible) {
+  const errorEl = document.getElementById('github-stats-error');
+  if (!errorEl) return;
+  errorEl.classList.toggle('hidden', !isVisible);
+}
+
+function renderLanguageList(languages, percentFormatter) {
+  const list = document.getElementById('github-language-list');
+  if (!list) return;
+  list.innerHTML = '';
+
+  if (!languages.length) {
+    const emptyState = document.createElement('li');
+    emptyState.className = 'language-empty';
+    emptyState.textContent = '--';
+    list.appendChild(emptyState);
+    return;
+  }
+
+  languages.forEach((language) => {
+    const entry = document.createElement('li');
+    entry.className = 'language-item';
+
+    const row = document.createElement('div');
+    row.className = 'language-row';
+
+    const dot = document.createElement('span');
+    dot.className = 'language-dot';
+    if (language.color) {
+      dot.style.setProperty('--language-dot-color', language.color);
+    }
+
+    const copy = document.createElement('div');
+    copy.className = 'language-copy';
+
+    const name = document.createElement('p');
+    name.className = 'language-name';
+    name.textContent = language.name || '—';
+
+    const share = document.createElement('p');
+    share.className = 'language-share';
+    const safeShare = typeof language.share === 'number' ? Math.max(0, Math.min(language.share, 1)) : 0;
+    share.textContent = percentFormatter.format(safeShare);
+
+    copy.append(name, share);
+    row.append(dot, copy);
+
+    const bar = document.createElement('div');
+    bar.className = 'language-bar';
+    const fill = document.createElement('span');
+    fill.style.setProperty('--language-share', `${safeShare * 100}%`);
+    if (language.color) {
+      fill.style.setProperty('--language-dot-color', language.color);
+    }
+    bar.appendChild(fill);
+
+    entry.append(row, bar);
+    list.appendChild(entry);
+  });
+}
+
+function renderRepoList(repos, numberFormatter) {
+  const list = document.getElementById('github-repo-list');
+  if (!list) return;
+  list.innerHTML = '';
+
+  if (!repos.length) {
+    const empty = document.createElement('li');
+    empty.className = 'repo-empty';
+    empty.textContent = '--';
+    list.appendChild(empty);
+    return;
+  }
+
+  repos.slice(0, 6).forEach((repo) => {
+    const item = document.createElement('li');
+    item.className = 'repo-item';
+
+    const link = document.createElement('a');
+    link.href = repo.url;
+    link.target = '_blank';
+    link.rel = 'noreferrer noopener';
+    link.className = 'repo-link';
+
+    const copy = document.createElement('div');
+    copy.className = 'repo-copy';
+
+    const title = document.createElement('p');
+    title.className = 'repo-name';
+    title.textContent = repo.name || '—';
+
+    const meta = document.createElement('p');
+    meta.className = 'repo-meta';
+    const languageLabel = repo.language ? repo.language : null;
+    const starLabel = `${numberFormatter.format(repo.stars || 0)} ★`;
+    meta.textContent = [languageLabel, starLabel].filter(Boolean).join(' • ');
+
+    copy.append(title, meta);
+
+    const arrow = document.createElement('span');
+    arrow.className = 'repo-arrow';
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = '↗';
+
+    link.append(copy, arrow);
+    item.appendChild(link);
+    list.appendChild(item);
+  });
+}
+
+function renderActivityBars(contributions, dateFormatter) {
+  const container = document.getElementById('github-activity-bars');
+  if (!container) return;
+  container.innerHTML = '';
+
+  if (!contributions.length) {
+    container.classList.add('is-empty');
+    container.textContent = '--';
+    return;
+  }
+
+  container.classList.remove('is-empty');
+  const windowed = contributions.slice(-28);
+  const maxCount = Math.max(...windowed.map((entry) => entry.contributionCount || 0), 1);
+
+  windowed.forEach((entry) => {
+    const bar = document.createElement('span');
+    bar.className = 'activity-bar';
+    const count = entry.contributionCount || 0;
+    const normalized = Math.max((count / maxCount) * 100, 6);
+    bar.style.setProperty('--bar-height', `${normalized}%`);
+    const formattedDate = dateFormatter.format(new Date(entry.date));
+    bar.title = `${count} • ${formattedDate}`;
+    bar.setAttribute('aria-label', `${count} contributions · ${formattedDate}`);
+    container.appendChild(bar);
+  });
+}
+
+function hydrateGithubStats(data) {
+  if (!data) return;
+
+  githubStatsCache = data;
+  const locale = getActiveLocale();
+  const numberFormatter = new Intl.NumberFormat(locale);
+  const percentFormatter = new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 1 });
+  const dateFormatter = new Intl.DateTimeFormat(locale, { month: 'short', day: 'numeric' });
+
+  const totals = data.totals || {};
+  const profile = data.profile || {};
+
+  const statMap = {
+    contributionsLast365: totals.contributionsLast365 ?? 0,
+    currentStreakLength: totals.currentStreak?.length ?? 0,
+    longestStreakLength: totals.longestStreak?.length ?? 0,
+    totalStars: totals.totalStars ?? 0,
+    mergedPullRequests: totals.mergedPullRequests ?? 0,
+    issuesClosed: totals.issuesClosed ?? 0,
+    reposContributedTo: totals.reposContributedTo ?? 0,
+    followers: profile.followers ?? 0
+  };
+
+  document.querySelectorAll('[data-github-stat]').forEach((element) => {
+    const key = element.dataset.githubStat;
+    if (!key || !(key in statMap)) return;
+    element.textContent = numberFormatter.format(statMap[key]);
+  });
+
+  const assignRange = (attribute, streak) => {
+    const target = document.querySelector(`[data-github-stat-detail="${attribute}"]`);
+    if (!target) return;
+    if (!streak || !streak.length || !streak.start || !streak.end) {
+      target.textContent = '--';
+      return;
+    }
+    const startLabel = dateFormatter.format(new Date(streak.start));
+    const endLabel = dateFormatter.format(new Date(streak.end));
+    target.textContent = `${startLabel} → ${endLabel}`;
+  };
+
+  assignRange('currentStreakRange', totals.currentStreak);
+  assignRange('longestStreakRange', totals.longestStreak);
+
+  renderLanguageList(data.languages || [], percentFormatter);
+  renderRepoList(data.topRepositories || [], numberFormatter);
+  renderActivityBars(data.recentContributions || [], dateFormatter);
+}
+
+async function initGithubStats() {
+  const root = document.getElementById('github-stats-root');
+  if (!root) return;
+
+  toggleStatsLoading(true);
+  setStatsError(false);
+
+  try {
+    const response = await fetch('assets/data/github-stats.json', { cache: 'no-cache' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const payload = await response.json();
+    hydrateGithubStats(payload);
+  } catch (error) {
+    console.error('Unable to load GitHub stats', error);
+    setStatsError(true);
+  } finally {
+    toggleStatsLoading(false);
+  }
+}
+
 function initPage() {
   applyTheme();
   initPrefersReducedListener();
@@ -528,6 +794,8 @@ function initPage() {
   }), loadPartial('footer')]).then(() => {
     applyLanguage(languageState.current);
   });
+
+  initGithubStats();
 }
 
 document.addEventListener('DOMContentLoaded', initPage);

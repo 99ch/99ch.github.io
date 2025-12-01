@@ -1,0 +1,40 @@
+name: Update GitHub stats
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Refresh cached stats
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate latest stats snapshot
+        env:
+          GH_USERNAME: 99ch
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        run: node scripts/github-stats.mjs
+
+      - name: Commit and push if data changed
+        run: |
+          if git diff --quiet -- assets/data/github-stats.json; then
+            echo "No stat changes detected" && exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/github-stats.json
+          git commit -m "chore: update GitHub stats [skip ci]"
+          git push
