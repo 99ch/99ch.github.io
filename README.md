@@ -2,7 +2,7 @@
 
 Welcome to my portfolio! Here, you'll find an overview of my projects, skills, and journey as a developer.
 
-Live site: [chilavertndah.com](https://chilavertndah.com)
+Live site: [chilavertndah.dev](https://chilavertndah.dev)
 
 ## 🌟 About Me
 I am a **freelance developer** passionate about **full-stack development**, **mobile apps**, and **open-source projects**.
