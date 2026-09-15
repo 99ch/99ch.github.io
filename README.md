@@ -1,30 +1,23 @@
-# 🚀 My Portfolio
+# Manifest — Portfolio
 
-Welcome to my portfolio! Here, you'll find an overview of my projects, skills, and journey as a developer.
+Portfolio of Chilavert N'dah, designed as a ledger of shipped work: paper, ink, and a stamp for every verified entry.
 
 Live site: [chilavertndah.dev](https://chilavertndah.dev)
 
-## 🌟 About Me
-I am a **freelance developer** passionate about **full-stack development**, **mobile apps**, and **open-source projects**.
+## About
 
-## 🛠️ Skills
-- **Front-end**: HTML, CSS, JavaScript, Tailwind, Webflow
-- **Mobile**: Flutter
-- **Back-end**: Python, Django, FastAPI
-- **CMS**: WordPress
-- **Databases & Cloud**: Supabase, Firebase
-- **Tooling**: GitHub Actions, Pytest, PyPI publishing
+Freelance full-stack & mobile developer based in Cotonou, Bénin. Full-stack, mobile (Flutter), WordPress/Webflow, and open-source contributions.
 
-## 🗂️ Structure
+## Structure
 
-- `index.html`, `work.html`, `about.html`, `certifications.html` — the four pages of the site.
-- `assets/css/main.css`, `assets/js/main.js` — shared styles and behavior (theming, i18n, splash screen, navbar/footer partials).
-- `partials/` — HTML fragments (`navbar.html`, `footer.html`) injected at runtime via `fetch()`.
+- `index.html`, `work.html`, `about.html`, `certifications.html` — the four pages, each self-contained (navbar and footer are written directly into every page, not fetched, so there's no flash-of-empty-header on load).
+- `assets/css/main.css` — the Manifest design system (paper/ink palette, ledger rows, stamp badge, type scale).
+- `assets/js/main.js` — bilingual EN/FR strings (`TRANSLATIONS`), mobile menu, lazy-image enhancement.
 - `image/` — site assets, each raster image paired with a `.webp` version.
 
-## 🖥️ Local development
+## Local development
 
-The navbar and footer are loaded at runtime via `fetch('partials/...')`, which requires an HTTP server (opening the files directly with `file://` will fail to load them because of CORS). Serve the folder locally, for example:
+Any static file server works, e.g.:
 
 ```bash
 python3 -m http.server 8000
@@ -34,4 +27,4 @@ then open `http://localhost:8000`.
 
 ---
 
-Thank you for visiting my portfolio! Feel free to reach out for projects or collaborations. 🚀
+Feel free to reach out for projects or collaborations.
