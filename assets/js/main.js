@@ -578,6 +578,12 @@ function initPrefersReducedListener() {
   });
 }
 
+function initNavbar() {
+  initNavbarScrollBehavior();
+  initMobileMenu();
+  initLanguageSelectors();
+}
+
 function initPage() {
   applyTheme();
   initPrefersReducedListener();
@@ -587,11 +593,11 @@ function initPage() {
   initContactBackgroundFallback();
   applyLanguage(languageState.current);
 
-  Promise.all([loadPartial('navbar', () => {
-    initNavbarScrollBehavior();
-    initMobileMenu();
-    initLanguageSelectors();
-  }), loadPartial('footer')]).then(() => {
+  const navbarPromise = document.querySelector('[data-partial="navbar"]')
+    ? loadPartial('navbar', initNavbar)
+    : Promise.resolve(initNavbar());
+
+  Promise.all([navbarPromise, loadPartial('footer')]).then(() => {
     applyLanguage(languageState.current);
   });
 }

@@ -44,31 +44,51 @@
       </div>
     </div>
     <main id="main-content" class="dark bg-slate-900 text-slate-100" style="opacity: 0; transition: opacity 1s ease-in-out;" aria-hidden="true">
-      <div data-partial="navbar" data-swap="outer">
-        <noscript>
-          <header class="fixed-navbar">
-            <div class="uk-container max-w-7xl mx-auto px-4">
-              <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
-                <a href="/" class="flex items-center" aria-label="Go to homepage">
-                  <picture>
-                    <source srcset="/image/logo.webp" type="image/webp">
-                    <img src="/image/logo.png" alt="Logo Chilavert N'dah" width="120" height="48" class="nav-logo" decoding="async">
-                  </picture>
-                </a>
-                <div class="hidden md:flex">
-                  <nav class="uk-flex uk-flex-row uk-flex-middle gap-2 items-center" aria-label="Primary navigation">
-                    <a href="/" data-translate="Home" class="text-sm font-medium text-white bg-blue-500/20 px-4 py-2 rounded-lg">Home</a>
-                    <a href="/work.html" data-translate="Work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a>
-                    <a href="/about.html" data-translate="About" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a>
-                    <a href="/certifications.html" data-translate="Certifications" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Certifications</a>
-                    <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="GitHub" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">GitHub</a>
-                  </nav>
-                </div>
-              </div>
+      <header class="fixed-navbar" data-component="navbar">
+        <div class="uk-container max-w-7xl mx-auto px-4">
+          <div class="uk-flex uk-flex-between uk-flex-middle py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center" aria-label="Go to homepage">
+              <picture>
+                <source srcset="/image/logo.webp" type="image/webp">
+                <img src="/image/logo.png" alt="Logo Chilavert N'dah" width="120" height="48" class="nav-logo" decoding="async">
+              </picture>
+            </a>
+            <div class="hidden md:flex">
+              <nav class="uk-flex uk-flex-row uk-flex-middle gap-2 items-center" aria-label="Primary navigation">
+                <a href="/" data-translate="Home" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Home</a>
+                <a href="/work.html" data-translate="Work" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Work</a>
+                <a href="/about.html" data-translate="About" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">About</a>
+                <a href="/certifications.html" data-translate="Certifications" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">Certifications</a>
+                <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="GitHub" class="text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-blue-500/20">GitHub</a>
+                <label for="language-selector" class="screen-reader-text">Language selector</label>
+                <select id="language-selector" class="uk-select language-selector" name="language-selector" aria-label="Choose language">
+                  <option value="en">English</option>
+                  <option value="fr">Français</option>
+                </select>
+              </nav>
             </div>
-          </header>
-        </noscript>
-      </div>
+            <button aria-label="Toggle mobile menu" aria-expanded="false" id="mobile-menu-button" class="uk-button hamburger-button focus:outline-none" type="button" aria-controls="mobile-menu">
+              <span class="hamburger-line" aria-hidden="true"></span>
+              <span class="hamburger-line" aria-hidden="true"></span>
+              <span class="hamburger-line" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <nav id="mobile-menu" class="hidden bg-slate-900 md:hidden" aria-label="Mobile navigation">
+          <div class="py-2">
+            <a href="/" data-translate="Home" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Home</a>
+            <a href="/work.html" data-translate="Work" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Work</a>
+            <a href="/about.html" data-translate="About" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">About</a>
+            <a href="/certifications.html" data-translate="Certifications" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">Certifications</a>
+            <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="GitHub" class="block text-sm font-medium text-blue-100 hover:text-white transition-colors px-4 py-3 border-b border-blue-500/20">GitHub</a>
+            <label for="mobile-language-selector" class="screen-reader-text">Language selector (mobile)</label>
+            <select id="mobile-language-selector" class="uk-select language-selector" name="mobile-language-selector" aria-label="Choose language on mobile">
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </nav>
+      </header>
       <div class="uk-section hero-bg">
         <span data-translate="Think different" data-animation="fadeInLeft" class="vertical-logo animate-on-scroll">Think different</span>
         <div class="hero-content">
