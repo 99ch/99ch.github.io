@@ -2,14 +2,35 @@
 
 Welcome to my portfolio! Here, you'll find an overview of my projects, skills, and journey as a developer.
 
-## 🌟 About Me  
-I am a **freelance developer** passionate about **full-stack development** and **cloud technologies**. I also contribute to **open-source projects** to enhance my skills.
+Live site: [chilavertndah.dev](https://chilavertndah.dev)
 
-## 🛠️ Skills  
-- **Front-end**: HTML, CSS, JavaScript, React  
-- **Back-end**: Node.js, Express, Django  
-- **Databases**: PostgreSQL, MongoDB  
-- **DevOps & Cloud**: Docker, GitHub Actions, AWS  
+## 🌟 About Me
+I am a **freelance developer** passionate about **full-stack development**, **mobile apps**, and **open-source projects**.
+
+## 🛠️ Skills
+- **Front-end**: HTML, CSS, JavaScript, Tailwind, Webflow
+- **Mobile**: Flutter
+- **Back-end**: Python, Django, FastAPI
+- **CMS**: WordPress
+- **Databases & Cloud**: Supabase, Firebase
+- **Tooling**: GitHub Actions, Pytest, PyPI publishing
+
+## 🗂️ Structure
+
+- `index.html`, `work.html`, `about.html`, `certifications.html` — the four pages of the site.
+- `assets/css/main.css`, `assets/js/main.js` — shared styles and behavior (theming, i18n, splash screen, navbar/footer partials).
+- `partials/` — HTML fragments (`navbar.html`, `footer.html`) injected at runtime via `fetch()`.
+- `image/` — site assets, each raster image paired with a `.webp` version.
+
+## 🖥️ Local development
+
+The navbar and footer are loaded at runtime via `fetch('partials/...')`, which requires an HTTP server (opening the files directly with `file://` will fail to load them because of CORS). Serve the folder locally, for example:
+
+```bash
+python3 -m http.server 8000
+```
+
+then open `http://localhost:8000`.
 
 ---
 
