@@ -53,6 +53,7 @@ const TRANSLATIONS = {
     "Stat Shipped": "Projects shipped",
     "Stat Sectors": "Sectors covered",
     "Stat Years": "Years active",
+    "Status Shipped": "Shipped",
 
     "Open Source Section": "Open source",
     "Mobile Section": "Mobile applications",
@@ -236,6 +237,7 @@ const TRANSLATIONS = {
     "Stat Shipped": "Projets livrés",
     "Stat Sectors": "Secteurs couverts",
     "Stat Years": "Années d'activité",
+    "Status Shipped": "Livré",
 
     "Open Source Section": "Open source",
     "Mobile Section": "Applications mobiles",
@@ -432,11 +434,93 @@ function enhanceLazyImages() {
   });
 }
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function initScrollReveal() {
+  const revealItems = document.querySelectorAll('.ledger-row, .card-grid .card, .contact-grid a');
+  revealItems.forEach((el) => el.setAttribute('data-reveal', ''));
+
+  if (prefersReducedMotion.matches || !('IntersectionObserver' in window)) {
+    revealItems.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
+  const groups = new Map();
+  revealItems.forEach((el) => {
+    const parent = el.parentElement;
+    if (!groups.has(parent)) groups.set(parent, []);
+    groups.get(parent).push(el);
+  });
+  groups.forEach((siblings) => {
+    siblings.forEach((el, i) => {
+      el.style.transitionDelay = `${Math.min(i, 8) * 60}ms`;
+    });
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  revealItems.forEach((el) => observer.observe(el));
+}
+
+function initStatCounters() {
+  const stats = document.querySelectorAll('.stat-row .stat b');
+  if (!stats.length) return;
+
+  const animateCount = (el) => {
+    const text = el.textContent.trim();
+    const match = text.match(/^(\d+)$/);
+    if (!match || prefersReducedMotion.matches) return;
+
+    const target = parseInt(match[1], 10);
+    const duration = 700;
+    const start = performance.now();
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target).toString();
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = text;
+      }
+    };
+    requestAnimationFrame(step);
+  };
+
+  if (!('IntersectionObserver' in window)) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+  stats.forEach((el) => observer.observe(el));
+}
+
 function initPage() {
   enhanceLazyImages();
   initMobileMenu();
   initLanguageSelectors();
   applyLanguage(languageState.current);
+  initScrollReveal();
+  initStatCounters();
 }
 
 document.addEventListener('DOMContentLoaded', initPage);
