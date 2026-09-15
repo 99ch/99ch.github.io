@@ -5,174 +5,182 @@ const TRANSLATIONS = {
     "About": "About",
     "Certifications": "Certifications",
     "GitHub": "GitHub",
-    "Think different": "Think different",
+    "Language selector": "Language selector",
+
+    "Manifest Eyebrow": "Ledger of shipped work — 2026 edition",
     "Chilavert N'Dah": "Chilavert N'Dah",
-    "Software Developer": "Software Developer",
+    "Software Developer": "Full-stack & mobile developer, based in Cotonou, Bénin. Every entry below is a project that actually shipped to a client or an association.",
+    "Stamp Line 1": "Shipped",
+    "Stamp Line 2": "& verified",
+    "Stamp Line 3": "Cotonou · BJ",
     "Call": "Call",
     "Text": "Text",
-    "Services": "Services",
-    "Web Site": "Web Site",
-    "Web Application": "Web Application",
-    "Mobile Application": "Mobile Application",
-    "Projects": "Projects",
-    "Case Studies & Experiments": "Case Studies & Experiments",
-    "Work Page Intro": "A closer look at the launches I obsess over—mixing marketing, open-source, and automation to keep teams shipping.",
-    "Industries Served": "Sectors covered",
-    "Referral Work": "Years active",
-    "Featured Deliveries": "Featured Deliveries",
-    "Featured Work Subtitle": "Cross-functional projects where I owned the experience end-to-end—from insight gathering to production-ready code.",
-    "Marketing Site": "Marketing Site",
-    "Open Source": "Open Source",
-    "Automation": "Automation",
-    "MC Agence Summary": "Localized a marketing site with human copy, cinematic scroll animations, and analytics-ready forms that drive leads on autopilot.",
-    "MC Role": "Lead designer & Webflow developer",
-    "MC Impact": "+42% qualified demos in 8 weeks",
-    "Monster Summary": "Extended MonsterUI with accessible overlays, keyboard tooling, and snapshot tests powering Python micro-frontends.",
+    "Send Email": "Email",
+    "See Ledger": "See full ledger",
+
+    "Ledger Heading": "Featured entries",
+    "Ledger Intro": "A shortlist from the full ledger — open-source contributions, mobile apps, and websites shipped for real clients.",
+    "See More": "See full ledger",
+
+    "About Preview Heading": "About the ledger keeper",
+    "About Preview Body": "Computer Science graduate from UCAO in Cotonou. I work as a freelance developer and contribute to open-source projects between client launches. Off the clock: basketball, music, and travel.",
+    "Read Bio": "Read the full bio",
+
+    "Toolbox Heading": "Instruments",
+    "Toolbox Intro": "What's actually on the bench — no résumé padding.",
+
+    "Certifications Preview Heading": "Certifications on file",
+    "Certifications Intro": "Structured programs, labs, and exams — each entry links to its verification page.",
+
+    "GitHub Heading": "Commit record",
+    "GitHub Intro": "Public activity, pulled straight from GitHub.",
+
+    "Contact Heading": "Get in touch",
+    "Contact Intro": "I answer within a day, usually faster.",
+    "Email Label": "Email",
+    "Call Label": "Call",
+    "WhatsApp Label": "WhatsApp",
+    "WhatsApp Value": "Instant chats & quick briefs",
+
+    "Footer Rights": "© 2026 Chilavert N'Dah",
+    "Footer GitHub": "GitHub",
+
+    "Work Eyebrow": "Case studies & experiments",
+    "Work Heading": "The ledger",
+    "Work Intro": "Every project below shipped to a real client, employer, or open-source repo — dated, with role and stack on record.",
+    "Back to Home": "Back to home",
+    "Resume": "Résumé",
+    "Stat Shipped": "Projects shipped",
+    "Stat Sectors": "Sectors covered",
+    "Stat Years": "Years active",
+
+    "Open Source Section": "Open source",
+    "Mobile Section": "Mobile applications",
+    "Websites Section": "Websites",
+
+    "Monster Entry": "MonsterUI — library contribution",
+    "Monster Body": "Extended the open-source MonsterUI library with accessible overlays, keyboard tooling, and snapshot tests for Python micro-frontends. PR #30.",
     "Monster Role": "Open-source maintainer",
-    "Monster Impact": "Reduced UI regressions by 30% across adopters",
-    "Open Source Contributions": "Open Source Contributions",
-    "Pytest Infrastructure Contribution": "Pytest Testing Infrastructure for SKFeatureLLM",
-    "Pytest Infrastructure Summary": "Set up a Pytest-based testing stack for SKFeatureLLM with unit tests, mocks, and configuration to keep the core feature selection logic reliable.",
-    "Pytest Role": "Open-source contributor",
-    "Pytest Impact": "Improved reliability and maintainability by adding tests, mocks, and linting to the project.",
-    "CI CD Pipeline PyPI": "CI/CD Pipeline for Testing & PyPI",
-    "CI CD Pipeline Summary": "Built a GitHub Actions pipeline that runs tests, enforces code quality, and publishes Python packages securely to PyPI using Trusted Publishing.",
+    "View PR": "View PR",
+
+    "CI CD Entry": "SKFeatureLLM — CI/CD pipeline",
+    "CI CD Body": "Built a GitHub Actions pipeline that runs tests, enforces code quality, and publishes Python packages securely to PyPI via Trusted Publishing.",
     "CI CD Role": "Open-source contributor",
-    "CI CD Impact": "Unified linting, testing, and deployment into one pipeline and enabled secure, credential-free publishing to PyPI.",
-    "Mobile Applications": "Mobile Applications",
-    "Mobile App": "Mobile App",
-    "AB Project EE Mobile": "A&B Project EE Mobile",
-    "AB Project EE Mobile Summary": "Volunteer-built mobile application helping A&B Project EE coordinate blood donations and connect donors with people in need.",
+
+    "Pytest Entry": "SKFeatureLLM — Pytest infrastructure",
+    "Pytest Body": "Set up a Pytest-based testing stack with unit tests, mocks, and configuration to keep the core feature-selection logic reliable.",
+    "Pytest Role": "Open-source contributor",
+
+    "AB Mobile Entry": "A&B Project EE — mobile app",
+    "AB Mobile Body": "Volunteer-built Flutter + Django app coordinating blood donations and connecting donors with people in need.",
     "AB Mobile Role": "Volunteer Flutter & Django developer",
-    "AB Mobile Impact": "Streamlined matching between donors and beneficiaries through a dedicated mobile experience.",
-    "View App Screens": "View App Screens",
-    "Ecommerce": "Ecommerce",
-    "Benin Digital Marketplace": "Bénin Digital Marketplace",
-    "Benin Digital Marketplace Summary": "On-site marketplace application built for Bénin Digital, enabling buyers and sellers to trade products through a mobile-friendly ecommerce experience.",
-    "Benin Role": "On-site marketplace application developer",
-    "Benin Impact": "Delivered a modern marketplace interface to showcase products and streamline orders.",
-    "View Marketplace Screens": "View Marketplace Screens",
-    "Websites": "Websites",
-    "Nonprofit": "Nonprofit",
-    "AB Project EE Website": "A&B Project EE Website",
-    "AB Project EE Summary": "Designed and built the public website for A&B Project EE, a nonprofit focused on social, humanitarian, and solidarity support.",
-    "AB Role": "Volunteer web developer",
-    "AB Impact": "Gave the organization a modern online presence to share initiatives and rally support.",
-    "Corporate Site": "Corporate Site",
-    "Keoni Consulting Website": "Keoni Consulting Website",
-    "Keoni Consulting Summary": "WordPress-powered consulting website created for Benin Digital to showcase services and capture leads for Keoni Consulting.",
+    "View Screens": "View screens",
+
+    "Benin Marketplace Entry": "Bénin Digital — marketplace app",
+    "Benin Marketplace Body": "On-site marketplace application enabling buyers and sellers to trade products through a mobile-friendly ecommerce experience.",
+    "Benin Marketplace Role": "Marketplace application developer",
+
+    "MC Agence Entry": "MC Agence — marketing site",
+    "MC Agence Body": "Responsive Webflow site for a marketing agency, with cinematic scroll and analytics-ready forms.",
+    "MC Agence Role": "Lead designer & Webflow developer",
+    "Visit Website": "Visit site",
+
+    "AB Website Entry": "A&B Project EE — website",
+    "AB Website Body": "Public website for a nonprofit focused on social, humanitarian, and solidarity support.",
+    "AB Website Role": "Volunteer web developer",
+
+    "Keoni Entry": "Keoni Consulting — corporate site",
+    "Keoni Body": "WordPress consulting site built for Bénin Digital, with clear service pages and lead capture.",
     "Keoni Role": "WordPress & PHP developer",
-    "Keoni Impact": "Delivered a modern corporate presence with clear service pages and contact flows.",
-    "AB Mobile Screens Heading": "A&B Project EE – App Screens",
-    "AB Mobile Screens Subtitle": "Browse through the main screens of the blood donation mobile app.",
-    "Benin Marketplace Screens Heading": "Bénin Digital – Marketplace Screens",
-    "Benin Marketplace Screens Subtitle": "Browse through the key ecommerce flows of the Bénin Digital marketplace app.",
-    "Role": "Role",
-    "Stack": "Stack",
-    "Impact": "Impact",
-    "How I Ship Work": "How I Ship Work",
-    "Process Subtitle": "A lean, opinionated delivery playbook tuned for founders and lean teams.",
-    "Discovery & Alignment": "Discovery & Alignment",
-    "Discovery Copy": "Stakeholder interviews, success metrics, and backlog triage to focus on outcomes, not outputs.",
-    "Experience Design": "Experience Design",
-    "Design Copy": "Wireflows, system tokens, and prototyping sessions that capture nuance before code is written.",
-    "Build & QA": "Build & QA",
-    "Build Copy": "Test-driven builds with instrumentation, accessibility sweeps, and environment parity.",
-    "Launch & Care": "Launch & Care",
-    "Launch Copy": "Operational runbooks, async hand-offs, and post-launch analytics to keep momentum alive.",
-    "Collaboration Formats": "Collaboration Formats",
-    "Collaboration Subtitle": "Engagement models that flex with your roadmap and budget.",
-    "Launch Sprint": "Launch Sprint",
-    "Launch Sprint Copy": "2-3 week engagements to ship a marketing site, microsite, or design system MVP.",
-    "Sprint Deliverable 1": "Roadmap, wireframes, and dev-ready components.",
-    "Sprint Deliverable 2": "Weekly demos and Loom summaries.",
-    "Embedded Partner": "Embedded Partner",
-    "Embedded Copy": "Part-time retention where I co-own a backlog, mentor teammates, and keep releases humming.",
-    "Embedded Deliverable 1": "Standups + async updates.",
-    "Embedded Deliverable 2": "Design, build, and QA coverage.",
-    "Advisory Sessions": "Advisory Sessions",
-    "Advisory Copy": "One-off or recurring strategy calls focused on developer experience and automation.",
-    "Advisory Deliverable 1": "Recorded sessions & next steps.",
-    "Advisory Deliverable 2": "Tooling and hiring recommendations.",
-    "About Hero Tagline": "More than a résumé",
+
+    "AB Mobile Screens Heading": "A&B Project EE — app screens",
+    "AB Mobile Screens Subtitle": "The main screens of the blood-donation mobile app.",
+    "Benin Marketplace Screens Heading": "Bénin Digital — marketplace screens",
+    "Benin Marketplace Screens Subtitle": "Key ecommerce flows of the Bénin Digital marketplace app.",
+    "Close": "Close",
+
+    "Process Heading": "How entries get filed",
+    "Process Intro": "A lean, opinionated delivery process for founders and lean teams.",
+    "Discovery Entry": "Discovery & alignment",
+    "Discovery Body": "Stakeholder interviews, success metrics, and backlog triage to focus on outcomes, not outputs.",
+    "Design Entry": "Experience design",
+    "Design Body": "Wireflows, system tokens, and prototyping sessions that capture nuance before code is written.",
+    "Build Entry": "Build & QA",
+    "Build Body": "Test-driven builds with instrumentation, accessibility sweeps, and environment parity.",
+    "Launch Entry": "Launch & care",
+    "Launch Body": "Operational runbooks, async hand-offs, and post-launch analytics to keep momentum alive.",
+
+    "Collaboration Heading": "Collaboration formats",
+    "Collaboration Intro": "Engagement models that flex with your roadmap and budget.",
+    "Sprint Entry": "Launch sprint",
+    "Sprint Body": "2–3 week engagements to ship a marketing site, microsite, or design-system MVP.",
+    "Embedded Entry": "Embedded partner",
+    "Embedded Body": "Part-time retention where I co-own a backlog, mentor teammates, and keep releases humming.",
+    "Advisory Entry": "Advisory sessions",
+    "Advisory Body": "One-off or recurring strategy calls focused on developer experience and automation.",
+
+    "About Eyebrow": "More than a résumé",
     "About Hero Intro": "I design resilient software, facilitate calm releases, and keep teams aligned even when the scope shifts mid-flight.",
     "About Hero Secondary": "Beninese-born engineer, UCAO alumni, and lifelong student of product strategy, systems thinking, and inclusive design.",
-    "View Work": "View Work",
+    "Open Source Projects": "Open-source projects",
     "Languages Spoken": "Languages spoken",
+    "View Work": "View the ledger",
+
     "Story Heading": "The story so far",
     "Story Intro": "From tinkering with BASIC scripts to shipping distributed systems, here's how I found my groove.",
-    "Origin Story": "Origin Story",
-    "Origin Copy": "Learned to debug on family hardware in Porto-Novo, fell in love with community meetups, and kept stacking skills through Google Developer Groups.",
-    "Uni Chapter": "University Years",
-    "Uni Copy": "Graduated in Computer Science at UCAO with research on resilient web architectures and started freelancing for NGOs.",
-    "Now Chapter": "Right Now",
-    "Now Copy": "Split my time between client launches, MonsterUI contributions, and mentoring juniors on automation best practices.",
-    "Principles Heading": "Principles I work by",
+    "Origin Entry": "Origin",
+    "Origin Body": "Learned to debug on family hardware in Porto-Novo, fell in love with community meetups, and kept stacking skills through Google Developer Groups.",
+    "Uni Entry": "University years",
+    "Uni Body": "Graduated in Computer Science at UCAO with research on resilient web architectures, and started freelancing for NGOs.",
+    "Now Entry": "Right now",
+    "Now Body": "Split between client launches, open-source contributions, and mentoring juniors on automation best practices.",
+
+    "Principles Heading": "Principles on file",
     "Principles Intro": "The filters I run before pushing code, presenting work, or joining a team.",
-    "Principle 1 Title": "Accessibility is table stakes",
-    "Principle 1 Copy": "Every UI ships with semantic structure, keyboard coverage, and inclusive copy.",
-    "Principle 2 Title": "Documentation beats memory",
-    "Principle 2 Copy": "Async hand-offs, Loom walkthroughs, and living runbooks keep teams confident.",
-    "Principle 3 Title": "Measure what matters",
-    "Principle 3 Copy": "Every build tracks the metric it's meant to elevate, from demo requests to MTTR.",
-    "Principle 4 Title": "People over process",
-    "Principle 4 Copy": "Rituals should energize collaboration—not drain it—so I keep meetings light and context heavy.",
-    "Toolbox Heading": "Toolbox & focus areas",
-    "Toolbox Intro": "I thrive at the intersection of product, design systems, and platform automation.",
-    "Toolbox 1 Title": "Frontend & DX",
-    "Toolbox 1 Copy": "React, Astro, Webflow, Tailwind, Playwright, Vitest.",
-    "Toolbox 2 Title": "Backend & Cloud",
-    "Toolbox 2 Copy": "Python, FastAPI, Supabase, AWS, Cloudflare Workers, Docker.",
-    "Toolbox 3 Title": "Product Ops",
-    "Toolbox 3 Copy": "Notion, Linear, Retool, Zapier, analytics instrumentation, QA ops.",
-    "Production Deployments": "Projects shipped",
-    "Open Source Projects": "Open source projects",
-    "Credential Gallery": "Credential Gallery",
-    "Certifications Intro": "Proof that I'm always leveling up my craft through structured programs, labs, and exams.",
-    "Back to Home": "Back to Home",
-    "Download Transcript": "Download Transcript",
-    "MC Agence Website": "MC Agence Website",
-    "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.": "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.",
-    "Visit Website": "Visit Website",
-    "MonsterUI Library Contribution": "MonsterUI Library Contribution",
-    "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.": "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.",
-    "View PR on GitHub": "View PR on GitHub",
-    "About Me": "About Me",
-    "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅": "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅",
-    "Resume": "Resume",
-    "Things I Can Do Without Googling... Mostly": "Things I Can Do Without Googling... Mostly",
-    "Programming in Python": "Programming in Python",
-    "Meta through Coursera - Issued: Jul 2024": "Meta through Coursera - Issued: Jul 2024",
-    "JavaScript Algorithms and Data Structures": "JavaScript Algorithms and Data Structures",
-    "freeCodeCamp - Issued: Sep 2024": "freeCodeCamp - Issued: Sep 2024",
-    "Artificial Intelligence": "Artificial Intelligence",
-    "Cheikh Hamidou Kane Digital University - Issued: Mar 2024": "Cheikh Hamidou Kane Digital University - Issued: Mar 2024",
-    "View Certificate": "View Certificate",
-    "See More": "See More",
-    "GitHub Stats & Contributions": "GitHub Stats & Contributions",
-    "Let's Connect": "Let's Connect",
-    "Feel free to reach out to me via email.": "Feel free to reach out to me via email.",
-    "Send Email": "Send Email",
-    "© 2025 Chilavert N'dah": "© 2025 Chilavert N'dah",
-    "Microsoft Excel": "Microsoft Excel",
-    "Microsoft through Coursera - Issued: Feb 2024": "Microsoft through Coursera - Issued: Feb 2024",
-    "Think Like a Computer: The Logic of Programming": "Think Like a Computer: The Logic of Programming",
-    "OpenClassrooms - Issued: Jan 2024": "OpenClassrooms - Issued: Jan 2024",
-    "Foundations of Cybersecurity": "Foundations of Cybersecurity",
-    "Google through Coursera - Issued: Jan 2024": "Google through Coursera - Issued: Jan 2024",
-    "Data Security": "Data Security",
-    "Cisco through Coursera - Issued: Jul 2024": "Cisco through Coursera - Issued: Jul 2024",
-    "Visual Elements of User Interface Design": "Visual Elements of User Interface Design",
-    "California Institute of the Arts through Coursera - Issued: Jul 2024": "California Institute of the Arts through Coursera - Issued: Jul 2024",
-    "Software Design and Project Management": "Software Design and Project Management",
-    "The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024": "The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024",
-    "Responsive Web Design": "Responsive Web Design",
-    "freeCodeCamp - Issued: Aug 2024": "freeCodeCamp - Issued: Aug 2024",
-    "Introduction to Git": "Introduction to Git",
-    "Microsoft Learn - Issued: Aug 2024": "Microsoft Learn - Issued: Aug 2024",
-    "Introduction to GitHub": "Introduction to GitHub",
+    "Principle 1 Entry": "Accessibility is table stakes",
+    "Principle 1 Body": "Every UI ships with semantic structure, keyboard coverage, and inclusive copy.",
+    "Principle 2 Entry": "Documentation beats memory",
+    "Principle 2 Body": "Async hand-offs, walkthroughs, and living runbooks keep teams confident.",
+    "Principle 3 Entry": "Measure what matters",
+    "Principle 3 Body": "Every build tracks the metric it's meant to move, from demo requests to MTTR.",
+    "Principle 4 Entry": "People over process",
+    "Principle 4 Body": "Rituals should energize collaboration, not drain it — light meetings, heavy context.",
+
+    "Toolbox 1 Entry": "Frontend & DX",
+    "Toolbox 1 Body": "Flutter, React, Webflow, Tailwind, Playwright, Vitest.",
+    "Toolbox 2 Entry": "Backend & cloud",
+    "Toolbox 2 Body": "Python, Django, FastAPI, Supabase, Firebase.",
+    "Toolbox 3 Entry": "Product ops",
+    "Toolbox 3 Body": "WordPress, Notion, GitHub Actions, analytics instrumentation.",
+
+    "Cert Intro Heading": "The full record",
+    "Cert Intro Body": "Every certificate earned, dated and linked to its issuer's verification page — nothing self-reported.",
     "Verify": "Verify",
-    "Back": "Back"
+
+    "Python Cert Entry": "Programming in Python",
+    "Python Cert Issuer": "Meta, via Coursera",
+    "JS Cert Entry": "JavaScript Algorithms and Data Structures",
+    "JS Cert Issuer": "freeCodeCamp",
+    "AI Cert Entry": "Artificial Intelligence",
+    "AI Cert Issuer": "Cheikh Hamidou Kane Digital University",
+    "Excel Cert Entry": "Microsoft Excel",
+    "Excel Cert Issuer": "Microsoft, via Coursera",
+    "Logic Cert Entry": "Think Like a Computer: The Logic of Programming",
+    "Logic Cert Issuer": "OpenClassrooms",
+    "Cyber Cert Entry": "Foundations of Cybersecurity",
+    "Cyber Cert Issuer": "Google, via Coursera",
+    "DataSec Cert Entry": "Data Security",
+    "DataSec Cert Issuer": "Cisco, via Coursera",
+    "UI Cert Entry": "Visual Elements of User Interface Design",
+    "UI Cert Issuer": "California Institute of the Arts, via Coursera",
+    "SDPM Cert Entry": "Software Design and Project Management",
+    "SDPM Cert Issuer": "HKUST, via Coursera",
+    "RWD Cert Entry": "Responsive Web Design",
+    "RWD Cert Issuer": "freeCodeCamp",
+    "Git Cert Entry": "Introduction to Git",
+    "Git Cert Issuer": "Microsoft Learn",
+    "GitHub Cert Entry": "Introduction to GitHub",
+    "GitHub Cert Issuer": "Microsoft Learn"
   },
   fr: {
     "Home": "Accueil",
@@ -180,209 +188,188 @@ const TRANSLATIONS = {
     "About": "À propos",
     "Certifications": "Certifications",
     "GitHub": "GitHub",
-    "Think different": "Pensez différemment",
+    "Language selector": "Sélection de la langue",
+
+    "Manifest Eyebrow": "Registre des livraisons — édition 2026",
     "Chilavert N'Dah": "Chilavert N'Dah",
-    "Software Developer": "Développeur logiciel",
+    "Software Developer": "Développeur full-stack & mobile, basé à Cotonou, Bénin. Chaque entrée ci-dessous est un projet réellement livré à un client ou une association.",
+    "Stamp Line 1": "Livré",
+    "Stamp Line 2": "& vérifié",
+    "Stamp Line 3": "Cotonou · BJ",
     "Call": "Appeler",
     "Text": "Écrire",
-    "Services": "Services",
-    "Web Site": "Site web",
-    "Web Application": "Application web",
-    "Mobile Application": "Application mobile",
-    "Projects": "Projets",
-    "Case Studies & Experiments": "Études de cas & expérimentations",
-    "Work Page Intro": "Zoom sur mes livrables favoris mêlant marketing, open source et automatisation pour garder les équipes en mouvement.",
-    "Industries Served": "Secteurs accompagnés",
-    "Referral Work": "Années d'activité",
-    "Featured Deliveries": "Livrables mis en avant",
-    "Featured Work Subtitle": "Des projets menés de bout en bout – de l'insight au code prêt pour la prod.",
-    "Marketing Site": "Site marketing",
-    "Open Source": "Open source",
-    "Automation": "Automatisation",
-    "MC Agence Summary": "Site marketing localisé avec copy humaine, animations cinématiques et formulaires prêts pour l'analyse.",
-    "MC Role": "Lead designer & développeur Webflow",
-    "MC Impact": "+42% de démos qualifiées en 8 semaines",
-    "Monster Summary": "Extension de MonsterUI avec overlays accessibles, navigation clavier et tests snapshot.",
-    "Monster Role": "Mainteneur open source",
-    "Monster Impact": "-30% de régressions UI chez les adopteurs",
-    "Open Source Contributions": "Contributions open source",
-    "Pytest Infrastructure Contribution": "Infrastructure de tests Pytest pour SKFeatureLLM",
-    "Pytest Infrastructure Summary": "Mise en place d'une suite de tests Pytest pour SKFeatureLLM avec tests unitaires, mocks et configuration pour fiabiliser la logique de sélection de features.",
-    "Pytest Role": "Contributeur open source",
-    "Pytest Impact": "Amélioration de la fiabilité et de la maintenabilité grâce aux tests, mocks et au linting ajoutés au projet.",
-    "CI CD Pipeline PyPI": "Pipeline CI/CD pour les tests & PyPI",
-    "CI CD Pipeline Summary": "Mise en place d'un pipeline GitHub Actions qui exécute les tests, applique la qualité de code et publie les paquets Python sur PyPI via Trusted Publishing.",
-    "CI CD Role": "Contributeur open source",
-    "CI CD Impact": "Unification du linting, des tests et du déploiement dans un seul pipeline, avec publication sécurisée et sans identifiants sur PyPI.",
-    "Mobile Applications": "Applications mobiles",
-    "Mobile App": "Application mobile",
-    "AB Project EE Mobile": "Application mobile A&B Project EE",
-    "AB Project EE Mobile Summary": "Application mobile bénévole aidant A&B Project EE à coordonner les dons de sang et à connecter donneurs et bénéficiaires.",
-    "AB Mobile Role": "Développeur bénévole Flutter & Django",
-    "AB Mobile Impact": "Fluidification de la mise en relation entre donneurs et bénéficiaires grâce à une expérience mobile dédiée.",
-    "View App Screens": "Voir les écrans de l'app",
-    "Ecommerce": "E-commerce",
-    "Benin Digital Marketplace": "Marketplace Bénin Digital",
-    "Benin Digital Marketplace Summary": "Application marketplace on-site développée pour Bénin Digital, permettant à acheteurs et vendeurs d'échanger via une expérience e-commerce mobile-friendly.",
-    "Benin Role": "Développeur de l'application marketplace on-site",
-    "Benin Impact": "Livraison d'une interface marketplace moderne pour présenter les produits et fluidifier les commandes.",
-    "View Marketplace Screens": "Voir les écrans de la marketplace",
-    "Websites": "Sites web",
-    "Nonprofit": "Association",
-    "AB Project EE Website": "Site web A&B Project EE",
-    "AB Project EE Summary": "Conception et développement du site public d'A&B Project EE, une association d'aide sociale, humanitaire et solidaire.",
-    "AB Role": "Développeur web bénévole",
-    "AB Impact": "Offre à l'association une présence en ligne moderne pour partager ses initiatives et mobiliser du soutien.",
-    "Corporate Site": "Site corporate",
-    "Keoni Consulting Website": "Site web Keoni Consulting",
-    "Keoni Consulting Summary": "Site de conseil sous WordPress créé pour Benin Digital afin de présenter les services et générer des leads pour Keoni Consulting.",
-    "Keoni Role": "Développeur WordPress & PHP",
-    "Keoni Impact": "Livraison d'une présence corporate moderne avec des pages de services claires et des parcours de contact.",
-    "AB Mobile Screens Heading": "A&B Project EE – Écrans de l'application",
-    "AB Mobile Screens Subtitle": "Parcourez les principaux écrans de l'application mobile de don de sang.",
-    "Benin Marketplace Screens Heading": "Bénin Digital – Écrans de la marketplace",
-    "Benin Marketplace Screens Subtitle": "Parcourez les principaux parcours e-commerce de la marketplace Bénin Digital.",
-    "Role": "Rôle",
-    "Stack": "Stack",
-    "Impact": "Impact",
-    "How I Ship Work": "Ma façon de livrer",
-    "Process Subtitle": "Un playbook affûté pour fondateurs et équipes agiles.",
-    "Discovery & Alignment": "Discovery & alignement",
-    "Discovery Copy": "Entretiens, métriques de succès et tri du backlog pour viser les résultats.",
-    "Experience Design": "Design d'expérience",
-    "Design Copy": "Wireflows, tokens et protos pour capturer la nuance avant le code.",
-    "Build & QA": "Build & QA",
-    "Build Copy": "Dév piloté par les tests avec instrumentation et revues accessibilité.",
-    "Launch & Care": "Lancement & suivi",
-    "Launch Copy": "Runbooks, hand-offs async et analytics post-lancement pour garder l'élan.",
-    "Collaboration Formats": "Modes de collaboration",
-    "Collaboration Subtitle": "Des formats qui s'adaptent à votre roadmap et budget.",
-    "Launch Sprint": "Sprint de lancement",
-    "Launch Sprint Copy": "2-3 semaines pour livrer site marketing, microsite ou design system MVP.",
-    "Sprint Deliverable 1": "Roadmap, wireframes et composants prêts dev.",
-    "Sprint Deliverable 2": "Démos hebdo et résumés Loom.",
-    "Embedded Partner": "Partenaire embarqué",
-    "Embedded Copy": "Rétention part-time pour co-gérer le backlog, mentorer et sécuriser les releases.",
-    "Embedded Deliverable 1": "Standup + updates async.",
-    "Embedded Deliverable 2": "Design, build et QA au long cours.",
-    "Advisory Sessions": "Sessions conseil",
-    "Advisory Copy": "Coaching ponctuel ou récurrent sur la DX et l'automatisation.",
-    "Advisory Deliverable 1": "Sessions enregistrées & next steps.",
-    "Advisory Deliverable 2": "Reco tooling et staffing.",
-    "About Hero Tagline": "Au-delà du CV",
-    "About Hero Intro": "Je conçois des logiciels résilients, orchestre des sorties sereines et garde les équipes alignées quand la portée évolue.",
-    "About Hero Secondary": "Ingénieur béninois, alumni UCAO et étudiant perpétuel de la stratégie produit et du design inclusif.",
-    "View Work": "Voir les projets",
-    "Languages Spoken": "Langues parlées",
-    "Story Heading": "Mon parcours",
-    "Story Intro": "Des scripts BASIC aux systèmes distribués : voici comment j'ai trouvé mon rythme.",
-    "Origin Story": "Les débuts",
-    "Origin Copy": "Débogage sur le PC familial à Porto-Novo, communautés locales et Google Developer Groups.",
-    "Uni Chapter": "Années fac",
-    "Uni Copy": "Diplômé en informatique à l'UCAO avec un mémoire sur les architectures web résilientes.",
-    "Now Chapter": "Aujourd'hui",
-    "Now Copy": "Entre lancements clients, contributions MonsterUI et mentorat autour de l'automatisation.",
-    "Principles Heading": "Principes de travail",
-    "Principles Intro": "Mes filtres avant toute livraison ou collaboration.",
-    "Principle 1 Title": "L'accessibilité est un prérequis",
-    "Principle 1 Copy": "Chaque UI arrive avec sémantique, navigation clavier et copy inclusive.",
-    "Principle 2 Title": "La doc prime sur la mémoire",
-    "Principle 2 Copy": "Hand-offs async, Loom et runbooks vivants rassurent les équipes.",
-    "Principle 3 Title": "Mesurer l'essentiel",
-    "Principle 3 Copy": "Chaque build suit la métrique visée, des démos à la MTTR.",
-    "Principle 4 Title": "Les gens avant le process",
-    "Principle 4 Copy": "Des rituels qui boostent l'énergie, pas l'inverse : peu de réunions, beaucoup de contexte.",
-    "Toolbox Heading": "Boîte à outils & focus",
-    "Toolbox Intro": "Je performe à l'intersection produit, design systems et automation.",
-    "Toolbox 1 Title": "Frontend & DX",
-    "Toolbox 1 Copy": "React, Astro, Webflow, Tailwind, Playwright, Vitest.",
-    "Toolbox 2 Title": "Backend & Cloud",
-    "Toolbox 2 Copy": "Python, FastAPI, Supabase, AWS, Cloudflare Workers, Docker.",
-    "Toolbox 3 Title": "Product Ops",
-    "Toolbox 3 Copy": "Notion, Linear, Retool, Zapier, instrumentation analytics, QA ops.",
-    "Production Deployments": "Projets livrés",
-    "Open Source Projects": "Projets open source",
-    "Credential Gallery": "Galerie de certifications",
-    "Certifications Intro": "La preuve que je fais évoluer mes compétences via des parcours structurés, des labs et des examens.",
+    "Send Email": "Email",
+    "See Ledger": "Voir le registre complet",
+
+    "Ledger Heading": "Entrées en vedette",
+    "Ledger Intro": "Un extrait du registre complet — contributions open source, applications mobiles et sites livrés à de vrais clients.",
+    "See More": "Voir le registre complet",
+
+    "About Preview Heading": "À propos du tenancier du registre",
+    "About Preview Body": "Diplômé en informatique de l'UCAO à Cotonou. Développeur freelance, je contribue à des projets open source entre deux lancements clients. En dehors : basketball, musique et voyages.",
+    "Read Bio": "Lire la bio complète",
+
+    "Toolbox Heading": "Instruments",
+    "Toolbox Intro": "Ce qui est vraiment sur l'établi — sans enjolivement de CV.",
+
+    "Certifications Preview Heading": "Certifications au dossier",
+    "Certifications Intro": "Parcours structurés, labs et examens — chaque entrée renvoie vers sa page de vérification.",
+
+    "GitHub Heading": "Relevé de contributions",
+    "GitHub Intro": "Activité publique, extraite directement de GitHub.",
+
+    "Contact Heading": "Me contacter",
+    "Contact Intro": "Je réponds en moins d'une journée, souvent plus vite.",
+    "Email Label": "Email",
+    "Call Label": "Appeler",
+    "WhatsApp Label": "WhatsApp",
+    "WhatsApp Value": "Échanges rapides & briefs",
+
+    "Footer Rights": "© 2026 Chilavert N'Dah",
+    "Footer GitHub": "GitHub",
+
+    "Work Eyebrow": "Études de cas & expérimentations",
+    "Work Heading": "Le registre",
+    "Work Intro": "Chaque projet ci-dessous a été livré à un vrai client, employeur ou dépôt open source — daté, avec rôle et stack au dossier.",
     "Back to Home": "Retour à l'accueil",
-    "Download Transcript": "Télécharger le relevé",
-    "MC Agence Website": "Site web MC Agence",
-    "A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach.": "Un site responsive pour une agence marketing construit avec Webflow, mêlant design UI/UX moderne, animations fluides et approche centrée client.",
-    "Visit Website": "Visiter le site",
-    "MonsterUI Library Contribution": "Contribution à MonsterUI",
-    "Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library.": "Contribution à la bibliothèque open source MonsterUI pour ajouter de nouveaux composants UI et améliorations (pull request #30).",
-    "View PR on GitHub": "Voir la PR sur GitHub",
-    "About Me": "À propos de moi",
-    "I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅": "Diplômé en informatique de l'UCAO (Cotonou), je suis développeur logiciel freelance et contributeur open source. Passionné de full-stack et de cloud, j'aime aussi le basket, la musique et les voyages. Anecdote : trois heures de debug avant de réaliser que je n'avais pas enregistré le fichier. 😅",
     "Resume": "CV",
-    "Things I Can Do Without Googling... Mostly": "Ce que je maîtrise (presque) sans Google",
-    "Programming in Python": "Programmation en Python",
-    "Meta through Coursera - Issued: Jul 2024": "Meta via Coursera - Juil 2024",
-    "JavaScript Algorithms and Data Structures": "Algorithmes et structures de données JavaScript",
-    "freeCodeCamp - Issued: Sep 2024": "freeCodeCamp - Sep 2024",
-    "Artificial Intelligence": "Intelligence artificielle",
-    "Cheikh Hamidou Kane Digital University - Issued: Mar 2024": "Université Numérique Cheikh Hamidou Kane - Mar 2024",
-    "View Certificate": "Voir le certificat",
-    "See More": "Voir plus",
-    "GitHub Stats & Contributions": "Statistiques & contributions GitHub",
-    "Let's Connect": "Restons en contact",
-    "Feel free to reach out to me via email.": "Contactez-moi par email.",
-    "Send Email": "Envoyer un email",
-    "© 2025 Chilavert N'dah": "© 2025 Chilavert N'dah",
-    "Microsoft Excel": "Microsoft Excel",
-    "Microsoft through Coursera - Issued: Feb 2024": "Microsoft via Coursera - Fév 2024",
-    "Think Like a Computer: The Logic of Programming": "Penser comme un ordinateur : la logique de la programmation",
-    "OpenClassrooms - Issued: Jan 2024": "OpenClassrooms - Jan 2024",
-    "Foundations of Cybersecurity": "Fondamentaux de la cybersécurité",
-    "Google through Coursera - Issued: Jan 2024": "Google via Coursera - Jan 2024",
-    "Data Security": "Sécurité des données",
-    "Cisco through Coursera - Issued: Jul 2024": "Cisco via Coursera - Juil 2024",
-    "Visual Elements of User Interface Design": "Éléments visuels du design d'interface",
-    "California Institute of the Arts through Coursera - Issued: Jul 2024": "California Institute of the Arts via Coursera - Juil 2024",
-    "Software Design and Project Management": "Conception logicielle & gestion de projet",
-    "The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024": "HKUST via Coursera - Juil 2024",
-    "Responsive Web Design": "Design web responsive",
-    "freeCodeCamp - Issued: Aug 2024": "freeCodeCamp - Août 2024",
-    "Introduction to Git": "Introduction à Git",
-    "Microsoft Learn - Issued: Aug 2024": "Microsoft Learn - Août 2024",
-    "Introduction to GitHub": "Introduction à GitHub",
+    "Stat Shipped": "Projets livrés",
+    "Stat Sectors": "Secteurs couverts",
+    "Stat Years": "Années d'activité",
+
+    "Open Source Section": "Open source",
+    "Mobile Section": "Applications mobiles",
+    "Websites Section": "Sites web",
+
+    "Monster Entry": "MonsterUI — contribution à la bibliothèque",
+    "Monster Body": "Extension de la bibliothèque open source MonsterUI avec overlays accessibles, navigation clavier et tests snapshot pour micro-frontends Python. PR #30.",
+    "Monster Role": "Mainteneur open source",
+    "View PR": "Voir la PR",
+
+    "CI CD Entry": "SKFeatureLLM — pipeline CI/CD",
+    "CI CD Body": "Pipeline GitHub Actions qui exécute les tests, applique la qualité de code et publie les paquets Python sur PyPI via Trusted Publishing.",
+    "CI CD Role": "Contributeur open source",
+
+    "Pytest Entry": "SKFeatureLLM — infrastructure Pytest",
+    "Pytest Body": "Suite de tests Pytest avec tests unitaires, mocks et configuration pour fiabiliser la logique de sélection de features.",
+    "Pytest Role": "Contributeur open source",
+
+    "AB Mobile Entry": "A&B Project EE — application mobile",
+    "AB Mobile Body": "Application Flutter + Django bâtie bénévolement pour coordonner les dons de sang et mettre en relation donneurs et personnes dans le besoin.",
+    "AB Mobile Role": "Développeur bénévole Flutter & Django",
+    "View Screens": "Voir les écrans",
+
+    "Benin Marketplace Entry": "Bénin Digital — application marketplace",
+    "Benin Marketplace Body": "Application marketplace on-site permettant à acheteurs et vendeurs d'échanger via une expérience e-commerce mobile-friendly.",
+    "Benin Marketplace Role": "Développeur de l'application marketplace",
+
+    "MC Agence Entry": "MC Agence — site marketing",
+    "MC Agence Body": "Site Webflow responsive pour une agence marketing, animations cinématiques et formulaires prêts pour l'analyse.",
+    "MC Agence Role": "Lead designer & développeur Webflow",
+    "Visit Website": "Visiter le site",
+
+    "AB Website Entry": "A&B Project EE — site web",
+    "AB Website Body": "Site public d'une association d'aide sociale, humanitaire et solidaire.",
+    "AB Website Role": "Développeur web bénévole",
+
+    "Keoni Entry": "Keoni Consulting — site corporate",
+    "Keoni Body": "Site de conseil sous WordPress créé pour Bénin Digital, pages de services claires et génération de leads.",
+    "Keoni Role": "Développeur WordPress & PHP",
+
+    "AB Mobile Screens Heading": "A&B Project EE — écrans de l'application",
+    "AB Mobile Screens Subtitle": "Les principaux écrans de l'application mobile de don de sang.",
+    "Benin Marketplace Screens Heading": "Bénin Digital — écrans de la marketplace",
+    "Benin Marketplace Screens Subtitle": "Les principaux parcours e-commerce de la marketplace Bénin Digital.",
+    "Close": "Fermer",
+
+    "Process Heading": "Comment les entrées sont classées",
+    "Process Intro": "Un processus de livraison sobre et assumé, pour fondateurs et petites équipes.",
+    "Discovery Entry": "Découverte & alignement",
+    "Discovery Body": "Entretiens, métriques de succès et tri du backlog pour viser les résultats, pas seulement les livrables.",
+    "Design Entry": "Design d'expérience",
+    "Design Body": "Wireflows, tokens de design et prototypage pour capturer la nuance avant le code.",
+    "Build Entry": "Build & QA",
+    "Build Body": "Développement piloté par les tests, instrumentation et revues d'accessibilité.",
+    "Launch Entry": "Lancement & suivi",
+    "Launch Body": "Runbooks opérationnels, passations async et analytics post-lancement pour garder l'élan.",
+
+    "Collaboration Heading": "Modes de collaboration",
+    "Collaboration Intro": "Des formats qui s'adaptent à votre feuille de route et votre budget.",
+    "Sprint Entry": "Sprint de lancement",
+    "Sprint Body": "2 à 3 semaines pour livrer un site marketing, un microsite ou un MVP de design system.",
+    "Embedded Entry": "Partenaire embarqué",
+    "Embedded Body": "Rétention à temps partiel : je co-gère un backlog, mentore l'équipe et sécurise les releases.",
+    "Advisory Entry": "Sessions de conseil",
+    "Advisory Body": "Appels stratégiques ponctuels ou récurrents sur la DX et l'automatisation.",
+
+    "About Eyebrow": "Plus qu'un CV",
+    "About Hero Intro": "Je conçois des logiciels résilients, j'orchestre des sorties sereines et je garde les équipes alignées même quand le périmètre évolue en cours de route.",
+    "About Hero Secondary": "Ingénieur béninois, alumni de l'UCAO, étudiant perpétuel de la stratégie produit, de la pensée systémique et du design inclusif.",
+    "Open Source Projects": "Projets open source",
+    "Languages Spoken": "Langues parlées",
+    "View Work": "Voir le registre",
+
+    "Story Heading": "Le parcours jusqu'ici",
+    "Story Intro": "Des scripts BASIC bricolés aux systèmes distribués livrés en prod : voici comment j'ai trouvé mon rythme.",
+    "Origin Entry": "Les débuts",
+    "Origin Body": "Débogage sur le matériel familial à Porto-Novo, coup de cœur pour les meetups communautaires, montée en compétences via les Google Developer Groups.",
+    "Uni Entry": "Les années fac",
+    "Uni Body": "Diplômé en informatique à l'UCAO avec un mémoire sur les architectures web résilientes, et premiers freelances pour des ONG.",
+    "Now Entry": "Aujourd'hui",
+    "Now Body": "Partagé entre lancements clients, contributions open source et mentorat sur les bonnes pratiques d'automatisation.",
+
+    "Principles Heading": "Principes au dossier",
+    "Principles Intro": "Les filtres que j'applique avant de pousser du code, présenter un travail, ou rejoindre une équipe.",
+    "Principle 1 Entry": "L'accessibilité est un prérequis",
+    "Principle 1 Body": "Chaque UI arrive avec une structure sémantique, une navigation clavier complète et une copy inclusive.",
+    "Principle 2 Entry": "La documentation prime sur la mémoire",
+    "Principle 2 Body": "Passations async, walkthroughs et runbooks vivants rassurent les équipes.",
+    "Principle 3 Entry": "Mesurer ce qui compte",
+    "Principle 3 Body": "Chaque build suit la métrique qu'il doit faire bouger, des demandes de démo au MTTR.",
+    "Principle 4 Entry": "Les gens avant le process",
+    "Principle 4 Body": "Les rituels doivent dynamiser la collaboration, pas l'épuiser — peu de réunions, beaucoup de contexte.",
+
+    "Toolbox 1 Entry": "Frontend & DX",
+    "Toolbox 1 Body": "Flutter, React, Webflow, Tailwind, Playwright, Vitest.",
+    "Toolbox 2 Entry": "Backend & cloud",
+    "Toolbox 2 Body": "Python, Django, FastAPI, Supabase, Firebase.",
+    "Toolbox 3 Entry": "Product ops",
+    "Toolbox 3 Body": "WordPress, Notion, GitHub Actions, instrumentation analytics.",
+
+    "Cert Intro Heading": "Le dossier complet",
+    "Cert Intro Body": "Chaque certificat obtenu, daté et relié à la page de vérification de son émetteur — rien de déclaratif.",
     "Verify": "Vérifier",
-    "Back": "Retour"
+
+    "Python Cert Entry": "Programmation en Python",
+    "Python Cert Issuer": "Meta, via Coursera",
+    "JS Cert Entry": "Algorithmes et structures de données JavaScript",
+    "JS Cert Issuer": "freeCodeCamp",
+    "AI Cert Entry": "Intelligence artificielle",
+    "AI Cert Issuer": "Université Numérique Cheikh Hamidou Kane",
+    "Excel Cert Entry": "Microsoft Excel",
+    "Excel Cert Issuer": "Microsoft, via Coursera",
+    "Logic Cert Entry": "Penser comme un ordinateur : la logique de la programmation",
+    "Logic Cert Issuer": "OpenClassrooms",
+    "Cyber Cert Entry": "Fondamentaux de la cybersécurité",
+    "Cyber Cert Issuer": "Google, via Coursera",
+    "DataSec Cert Entry": "Sécurité des données",
+    "DataSec Cert Issuer": "Cisco, via Coursera",
+    "UI Cert Entry": "Éléments visuels du design d'interface",
+    "UI Cert Issuer": "California Institute of the Arts, via Coursera",
+    "SDPM Cert Entry": "Conception logicielle & gestion de projet",
+    "SDPM Cert Issuer": "HKUST, via Coursera",
+    "RWD Cert Entry": "Design web responsive",
+    "RWD Cert Issuer": "freeCodeCamp",
+    "Git Cert Entry": "Introduction à Git",
+    "Git Cert Issuer": "Microsoft Learn",
+    "GitHub Cert Entry": "Introduction à GitHub",
+    "GitHub Cert Issuer": "Microsoft Learn"
   }
 };
-
-const GREETINGS = [
-  "Hello",
-  "Bonjour",
-  "Hola",
-  "Ciao",
-  "Olá",
-  "Привет",
-  "こんにちは",
-  "你好",
-  "안녕하세요",
-  "مرحبا",
-  "नमस्ते",
-  "Hallo",
-  "Γειά σου",
-  "Salve"
-];
 
 const languageState = {
   current: localStorage.getItem('preferredLanguage') || 'en'
 };
-
-const prefersReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-function applyTheme() {
-  const htmlElement = document.documentElement;
-  const storedMode = localStorage.getItem('mode');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  const shouldUseDark = storedMode === 'dark' || (!storedMode && prefersDark.matches);
-
-  htmlElement.classList.toggle('dark', shouldUseDark);
-  htmlElement.classList.add(localStorage.getItem('theme') || 'uk-theme-blue');
-}
 
 function applyLanguage(lang) {
   const safeLang = TRANSLATIONS[lang] ? lang : 'en';
@@ -401,9 +388,7 @@ function applyLanguage(lang) {
   document
     .querySelectorAll('#language-selector, #mobile-language-selector')
     .forEach((selector) => {
-      if (selector) {
-        selector.value = safeLang;
-      }
+      if (selector) selector.value = safeLang;
     });
 }
 
@@ -416,70 +401,6 @@ function initLanguageSelectors() {
         applyLanguage(event.target.value);
       });
     });
-}
-
-function initSplashScreen() {
-  const splashScreen = document.getElementById('splash-screen');
-  const loadingBar = document.getElementById('loading-progress');
-  const splashGreeting = document.getElementById('splash-greeting');
-  const mainContent = document.getElementById('main-content');
-
-  if (!splashScreen || !loadingBar || !splashGreeting || !mainContent) {
-    return;
-  }
-
-  const skipAnimations = prefersReducedMotionQuery.matches;
-
-  if (skipAnimations) {
-    splashScreen.style.display = 'none';
-    mainContent.style.opacity = '1';
-    mainContent.removeAttribute('aria-hidden');
-    return;
-  }
-
-  splashScreen.style.opacity = '1';
-  mainContent.style.opacity = '0';
-  mainContent.setAttribute('aria-hidden', 'true');
-
-  let currentGreetingIndex = 0;
-  splashGreeting.textContent = GREETINGS[currentGreetingIndex];
-
-  const greetingInterval = setInterval(() => {
-    currentGreetingIndex = (currentGreetingIndex + 1) % GREETINGS.length;
-    splashGreeting.textContent = GREETINGS[currentGreetingIndex];
-  }, 600);
-
-  setTimeout(() => {
-    loadingBar.style.width = '100%';
-  }, 100);
-
-  setTimeout(() => {
-    splashScreen.style.opacity = '0';
-    mainContent.style.opacity = '1';
-    mainContent.removeAttribute('aria-hidden');
-    clearInterval(greetingInterval);
-    setTimeout(() => {
-      splashScreen.style.display = 'none';
-    }, 500);
-  }, 3000);
-}
-
-function initNavbarScrollBehavior() {
-  const navbar = document.querySelector('.fixed-navbar');
-  if (!navbar) return;
-
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      navbar.style.transform = 'translateY(-100%)';
-    } else {
-      navbar.style.transform = 'translateY(0)';
-      navbar.classList.toggle('nav-scrolled', currentScrollY > 50);
-    }
-    lastScrollY = currentScrollY;
-  });
 }
 
 function initMobileMenu() {
@@ -503,31 +424,6 @@ function initMobileMenu() {
   });
 }
 
-function initScrollAnimations() {
-  if (prefersReducedMotionQuery.matches) {
-    document.body.classList.add('prefers-reduced-motion');
-    return;
-  }
-
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-  if (!animatedElements.length) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const animation = entry.target.getAttribute('data-animation');
-          entry.target.classList.add('animate__animated', `animate__${animation}`);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  animatedElements.forEach((element) => observer.observe(element));
-}
-
 function enhanceLazyImages() {
   document.querySelectorAll('img:not([loading])').forEach((img) => {
     if (img.dataset.priority === 'true') return;
@@ -536,70 +432,11 @@ function enhanceLazyImages() {
   });
 }
 
-async function loadPartial(name, onLoad) {
-  const container = document.querySelector(`[data-partial="${name}"]`);
-  if (!container) return;
-
-  const swapOuter = container.dataset.swap === 'outer';
-
-  try {
-    const response = await fetch(`partials/${name}.html`, { cache: 'no-cache' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const markup = await response.text();
-
-    if (swapOuter) {
-      container.outerHTML = markup;
-    } else {
-      container.innerHTML = markup;
-    }
-
-    if (typeof onLoad === 'function') {
-      onLoad();
-    }
-  } catch (error) {
-    console.error(`Failed to load partial "${name}"`, error);
-  }
-}
-
-function initContactBackgroundFallback() {
-  const contactSection = document.querySelector('.contact-section');
-  if (!contactSection) return;
-  contactSection.classList.add('has-background');
-}
-
-function initPrefersReducedListener() {
-  const applyState = (matches) => {
-    document.body.classList.toggle('prefers-reduced-motion', matches);
-  };
-
-  applyState(prefersReducedMotionQuery.matches);
-  prefersReducedMotionQuery.addEventListener('change', (event) => {
-    applyState(event.matches);
-  });
-}
-
-function initNavbar() {
-  initNavbarScrollBehavior();
+function initPage() {
+  enhanceLazyImages();
   initMobileMenu();
   initLanguageSelectors();
-}
-
-function initPage() {
-  applyTheme();
-  initPrefersReducedListener();
-  initSplashScreen();
-  initScrollAnimations();
-  enhanceLazyImages();
-  initContactBackgroundFallback();
   applyLanguage(languageState.current);
-
-  const navbarPromise = document.querySelector('[data-partial="navbar"]')
-    ? loadPartial('navbar', initNavbar)
-    : Promise.resolve(initNavbar());
-
-  Promise.all([navbarPromise, loadPartial('footer')]).then(() => {
-    applyLanguage(languageState.current);
-  });
 }
 
 document.addEventListener('DOMContentLoaded', initPage);
