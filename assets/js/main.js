@@ -17,8 +17,8 @@ const TRANSLATIONS = {
     "Projects": "Projects",
     "Case Studies & Experiments": "Case Studies & Experiments",
     "Work Page Intro": "A closer look at the launches I obsess over—mixing marketing, open-source, and automation to keep teams shipping.",
-    "Industries Served": "Industries served",
-    "Referral Work": "Work from referrals",
+    "Industries Served": "Sectors covered",
+    "Referral Work": "Years active",
     "Featured Deliveries": "Featured Deliveries",
     "Featured Work Subtitle": "Cross-functional projects where I owned the experience end-to-end—from insight gathering to production-ready code.",
     "Marketing Site": "Marketing Site",
@@ -30,10 +30,43 @@ const TRANSLATIONS = {
     "Monster Summary": "Extended MonsterUI with accessible overlays, keyboard tooling, and snapshot tests powering Python micro-frontends.",
     "Monster Role": "Open-source maintainer",
     "Monster Impact": "Reduced UI regressions by 30% across adopters",
-    "Ops Automation Accelerator": "Ops Automation Accelerator",
-    "Ops Automation Summary": "Built a Notion + Supabase stack that ingests procurement briefs, routes approvals, and deploys serverless scrapers for pricing intel.",
-    "Ops Role": "Product engineer & workflow designer",
-    "Ops Impact": "Cut manual ops time by 18 hours/week",
+    "Open Source Contributions": "Open Source Contributions",
+    "Pytest Infrastructure Contribution": "Pytest Testing Infrastructure for SKFeatureLLM",
+    "Pytest Infrastructure Summary": "Set up a Pytest-based testing stack for SKFeatureLLM with unit tests, mocks, and configuration to keep the core feature selection logic reliable.",
+    "Pytest Role": "Open-source contributor",
+    "Pytest Impact": "Improved reliability and maintainability by adding tests, mocks, and linting to the project.",
+    "CI CD Pipeline PyPI": "CI/CD Pipeline for Testing & PyPI",
+    "CI CD Pipeline Summary": "Built a GitHub Actions pipeline that runs tests, enforces code quality, and publishes Python packages securely to PyPI using Trusted Publishing.",
+    "CI CD Role": "Open-source contributor",
+    "CI CD Impact": "Unified linting, testing, and deployment into one pipeline and enabled secure, credential-free publishing to PyPI.",
+    "Mobile Applications": "Mobile Applications",
+    "Mobile App": "Mobile App",
+    "AB Project EE Mobile": "A&B Project EE Mobile",
+    "AB Project EE Mobile Summary": "Volunteer-built mobile application helping A&B Project EE coordinate blood donations and connect donors with people in need.",
+    "AB Mobile Role": "Volunteer Flutter & Django developer",
+    "AB Mobile Impact": "Streamlined matching between donors and beneficiaries through a dedicated mobile experience.",
+    "View App Screens": "View App Screens",
+    "Ecommerce": "Ecommerce",
+    "Benin Digital Marketplace": "Bénin Digital Marketplace",
+    "Benin Digital Marketplace Summary": "On-site marketplace application built for Bénin Digital, enabling buyers and sellers to trade products through a mobile-friendly ecommerce experience.",
+    "Benin Role": "On-site marketplace application developer",
+    "Benin Impact": "Delivered a modern marketplace interface to showcase products and streamline orders.",
+    "View Marketplace Screens": "View Marketplace Screens",
+    "Websites": "Websites",
+    "Nonprofit": "Nonprofit",
+    "AB Project EE Website": "A&B Project EE Website",
+    "AB Project EE Summary": "Designed and built the public website for A&B Project EE, a nonprofit focused on social, humanitarian, and solidarity support.",
+    "AB Role": "Volunteer web developer",
+    "AB Impact": "Gave the organization a modern online presence to share initiatives and rally support.",
+    "Corporate Site": "Corporate Site",
+    "Keoni Consulting Website": "Keoni Consulting Website",
+    "Keoni Consulting Summary": "WordPress-powered consulting website created for Benin Digital to showcase services and capture leads for Keoni Consulting.",
+    "Keoni Role": "WordPress & PHP developer",
+    "Keoni Impact": "Delivered a modern corporate presence with clear service pages and contact flows.",
+    "AB Mobile Screens Heading": "A&B Project EE – App Screens",
+    "AB Mobile Screens Subtitle": "Browse through the main screens of the blood donation mobile app.",
+    "Benin Marketplace Screens Heading": "Bénin Digital – Marketplace Screens",
+    "Benin Marketplace Screens Subtitle": "Browse through the key ecommerce flows of the Bénin Digital marketplace app.",
     "Role": "Role",
     "Stack": "Stack",
     "Impact": "Impact",
@@ -92,7 +125,7 @@ const TRANSLATIONS = {
     "Toolbox 2 Copy": "Python, FastAPI, Supabase, AWS, Cloudflare Workers, Docker.",
     "Toolbox 3 Title": "Product Ops",
     "Toolbox 3 Copy": "Notion, Linear, Retool, Zapier, analytics instrumentation, QA ops.",
-    "Production Deployments": "Production deployments",
+    "Production Deployments": "Projects shipped",
     "Open Source Projects": "Open source projects",
     "Credential Gallery": "Credential Gallery",
     "Certifications Intro": "Proof that I'm always leveling up my craft through structured programs, labs, and exams.",
@@ -160,7 +193,7 @@ const TRANSLATIONS = {
     "Case Studies & Experiments": "Études de cas & expérimentations",
     "Work Page Intro": "Zoom sur mes livrables favoris mêlant marketing, open source et automatisation pour garder les équipes en mouvement.",
     "Industries Served": "Secteurs accompagnés",
-    "Referral Work": "Mandats par recommandation",
+    "Referral Work": "Années d'activité",
     "Featured Deliveries": "Livrables mis en avant",
     "Featured Work Subtitle": "Des projets menés de bout en bout – de l'insight au code prêt pour la prod.",
     "Marketing Site": "Site marketing",
@@ -172,10 +205,43 @@ const TRANSLATIONS = {
     "Monster Summary": "Extension de MonsterUI avec overlays accessibles, navigation clavier et tests snapshot.",
     "Monster Role": "Mainteneur open source",
     "Monster Impact": "-30% de régressions UI chez les adopteurs",
-    "Ops Automation Accelerator": "Ops Automation Accelerator",
-    "Ops Automation Summary": "Pile Notion + Supabase pour ingérer les appels d'offres, router les validations et lancer des scrapers serverless.",
-    "Ops Role": "Ingénieur produit & designer de workflows",
-    "Ops Impact": "-18h d'opérations manuelles par semaine",
+    "Open Source Contributions": "Contributions open source",
+    "Pytest Infrastructure Contribution": "Infrastructure de tests Pytest pour SKFeatureLLM",
+    "Pytest Infrastructure Summary": "Mise en place d'une suite de tests Pytest pour SKFeatureLLM avec tests unitaires, mocks et configuration pour fiabiliser la logique de sélection de features.",
+    "Pytest Role": "Contributeur open source",
+    "Pytest Impact": "Amélioration de la fiabilité et de la maintenabilité grâce aux tests, mocks et au linting ajoutés au projet.",
+    "CI CD Pipeline PyPI": "Pipeline CI/CD pour les tests & PyPI",
+    "CI CD Pipeline Summary": "Mise en place d'un pipeline GitHub Actions qui exécute les tests, applique la qualité de code et publie les paquets Python sur PyPI via Trusted Publishing.",
+    "CI CD Role": "Contributeur open source",
+    "CI CD Impact": "Unification du linting, des tests et du déploiement dans un seul pipeline, avec publication sécurisée et sans identifiants sur PyPI.",
+    "Mobile Applications": "Applications mobiles",
+    "Mobile App": "Application mobile",
+    "AB Project EE Mobile": "Application mobile A&B Project EE",
+    "AB Project EE Mobile Summary": "Application mobile bénévole aidant A&B Project EE à coordonner les dons de sang et à connecter donneurs et bénéficiaires.",
+    "AB Mobile Role": "Développeur bénévole Flutter & Django",
+    "AB Mobile Impact": "Fluidification de la mise en relation entre donneurs et bénéficiaires grâce à une expérience mobile dédiée.",
+    "View App Screens": "Voir les écrans de l'app",
+    "Ecommerce": "E-commerce",
+    "Benin Digital Marketplace": "Marketplace Bénin Digital",
+    "Benin Digital Marketplace Summary": "Application marketplace on-site développée pour Bénin Digital, permettant à acheteurs et vendeurs d'échanger via une expérience e-commerce mobile-friendly.",
+    "Benin Role": "Développeur de l'application marketplace on-site",
+    "Benin Impact": "Livraison d'une interface marketplace moderne pour présenter les produits et fluidifier les commandes.",
+    "View Marketplace Screens": "Voir les écrans de la marketplace",
+    "Websites": "Sites web",
+    "Nonprofit": "Association",
+    "AB Project EE Website": "Site web A&B Project EE",
+    "AB Project EE Summary": "Conception et développement du site public d'A&B Project EE, une association d'aide sociale, humanitaire et solidaire.",
+    "AB Role": "Développeur web bénévole",
+    "AB Impact": "Offre à l'association une présence en ligne moderne pour partager ses initiatives et mobiliser du soutien.",
+    "Corporate Site": "Site corporate",
+    "Keoni Consulting Website": "Site web Keoni Consulting",
+    "Keoni Consulting Summary": "Site de conseil sous WordPress créé pour Benin Digital afin de présenter les services et générer des leads pour Keoni Consulting.",
+    "Keoni Role": "Développeur WordPress & PHP",
+    "Keoni Impact": "Livraison d'une présence corporate moderne avec des pages de services claires et des parcours de contact.",
+    "AB Mobile Screens Heading": "A&B Project EE – Écrans de l'application",
+    "AB Mobile Screens Subtitle": "Parcourez les principaux écrans de l'application mobile de don de sang.",
+    "Benin Marketplace Screens Heading": "Bénin Digital – Écrans de la marketplace",
+    "Benin Marketplace Screens Subtitle": "Parcourez les principaux parcours e-commerce de la marketplace Bénin Digital.",
     "Role": "Rôle",
     "Stack": "Stack",
     "Impact": "Impact",
@@ -234,7 +300,7 @@ const TRANSLATIONS = {
     "Toolbox 2 Copy": "Python, FastAPI, Supabase, AWS, Cloudflare Workers, Docker.",
     "Toolbox 3 Title": "Product Ops",
     "Toolbox 3 Copy": "Notion, Linear, Retool, Zapier, instrumentation analytics, QA ops.",
-    "Production Deployments": "Déploiements en production",
+    "Production Deployments": "Projets livrés",
     "Open Source Projects": "Projets open source",
     "Credential Gallery": "Galerie de certifications",
     "Certifications Intro": "La preuve que je fais évoluer mes compétences via des parcours structurés, des labs et des examens.",
@@ -512,6 +578,12 @@ function initPrefersReducedListener() {
   });
 }
 
+function initNavbar() {
+  initNavbarScrollBehavior();
+  initMobileMenu();
+  initLanguageSelectors();
+}
+
 function initPage() {
   applyTheme();
   initPrefersReducedListener();
@@ -521,11 +593,11 @@ function initPage() {
   initContactBackgroundFallback();
   applyLanguage(languageState.current);
 
-  Promise.all([loadPartial('navbar', () => {
-    initNavbarScrollBehavior();
-    initMobileMenu();
-    initLanguageSelectors();
-  }), loadPartial('footer')]).then(() => {
+  const navbarPromise = document.querySelector('[data-partial="navbar"]')
+    ? loadPartial('navbar', initNavbar)
+    : Promise.resolve(initNavbar());
+
+  Promise.all([navbarPromise, loadPartial('footer')]).then(() => {
     applyLanguage(languageState.current);
   });
 }
