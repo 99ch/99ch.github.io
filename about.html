@@ -19,20 +19,38 @@
     <meta name="twitter:title" content="About | Chilavert N'dah">
     <meta name="twitter:description" content="Working principles and story of Chilavert N'dah.">
     <meta name="twitter:image" content="https://chilavertndah.dev/image/full_profil.webp">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#0b3550">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/franken-ui@1.1.0/dist/css/core.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+      window.tailwind = window.tailwind || {};
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: { 900: '#0b3550', 800: '#0e3f60', 700: '#155075', 400: '#8fb8d6', 100: '#eaf6ff' },
+              blue: { 100: '#bfe3ff', 300: '#8fd0ff', 400: '#5fb8f5', 500: '#3aa0e8', 600: '#1c6f9c', 700: '#155075' },
+              yellow: { 400: '#ffb454', 500: '#f2941f' }
+            }
+          }
+        }
+      };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body class="page-about">
+    <div class="blueprint-crop tl" aria-hidden="true"></div>
+    <div class="blueprint-crop tr" aria-hidden="true"></div>
+    <div class="blueprint-crop bl" aria-hidden="true"></div>
+    <div class="blueprint-crop br" aria-hidden="true"></div>
     <div id="splash-screen" class="splash-screen" role="dialog" aria-live="polite" aria-label="Loading about page">
       <picture>
         <source srcset="/image/logo.webp" type="image/webp">
