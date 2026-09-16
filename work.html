@@ -11,299 +11,287 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chilavertndah.dev/work.html">
     <meta property="og:title" content="Work | Chilavert N'dah">
-    <meta property="og:description" content="Commit history — every project Chilavert N'dah has shipped, dated, with role and stack on record.">
+    <meta property="og:description" content="Every project Chilavert N'dah has shipped, dated, with role and stack on record.">
     <meta property="og:image" content="https://chilavertndah.dev/image/hero-portrait.webp">
     <meta property="og:image:alt" content="Chilavert N'dah portrait">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Work | Chilavert N'dah">
-    <meta name="twitter:description" content="Commit history — every project Chilavert N'dah has shipped, dated, with role and stack on record.">
+    <meta name="twitter:description" content="Every project Chilavert N'dah has shipped, dated, with role and stack on record.">
     <meta name="twitter:image" content="https://chilavertndah.dev/image/hero-portrait.webp">
-    <meta name="theme-color" content="#0c2321">
+    <meta name="theme-color" content="#f5f5f3">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Work+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body class="page-work">
-    <header class="fixed-navbar">
-      <div class="nav-inner">
-        <a href="/" class="brand" aria-label="Go to homepage">
-          <img src="/image/logo.png" alt="">
-          <span class="wordmark">chilavert@cotonou</span>
-        </a>
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="/" data-translate="Home">home</a>
-          <a href="/work.html" data-translate="Work" aria-current="page">work</a>
-          <a href="/about.html" data-translate="About">about</a>
-          <a href="/certifications.html" data-translate="Certifications">certifications.md</a>
-          <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="GitHub">github</a>
-          <label for="language-selector" class="screen-reader-text" data-translate="Language selector">Language selector</label>
-          <select id="language-selector" class="lang-select" aria-label="Language">
-            <option value="en">EN</option>
-            <option value="fr">FR</option>
-          </select>
+    <button type="button" id="nav-toggle" aria-label="Menu" data-translate-aria="Menu" aria-expanded="false" class="nav-toggle">
+      <span></span><span></span>
+    </button>
+
+    <div id="nav-overlay" class="nav-overlay">
+      <button class="nav-toggle nav-overlay-close" aria-label="Close menu" data-translate="Close menu"><span></span><span></span></button>
+      <div class="nav-overlay-grid">
+        <nav class="nav-overlay-links" aria-label="Primary navigation">
+          <p class="eyebrow" data-translate="Navigation">Navigation</p>
+          <a href="/" data-translate="Home">Home</a>
+          <a href="/work.html" data-translate="Work" aria-current="page">Work</a>
+          <a href="/about.html" data-translate="About">About</a>
+          <a href="/certifications.html" data-translate="Certifications">Certifications</a>
         </nav>
-        <button aria-label="Toggle menu" aria-expanded="false" id="mobile-menu-button" class="hamburger-button" type="button" aria-controls="mobile-menu">
-          <span class="hamburger-line" aria-hidden="true"></span>
-          <span class="hamburger-line" aria-hidden="true"></span>
-          <span class="hamburger-line" aria-hidden="true"></span>
-        </button>
+        <div class="nav-overlay-side">
+          <div>
+            <p class="eyebrow" data-translate="Socials">Socials</p>
+            <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+          <div>
+            <label for="language-selector" class="screen-reader-text" data-translate="Language selector">Language selector</label>
+            <select id="language-selector" aria-label="Language" style="background:transparent;color:inherit;border:1px solid var(--rule-dark);border-radius:999px;padding:8px 14px;">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+            </select>
+          </div>
+        </div>
       </div>
-      <nav id="mobile-menu" class="hidden" aria-label="Mobile navigation">
-        <a href="/" data-translate="Home">home</a>
-        <a href="/work.html" data-translate="Work" aria-current="page">work</a>
-        <a href="/about.html" data-translate="About">about</a>
-        <a href="/certifications.html" data-translate="Certifications">certifications.md</a>
-        <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="GitHub">github</a>
-        <label for="mobile-language-selector" class="screen-reader-text" data-translate="Language selector">Language selector</label>
-        <select id="mobile-language-selector" class="lang-select" aria-label="Language">
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-        </select>
-      </nav>
-    </header>
+    </div>
 
-    <main id="main-content">
-      <section class="hero container">
-        <p class="eyebrow" data-translate="Work Eyebrow">git log --all --oneline</p>
-        <h1 style="font-size: clamp(2.2rem, 5.6vw, 3.2rem); margin-bottom: 16px;" data-translate="Work Heading">Commit history</h1>
-        <p class="role" data-translate="Work Intro">Every project below shipped to a real client, employer, or open-source repo — dated, with role and stack on record.</p>
-        <div class="contact-strip">
-          <a href="/" class="btn" data-translate="Back to Home">cd ~</a>
-          <a href="https://drive.google.com/drive/folders/1U5WnFJoznvbjn5cFtCkWaqCLff0av-R-?usp=sharing" target="_blank" rel="noreferrer" class="btn btn-primary" data-translate="Resume">resume.pdf</a>
-          <a href="#contact" class="btn" data-translate="Contact Heading">mail --compose</a>
-        </div>
-        <div class="stat-row" style="margin-top: 32px;">
-          <div class="stat"><b>8</b><span data-translate="Stat Shipped">commits shipped</span></div>
-          <div class="stat"><b>6</b><span data-translate="Stat Sectors">sectors covered</span></div>
-          <div class="stat"><b>2024–2025</b><span data-translate="Stat Years">years active</span></div>
-        </div>
-      </section>
+    <a href="/" class="brand-mark">
+      <img src="/image/logo.png" alt="">
+      <span data-translate="Brand Mark">Code by Chilavert</span>
+    </a>
 
-      <section class="section container" aria-labelledby="oss-heading">
-        <div class="section-head">
-          <h2 id="oss-heading" data-translate="Open Source Section" style="font-size:1.2rem;">~/open-source</h2>
-        </div>
-        <div class="ledger">
-          <div class="ledger-row">
-            <div class="thumb">
-              <picture><source srcset="/image/monsterui.webp" type="image/webp"><img src="/image/monsterui.png" alt="" loading="lazy"></picture>
-            </div>
-            <div class="meta">
-              <div class="top-line"><span class="date">2024</span><span class="status" data-translate="Status Shipped">shipped &amp; verified</span><h3 data-translate="Monster Entry">MonsterUI — library contribution</h3></div>
-              <p class="role-line" data-translate="Monster Role">Open-source maintainer</p>
-              <p data-translate="Monster Body">Extended the open-source MonsterUI library with accessible overlays, keyboard tooling, and snapshot tests for Python micro-frontends. PR #30.</p>
-              <div class="tag-row"><span class="tag">python</span><span class="tag">fasthtml</span><span class="tag">playwright</span></div>
-            </div>
-            <div class="action"><a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" rel="noreferrer" data-translate="View PR">view PR</a></div>
-          </div>
-          <div class="ledger-row">
-            <div class="thumb">
-              <picture><source srcset="/image/pipeline.webp" type="image/webp"><img src="/image/pipeline.png" alt="" loading="lazy"></picture>
-            </div>
-            <div class="meta">
-              <div class="top-line"><span class="date">2025</span><span class="status" data-translate="Status Shipped">shipped &amp; verified</span><h3 data-translate="CI CD Entry">SKFeatureLLM — CI/CD pipeline</h3></div>
-              <p class="role-line" data-translate="CI CD Role">Open-source contributor</p>
-              <p data-translate="CI CD Body">Built a GitHub Actions pipeline that runs tests, enforces code quality, and publishes Python packages securely to PyPI via Trusted Publishing.</p>
-              <div class="tag-row"><span class="tag">github-actions</span><span class="tag">pypi</span><span class="tag">pytest</span></div>
-            </div>
-            <div class="action"><a href="https://github.com/RobertoCorti/skfeaturellm/pull/10" target="_blank" rel="noreferrer" data-translate="View PR">view PR</a></div>
-          </div>
-          <div class="ledger-row">
-            <div class="thumb">
-              <picture><source srcset="/image/pytests.webp" type="image/webp"><img src="/image/pytests.png" alt="" loading="lazy"></picture>
-            </div>
-            <div class="meta">
-              <div class="top-line"><span class="date">2025</span><span class="status" data-translate="Status Shipped">shipped &amp; verified</span><h3 data-translate="Pytest Entry">SKFeatureLLM — Pytest infrastructure</h3></div>
-              <p class="role-line" data-translate="Pytest Role">Open-source contributor</p>
-              <p data-translate="Pytest Body">Set up a Pytest-based testing stack with unit tests, mocks, and configuration to keep the core feature-selection logic reliable.</p>
-              <div class="tag-row"><span class="tag">pytest</span><span class="tag">black</span><span class="tag">pylint</span></div>
-            </div>
-            <div class="action"><a href="https://github.com/RobertoCorti/skfeaturellm/pull/9" target="_blank" rel="noreferrer" data-translate="View PR">view PR</a></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-band" id="ab-mobile" aria-labelledby="mobile-heading">
+    <main id="main-content" class="section-white" style="padding-top:120px; color:var(--ink);">
       <div class="container">
-        <div class="section-head">
-          <h2 id="mobile-heading" data-translate="Mobile Section" style="font-size:1.2rem;">~/mobile</h2>
+        <p class="eyebrow" data-translate="Recent Work">Work</p>
+        <h1 style="font-size: clamp(2.4rem, 7vw, 4.6rem); margin-bottom: 20px;" data-translate="Work Heading">Work</h1>
+        <p style="font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--ink-soft); max-width: 56ch; margin-bottom: 24px;" data-translate="Work Intro">Every project below shipped to a real client, employer, or open-source repo — dated, with role and stack on record.</p>
+
+        <div class="stat-row">
+          <div class="stat"><b>8</b><span data-translate="Stat Shipped">Projects shipped</span></div>
+          <div class="stat"><b>6</b><span data-translate="Stat Sectors">Sectors covered</span></div>
+          <div class="stat"><b>2024–2025</b><span data-translate="Stat Years">Years active</span></div>
         </div>
-        <div class="ledger">
-          <div class="ledger-row">
-            <div class="thumb">
-              <picture><source srcset="/image/blood-donation/blood-donation-cover.webp" type="image/webp"><img src="/image/blood-donation/blood-donation-app-01.png" alt="" loading="lazy"></picture>
+
+        <div class="section-head">
+          <p class="eyebrow" data-translate="Open Source Section">Open source</p>
+        </div>
+        <div class="row-list">
+          <div class="row-list-item">
+            <div>
+              <div class="name"><span class="date">2024</span><span data-translate="Monster Entry">MonsterUI</span></div>
+              <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="Monster Body">Extended the open-source MonsterUI library with accessible overlays, keyboard tooling, and snapshot tests for Python micro-frontends. PR #30.</p>
+              <div class="tag-row"><span class="tag">Python</span><span class="tag">FastHTML</span><span class="tag">Playwright</span></div>
+              <span class="status" data-translate="Status Shipped">Shipped &amp; verified</span>
             </div>
             <div class="meta">
-              <div class="top-line"><span class="date">2025</span><span class="status" data-translate="Status Shipped">shipped &amp; verified</span><h3 data-translate="AB Mobile Entry">A&amp;B Project EE — mobile app</h3></div>
-              <p class="role-line" data-translate="AB Mobile Role">Volunteer Flutter &amp; Django developer</p>
-              <p data-translate="AB Mobile Body">Volunteer-built Flutter + Django app coordinating blood donations and connecting donors with people in need.</p>
-              <div class="tag-row"><span class="tag">flutter</span><span class="tag">django</span><span class="tag">rest-api</span></div>
+              <span data-translate="Monster Role">Open-source maintainer</span>
+              <small><a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" rel="noreferrer" data-translate="View PR">View PR</a></small>
             </div>
-            <div class="action"><button type="button" class="btn" onclick="document.getElementById('ab-ee-mobile-modal').showModal()" data-translate="View Screens">view screens</button></div>
           </div>
-          <div class="ledger-row">
-            <div class="thumb">
-              <picture><source srcset="/image/koutonou-marketplace/koutonou-marketplace-01.webp" type="image/webp"><img src="/image/koutonou-marketplace/koutonou-marketplace-01.png" alt="" loading="lazy"></picture>
+          <div class="row-list-item">
+            <div>
+              <div class="name"><span class="date">2025</span><span data-translate="CI CD Entry">SKFeatureLLM — CI/CD</span></div>
+              <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="CI CD Body">Built a GitHub Actions pipeline that runs tests, enforces code quality, and publishes Python packages securely to PyPI via Trusted Publishing.</p>
+              <div class="tag-row"><span class="tag">GitHub Actions</span><span class="tag">PyPI</span><span class="tag">pytest</span></div>
+              <span class="status" data-translate="Status Shipped">Shipped &amp; verified</span>
             </div>
             <div class="meta">
-              <div class="top-line"><span class="date">2025</span><span class="status" data-translate="Status Shipped">shipped &amp; verified</span><h3 data-translate="Benin Marketplace Entry">Bénin Digital — marketplace app</h3></div>
-              <p class="role-line" data-translate="Benin Marketplace Role">Marketplace application developer</p>
-              <p data-translate="Benin Marketplace Body">On-site marketplace application enabling buyers and sellers to trade products through a mobile-friendly ecommerce experience.</p>
-              <div class="tag-row"><span class="tag">mobile</span><span class="tag">ecommerce</span></div>
+              <span data-translate="CI CD Role">Open-source contributor</span>
+              <small><a href="https://github.com/RobertoCorti/skfeaturellm/pull/10" target="_blank" rel="noreferrer" data-translate="View PR">View PR</a></small>
             </div>
-            <div class="action"><button type="button" class="btn" onclick="document.getElementById('benin-marketplace-modal').showModal()" data-translate="View Screens">view screens</button></div>
           </div>
+          <div class="row-list-item">
+            <div>
+              <div class="name"><span class="date">2025</span><span data-translate="Pytest Entry">SKFeatureLLM — Testing</span></div>
+              <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="Pytest Body">Set up a Pytest-based testing stack with unit tests, mocks, and configuration to keep the core feature-selection logic reliable.</p>
+              <div class="tag-row"><span class="tag">Pytest</span><span class="tag">Black</span><span class="tag">Pylint</span></div>
+              <span class="status" data-translate="Status Shipped">Shipped &amp; verified</span>
+            </div>
+            <div class="meta">
+              <span data-translate="Pytest Role">Open-source contributor</span>
+              <small><a href="https://github.com/RobertoCorti/skfeaturellm/pull/9" target="_blank" rel="noreferrer" data-translate="View PR">View PR</a></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head" id="ab-mobile">
+          <p class="eyebrow" data-translate="Mobile Section">Mobile applications</p>
+        </div>
+        <div class="row-list">
+          <div class="row-list-item">
+            <div>
+              <div class="name"><span class="date">2025</span><span data-translate="AB Mobile Entry">A&amp;B Project EE</span></div>
+              <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="AB Mobile Body">Volunteer-built Flutter + Django app coordinating blood donations and connecting donors with people in need.</p>
+              <div class="tag-row"><span class="tag">Flutter</span><span class="tag">Django</span><span class="tag">REST API</span></div>
+              <span class="status" data-translate="Status Shipped">Shipped &amp; verified</span>
+            </div>
+            <div class="meta">
+              <span data-translate="AB Mobile Role">Volunteer Flutter &amp; Django developer</span>
+              <small><button type="button" style="background:none;border:none;color:inherit;text-decoration:underline;cursor:pointer;padding:0;font:inherit;" onclick="document.getElementById('ab-ee-mobile-modal').showModal()" data-translate="View Screens">View screens</button></small>
+            </div>
+          </div>
+          <div class="row-list-item">
+            <div>
+              <div class="name"><span class="date">2025</span><span data-translate="Benin Marketplace Entry">Bénin Digital</span></div>
+              <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="Benin Marketplace Body">On-site marketplace application enabling buyers and sellers to trade products through a mobile-friendly ecommerce experience.</p>
+              <div class="tag-row"><span class="tag">Mobile</span><span class="tag">Ecommerce</span></div>
+              <span class="status" data-translate="Status Shipped">Shipped &amp; verified</span>
+            </div>
+            <div class="meta">
+              <span data-translate="Benin Marketplace Role">Marketplace application developer</span>
+              <small><button type="button" style="background:none;border:none;color:inherit;text-decoration:underline;cursor:pointer;padding:0;font:inherit;" onclick="document.getElementById('benin-marketplace-modal').showModal()" data-translate="View Screens">View screens</button></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <p class="eyebrow" data-translate="Websites Section">Websites</p>
+        </div>
+        <div class="row-list">
+          <div class="row-list-item">
+            <div>
+              <div class="name"><span class="date">2024</span><span data-translate="MC Agence Entry">MC Agence</span></div>
+              <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="MC Agence Body">Responsive Webflow site for a marketing agency, with cinematic scroll and analytics-ready forms.</p>
+              <div class="tag-row"><span class="tag">Webflow</span><span class="tag">GSAP</span></div>
+              <span class="status" data-translate="Status Shipped">Shipped &amp; verified</span>
+            </div>
+            <div class="meta">
+              <span data-translate="MC Agence Role">Lead designer &amp; Webflow developer</span>
+              <small><a href="https://mc-agence.webflow.io" target="_blank" rel="noreferrer" data-translate="Visit Website">Visit site</a></small>
+            </div>
+          </div>
+          <div class="row-list-item">
+            <div>
+              <div class="name"><span class="date">2025</span><span data-translate="AB Website Entry">A&amp;B Project EE</span></div>
+              <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="AB Website Body">Public website for a nonprofit focused on social, humanitarian, and solidarity support.</p>
+              <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+              <span class="status" data-translate="Status Shipped">Shipped &amp; verified</span>
+            </div>
+            <div class="meta">
+              <span data-translate="AB Website Role">Volunteer web developer</span>
+              <small><a href="https://www.ab-project-ee.org" target="_blank" rel="noreferrer" data-translate="Visit Website">Visit site</a></small>
+            </div>
+          </div>
+          <div class="row-list-item">
+            <div>
+              <div class="name"><span class="date">2025</span><span data-translate="Keoni Entry">Keoni Consulting</span></div>
+              <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="Keoni Body">WordPress consulting site built for Bénin Digital, with clear service pages and lead capture.</p>
+              <div class="tag-row"><span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">Elementor</span></div>
+              <span class="status" data-translate="Status Shipped">Shipped &amp; verified</span>
+            </div>
+            <div class="meta">
+              <span data-translate="Keoni Role">WordPress &amp; PHP developer</span>
+              <small><a href="https://keoni-consulting.net/" target="_blank" rel="noreferrer" data-translate="Visit Website">Visit site</a></small>
+            </div>
+          </div>
+        </div>
+
+        <dialog id="ab-ee-mobile-modal" class="gallery">
+          <div class="gallery-head">
+            <h3 data-translate="AB Mobile Screens Heading">A&amp;B Project EE — app screens</h3>
+            <form method="dialog"><button class="gallery-close" aria-label="Close" data-translate="Close">✕</button></form>
+          </div>
+          <p class="gallery-sub" data-translate="AB Mobile Screens Subtitle">The main screens of the blood-donation mobile app.</p>
+          <div class="gallery-grid">
+            <img src="/image/blood-donation/blood-donation-app-01.webp" alt="A&amp;B Project EE app screen 1" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-02.webp" alt="A&amp;B Project EE app screen 2" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-03.webp" alt="A&amp;B Project EE app screen 3" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-04.webp" alt="A&amp;B Project EE app screen 4" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-05.webp" alt="A&amp;B Project EE app screen 5" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-06.webp" alt="A&amp;B Project EE app screen 6" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-07.webp" alt="A&amp;B Project EE app screen 7" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-08.webp" alt="A&amp;B Project EE app screen 8" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-09.webp" alt="A&amp;B Project EE app screen 9" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-10.webp" alt="A&amp;B Project EE app screen 10" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-11.webp" alt="A&amp;B Project EE app screen 11" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-12.webp" alt="A&amp;B Project EE app screen 12" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-13.webp" alt="A&amp;B Project EE app screen 13" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-14.webp" alt="A&amp;B Project EE app screen 14" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-15.webp" alt="A&amp;B Project EE app screen 15" loading="lazy">
+            <img src="/image/blood-donation/blood-donation-app-16.webp" alt="A&amp;B Project EE app screen 16" loading="lazy">
+          </div>
+          <form method="dialog" class="screen-reader-text"><button>close</button></form>
+        </dialog>
+
+        <dialog id="benin-marketplace-modal" class="gallery">
+          <div class="gallery-head">
+            <h3 data-translate="Benin Marketplace Screens Heading">Bénin Digital — marketplace screens</h3>
+            <form method="dialog"><button class="gallery-close" aria-label="Close" data-translate="Close">✕</button></form>
+          </div>
+          <p class="gallery-sub" data-translate="Benin Marketplace Screens Subtitle">Key ecommerce flows of the Bénin Digital marketplace app.</p>
+          <div class="gallery-grid">
+            <img src="/image/koutonou-marketplace/koutonou-marketplace-01.webp" alt="Bénin Digital marketplace app screen 1" loading="lazy">
+            <img src="/image/koutonou-marketplace/koutonou-marketplace-02.webp" alt="Bénin Digital marketplace app screen 2" loading="lazy">
+            <img src="/image/koutonou-marketplace/koutonou-marketplace-03.webp" alt="Bénin Digital marketplace app screen 3" loading="lazy">
+            <img src="/image/koutonou-marketplace/koutonou-marketplace-04.webp" alt="Bénin Digital marketplace app screen 4" loading="lazy">
+            <img src="/image/koutonou-marketplace/koutonou-marketplace-05.webp" alt="Bénin Digital marketplace app screen 5" loading="lazy">
+            <img src="/image/koutonou-marketplace/koutonou-marketplace-06.webp" alt="Bénin Digital marketplace app screen 6" loading="lazy">
+            <img src="/image/koutonou-marketplace/koutonou-marketplace-07.webp" alt="Bénin Digital marketplace app screen 7" loading="lazy">
+          </div>
+          <form method="dialog" class="screen-reader-text"><button>close</button></form>
+        </dialog>
+
+        <div class="section-head">
+          <p class="eyebrow" data-translate="Process Heading">How I ship work</p>
+          <p style="color:var(--ink-soft); max-width:56ch;" data-translate="Process Intro">A lean, opinionated delivery process for founders and lean teams.</p>
+        </div>
+        <div class="row-list">
+          <div class="row-list-item"><div class="name" style="font-size:1.4rem;" data-translate="Discovery Entry">Discovery &amp; alignment</div><p class="meta" data-translate="Discovery Body">Stakeholder interviews, success metrics, and backlog triage to focus on outcomes, not outputs.</p></div>
+          <div class="row-list-item"><div class="name" style="font-size:1.4rem;" data-translate="Design Entry">Experience design</div><p class="meta" data-translate="Design Body">Wireflows, system tokens, and prototyping sessions that capture nuance before code is written.</p></div>
+          <div class="row-list-item"><div class="name" style="font-size:1.4rem;" data-translate="Build Entry">Build &amp; QA</div><p class="meta" data-translate="Build Body">Test-driven builds with instrumentation, accessibility sweeps, and environment parity.</p></div>
+          <div class="row-list-item"><div class="name" style="font-size:1.4rem;" data-translate="Launch Entry">Launch &amp; care</div><p class="meta" data-translate="Launch Body">Operational runbooks, async hand-offs, and post-launch analytics to keep momentum alive.</p></div>
+        </div>
+
+        <div class="section-head">
+          <p class="eyebrow" data-translate="Collaboration Heading">Collaboration formats</p>
+        </div>
+        <div class="row-list" style="margin-bottom: 60px;">
+          <div class="row-list-item"><div class="name" style="font-size:1.4rem;" data-translate="Sprint Entry">Launch sprint</div><p class="meta" data-translate="Sprint Body">2–3 week engagements to ship a marketing site, microsite, or design-system MVP.</p></div>
+          <div class="row-list-item"><div class="name" style="font-size:1.4rem;" data-translate="Embedded Entry">Embedded partner</div><p class="meta" data-translate="Embedded Body">Part-time retention where I co-own a backlog, mentor teammates, and keep releases humming.</p></div>
+          <div class="row-list-item"><div class="name" style="font-size:1.4rem;" data-translate="Advisory Entry">Advisory sessions</div><p class="meta" data-translate="Advisory Body">One-off or recurring strategy calls focused on developer experience and automation.</p></div>
         </div>
       </div>
-      </section>
 
-      <section class="section container" aria-labelledby="web-heading">
-        <div class="section-head">
-          <h2 id="web-heading" data-translate="Websites Section" style="font-size:1.2rem;">~/websites</h2>
-        </div>
-        <div class="ledger">
-          <div class="ledger-row">
-            <div class="thumb">
-              <picture><source srcset="/image/mc-agence.webp" type="image/webp"><img src="/image/mc-agence.png" alt="" loading="lazy"></picture>
-            </div>
-            <div class="meta">
-              <div class="top-line"><span class="date">2024</span><span class="status" data-translate="Status Shipped">shipped &amp; verified</span><h3 data-translate="MC Agence Entry">MC Agence — marketing site</h3></div>
-              <p class="role-line" data-translate="MC Agence Role">Lead designer &amp; Webflow developer</p>
-              <p data-translate="MC Agence Body">Responsive Webflow site for a marketing agency, with cinematic scroll and analytics-ready forms.</p>
-              <div class="tag-row"><span class="tag">webflow</span><span class="tag">gsap</span></div>
-            </div>
-            <div class="action"><a href="https://mc-agence.webflow.io" target="_blank" rel="noreferrer" data-translate="Visit Website">visit site</a></div>
-          </div>
-          <div class="ledger-row">
-            <div class="thumb">
-              <picture><source srcset="/image/A&amp;B-projet-EE.webp" type="image/webp"><img src="/image/A&amp;B-projet-EE.png" alt="" loading="lazy"></picture>
-            </div>
-            <div class="meta">
-              <div class="top-line"><span class="date">2025</span><span class="status" data-translate="Status Shipped">shipped &amp; verified</span><h3 data-translate="AB Website Entry">A&amp;B Project EE — website</h3></div>
-              <p class="role-line" data-translate="AB Website Role">Volunteer web developer</p>
-              <p data-translate="AB Website Body">Public website for a nonprofit focused on social, humanitarian, and solidarity support.</p>
-              <div class="tag-row"><span class="tag">html</span><span class="tag">css</span><span class="tag">javascript</span></div>
-            </div>
-            <div class="action"><a href="https://www.ab-project-ee.org" target="_blank" rel="noreferrer" data-translate="Visit Website">visit site</a></div>
-          </div>
-          <div class="ledger-row">
-            <div class="thumb">
-              <picture><source srcset="/image/keoni.webp" type="image/webp"><img src="/image/keoni.png" alt="" loading="lazy"></picture>
-            </div>
-            <div class="meta">
-              <div class="top-line"><span class="date">2025</span><span class="status" data-translate="Status Shipped">shipped &amp; verified</span><h3 data-translate="Keoni Entry">Keoni Consulting — corporate site</h3></div>
-              <p class="role-line" data-translate="Keoni Role">WordPress &amp; PHP developer</p>
-              <p data-translate="Keoni Body">WordPress consulting site built for Bénin Digital, with clear service pages and lead capture.</p>
-              <div class="tag-row"><span class="tag">wordpress</span><span class="tag">php</span><span class="tag">elementor</span></div>
-            </div>
-            <div class="action"><a href="https://keoni-consulting.net/" target="_blank" rel="noreferrer" data-translate="Visit Website">visit site</a></div>
-          </div>
-        </div>
-      </section>
-
-      <dialog id="ab-ee-mobile-modal" class="gallery">
-        <div class="gallery-head">
-          <h3 data-translate="AB Mobile Screens Heading">A&amp;B Project EE — app screens</h3>
-          <form method="dialog"><button class="gallery-close" aria-label="Close" data-translate="Close">✕</button></form>
-        </div>
-        <p class="gallery-sub" data-translate="AB Mobile Screens Subtitle">The main screens of the blood-donation mobile app.</p>
-        <div class="gallery-grid">
-          <img src="/image/blood-donation/blood-donation-app-01.webp" alt="A&amp;B Project EE app screen 1" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-02.webp" alt="A&amp;B Project EE app screen 2" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-03.webp" alt="A&amp;B Project EE app screen 3" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-04.webp" alt="A&amp;B Project EE app screen 4" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-05.webp" alt="A&amp;B Project EE app screen 5" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-06.webp" alt="A&amp;B Project EE app screen 6" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-07.webp" alt="A&amp;B Project EE app screen 7" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-08.webp" alt="A&amp;B Project EE app screen 8" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-09.webp" alt="A&amp;B Project EE app screen 9" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-10.webp" alt="A&amp;B Project EE app screen 10" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-11.webp" alt="A&amp;B Project EE app screen 11" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-12.webp" alt="A&amp;B Project EE app screen 12" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-13.webp" alt="A&amp;B Project EE app screen 13" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-14.webp" alt="A&amp;B Project EE app screen 14" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-15.webp" alt="A&amp;B Project EE app screen 15" loading="lazy">
-          <img src="/image/blood-donation/blood-donation-app-16.webp" alt="A&amp;B Project EE app screen 16" loading="lazy">
-        </div>
-        <form method="dialog" class="screen-reader-text"><button>close</button></form>
-      </dialog>
-
-      <dialog id="benin-marketplace-modal" class="gallery">
-        <div class="gallery-head">
-          <h3 data-translate="Benin Marketplace Screens Heading">Bénin Digital — marketplace screens</h3>
-          <form method="dialog"><button class="gallery-close" aria-label="Close" data-translate="Close">✕</button></form>
-        </div>
-        <p class="gallery-sub" data-translate="Benin Marketplace Screens Subtitle">Key ecommerce flows of the Bénin Digital marketplace app.</p>
-        <div class="gallery-grid">
-          <img src="/image/koutonou-marketplace/koutonou-marketplace-01.webp" alt="Bénin Digital marketplace app screen 1" loading="lazy">
-          <img src="/image/koutonou-marketplace/koutonou-marketplace-02.webp" alt="Bénin Digital marketplace app screen 2" loading="lazy">
-          <img src="/image/koutonou-marketplace/koutonou-marketplace-03.webp" alt="Bénin Digital marketplace app screen 3" loading="lazy">
-          <img src="/image/koutonou-marketplace/koutonou-marketplace-04.webp" alt="Bénin Digital marketplace app screen 4" loading="lazy">
-          <img src="/image/koutonou-marketplace/koutonou-marketplace-05.webp" alt="Bénin Digital marketplace app screen 5" loading="lazy">
-          <img src="/image/koutonou-marketplace/koutonou-marketplace-06.webp" alt="Bénin Digital marketplace app screen 6" loading="lazy">
-          <img src="/image/koutonou-marketplace/koutonou-marketplace-07.webp" alt="Bénin Digital marketplace app screen 7" loading="lazy">
-        </div>
-        <form method="dialog" class="screen-reader-text"><button>close</button></form>
-      </dialog>
-
-      <section class="section container" aria-labelledby="process-heading">
-        <div class="section-head">
-          <h2 id="process-heading" data-translate="Process Heading">How commits get merged</h2>
-          <p data-translate="Process Intro">A lean, opinionated delivery process for founders and lean teams.</p>
-        </div>
-        <div class="card-grid">
-          <div class="card"><h3 data-translate="Discovery Entry">Discovery &amp; alignment</h3><p data-translate="Discovery Body">Stakeholder interviews, success metrics, and backlog triage to focus on outcomes, not outputs.</p></div>
-          <div class="card"><h3 data-translate="Design Entry">Experience design</h3><p data-translate="Design Body">Wireflows, system tokens, and prototyping sessions that capture nuance before code is written.</p></div>
-          <div class="card"><h3 data-translate="Build Entry">Build &amp; QA</h3><p data-translate="Build Body">Test-driven builds with instrumentation, accessibility sweeps, and environment parity.</p></div>
-          <div class="card"><h3 data-translate="Launch Entry">Launch &amp; care</h3><p data-translate="Launch Body">Operational runbooks, async hand-offs, and post-launch analytics to keep momentum alive.</p></div>
-        </div>
-      </section>
-
-      <section class="section section-band" aria-labelledby="collab-heading">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="collab-heading" data-translate="Collaboration Heading">Collaboration formats</h2>
-          <p data-translate="Collaboration Intro">Engagement models that flex with your roadmap and budget.</p>
-        </div>
-        <div class="card-grid">
-          <div class="card"><h3 data-translate="Sprint Entry">Launch sprint</h3><p data-translate="Sprint Body">2–3 week engagements to ship a marketing site, microsite, or design-system MVP.</p></div>
-          <div class="card"><h3 data-translate="Embedded Entry">Embedded partner</h3><p data-translate="Embedded Body">Part-time retention where I co-own a backlog, mentor teammates, and keep releases humming.</p></div>
-          <div class="card"><h3 data-translate="Advisory Entry">Advisory sessions</h3><p data-translate="Advisory Body">One-off or recurring strategy calls focused on developer experience and automation.</p></div>
-        </div>
-      </div>
-      </section>
-
-      <section class="section container" id="contact" aria-labelledby="contact-heading">
-        <div class="section-head">
-          <h2 id="contact-heading" data-translate="Contact Heading">mail --compose</h2>
-          <p data-translate="Contact Intro">I answer within a day, usually faster.</p>
-        </div>
-        <div class="contact-grid">
-          <a href="mailto:chilavertndah99@gmail.com">
-            <span class="label" data-translate="Email Label">email</span>
-            <span class="value">chilavertndah99@gmail.com</span>
-          </a>
-          <a href="tel:+2290149674848">
-            <span class="label" data-translate="Call Label">call</span>
-            <span class="value">+229 01 49 67 48 48</span>
-          </a>
-          <a href="https://wa.me/+2290149674848" target="_blank" rel="noreferrer">
-            <span class="label" data-translate="WhatsApp Label">whatsapp</span>
-            <span class="value" data-translate="WhatsApp Value">Instant chats &amp; quick briefs</span>
-          </a>
-        </div>
-      </section>
+      <svg class="wave-divider to-dark" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C360,-10 1080,90 1440,40 L1440,80 L0,80 Z"/></svg>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p data-translate="Footer Rights">© 2026 Chilavert N&#8217;Dah — exit 0</p>
-        <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="Footer GitHub">github</a>
+        <div class="footer-heading">
+          <picture>
+            <source srcset="/image/full_profil.webp" type="image/webp">
+            <img src="/image/full_profil.png" alt="">
+          </picture>
+          <h2 data-translate="Footer Heading">Let&#8217;s work together</h2>
+        </div>
+        <div class="footer-cta-row">
+          <span aria-hidden="true" style="font-size:1.2rem;">↙</span>
+          <a href="mailto:chilavertndah99@gmail.com" class="circle-btn accent" data-translate="Get In Touch">Get in touch</a>
+        </div>
+        <div class="footer-contact-pills">
+          <a href="mailto:chilavertndah99@gmail.com" class="pill-btn on-dark">chilavertndah99@gmail.com</a>
+          <a href="tel:+2290149674848" class="pill-btn on-dark">+229 01 49 67 48 48</a>
+          <a href="https://wa.me/+2290149674848" target="_blank" rel="noreferrer" class="pill-btn on-dark" data-translate="WhatsApp Label">WhatsApp</a>
+        </div>
+        <div class="footer-meta">
+          <div class="col">
+            <p class="eyebrow" data-translate="Version Label">Version</p>
+            <p data-translate="Version Value">2026 Edition</p>
+          </div>
+          <div class="col">
+            <p class="eyebrow" data-translate="Local Time Label">Local time</p>
+            <p id="local-time">—</p>
+          </div>
+          <div class="col">
+            <p class="eyebrow" data-translate="Socials">Socials</p>
+            <a href="https://github.com/99ch" target="_blank" rel="noreferrer" data-translate="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/chilavert-n-dah-ab5779272/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
