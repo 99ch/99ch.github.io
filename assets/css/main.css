@@ -336,19 +336,30 @@ hr.rule {
   border: 2px solid var(--accent);
   border-radius: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2px;
   text-align: center;
   transform: rotate(-9deg);
   color: var(--accent);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.08em;
+  font-size: 0.6rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.4;
   background: var(--paper-white);
   animation: stamp-press 0.7s cubic-bezier(0.25, 0.9, 0.3, 1.25) both;
   animation-delay: 0.2s;
+}
+
+.stamp-mark {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%);
+  opacity: 0.85;
+  margin-bottom: 2px;
 }
 
 .stamp .big {
@@ -752,16 +763,38 @@ hr.rule {
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
-.skills-list span {
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   font-family: var(--font-mono);
   font-size: 0.82rem;
   color: var(--ink-soft);
   border: 1px solid var(--rule-strong);
   border-radius: 2px;
-  padding: 6px 11px;
+  padding: 8px 13px;
+  background: var(--paper-white);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.skill:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+.skill img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%);
+  opacity: 0.72;
+  transition: opacity 0.15s ease;
+}
+
+.skill:hover img {
+  opacity: 1;
 }
 
 /* ============ Portrait ============ */

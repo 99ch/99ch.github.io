@@ -53,7 +53,7 @@ const TRANSLATIONS = {
     "Stat Shipped": "Projects shipped",
     "Stat Sectors": "Sectors covered",
     "Stat Years": "Years active",
-    "Status Shipped": "Shipped",
+    "Status Shipped": "Shipped & verified",
 
     "Open Source Section": "Open source",
     "Mobile Section": "Mobile applications",
@@ -237,7 +237,7 @@ const TRANSLATIONS = {
     "Stat Shipped": "Projets livrés",
     "Stat Sectors": "Secteurs couverts",
     "Stat Years": "Années d'activité",
-    "Status Shipped": "Livré",
+    "Status Shipped": "Livré & vérifié",
 
     "Open Source Section": "Open source",
     "Mobile Section": "Applications mobiles",
