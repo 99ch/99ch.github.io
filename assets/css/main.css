@@ -480,6 +480,24 @@ a {
   border-radius: 0.75rem;
 }
 
+.github-stats-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(148, 163, 184, 0.3);
+  color: #93c5fd;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.github-stats-fallback:hover {
+  border-color: rgba(147, 197, 253, 0.6);
+  color: #bfdbfe;
+}
+
 .contact-section {
   position: relative;
 }
