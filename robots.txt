@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chilavertndah.dev/sitemap.xml
