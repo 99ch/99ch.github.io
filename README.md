@@ -1,6 +1,6 @@
-# Manifest — Portfolio
+# Terminal Coast — Portfolio
 
-Portfolio of Chilavert N'dah, designed as a ledger of shipped work: paper, ink, and a stamp for every verified entry.
+Portfolio of Chilavert N'dah, styled as a terminal session at dusk on the Cotonou lagoon: dark teal, gold accents, and every section framed as a shell command.
 
 Live site: [chilavertndah.dev](https://chilavertndah.dev)
 
@@ -11,8 +11,8 @@ Freelance full-stack & mobile developer based in Cotonou, Bénin. Full-stack, mo
 ## Structure
 
 - `index.html`, `work.html`, `about.html`, `certifications.html` — the four pages, each self-contained (navbar and footer are written directly into every page, not fetched, so there's no flash-of-empty-header on load).
-- `assets/css/main.css` — the Manifest design system (paper/ink palette, ledger rows, stamp badge, type scale).
-- `assets/js/main.js` — bilingual EN/FR strings (`TRANSLATIONS`), mobile menu, lazy-image enhancement.
+- `assets/css/main.css` — the Terminal Coast design system (teal/gold palette, terminal-window hero, commit-log style project rows).
+- `assets/js/main.js` — bilingual EN/FR strings (`TRANSLATIONS`), mobile menu, scroll reveal, stat counters, lazy-image enhancement.
 - `image/` — site assets, each raster image paired with a `.webp` version.
 
 ## Local development
