@@ -443,6 +443,15 @@ a {
   object-position: top center;
 }
 
+.project-thumb--portrait {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.project-thumb--portrait img {
+  object-fit: contain;
+  object-position: center;
+}
+
 .project-card-link svg {
   transition: transform 0.2s ease;
 }
