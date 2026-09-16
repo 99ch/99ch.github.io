@@ -28,6 +28,14 @@
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body class="page-work">
+    <div id="splash-screen" class="splash-screen" role="dialog" aria-live="polite" aria-label="Loading work page">
+      <img src="/image/logo.png" alt="Logo Chilavert N'dah" class="splash-logo" width="120" height="120" data-priority="true">
+      <div id="splash-greeting" class="splash-greeting" role="status" aria-live="polite"></div>
+      <div class="splash-loading" aria-hidden="true">
+        <div id="loading-progress" class="loading-progress"></div>
+      </div>
+    </div>
+
     <button type="button" id="nav-toggle" aria-label="Menu" data-translate-aria="Menu" aria-expanded="false" class="nav-toggle">
       <span></span><span></span>
     </button>
@@ -64,7 +72,12 @@
       <span data-translate="Brand Mark">Code by Chilavert</span>
     </a>
 
-    <main id="main-content" class="section-white" style="padding-top:120px; color:var(--ink);">
+    <div class="hover-preview" id="hover-preview" aria-hidden="true">
+      <img id="hover-preview-img" alt="">
+      <span class="view-pill">View</span>
+    </div>
+
+    <main id="main-content" class="section-white" style="padding-top:120px; color:var(--ink); opacity: 0; transition: opacity 1s ease-in-out;" aria-hidden="true">
       <div class="container">
         <p class="eyebrow" data-translate="Recent Work">Work</p>
         <h1 style="font-size: clamp(2.4rem, 7vw, 4.6rem); margin-bottom: 20px;" data-translate="Work Heading">Work</h1>
@@ -80,7 +93,7 @@
           <p class="eyebrow" data-translate="Open Source Section">Open source</p>
         </div>
         <div class="row-list">
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/monsterui.webp">
             <div>
               <div class="name"><span class="date">2024</span><span data-translate="Monster Entry">MonsterUI</span></div>
               <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="Monster Body">Extended the open-source MonsterUI library with accessible overlays, keyboard tooling, and snapshot tests for Python micro-frontends. PR #30.</p>
@@ -92,7 +105,7 @@
               <small><a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" rel="noreferrer" data-translate="View PR">View PR</a></small>
             </div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/pipeline.webp">
             <div>
               <div class="name"><span class="date">2025</span><span data-translate="CI CD Entry">SKFeatureLLM — CI/CD</span></div>
               <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="CI CD Body">Built a GitHub Actions pipeline that runs tests, enforces code quality, and publishes Python packages securely to PyPI via Trusted Publishing.</p>
@@ -104,7 +117,7 @@
               <small><a href="https://github.com/RobertoCorti/skfeaturellm/pull/10" target="_blank" rel="noreferrer" data-translate="View PR">View PR</a></small>
             </div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/pytests.webp">
             <div>
               <div class="name"><span class="date">2025</span><span data-translate="Pytest Entry">SKFeatureLLM — Testing</span></div>
               <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="Pytest Body">Set up a Pytest-based testing stack with unit tests, mocks, and configuration to keep the core feature-selection logic reliable.</p>
@@ -122,7 +135,7 @@
           <p class="eyebrow" data-translate="Mobile Section">Mobile applications</p>
         </div>
         <div class="row-list">
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/blood-donation/blood-donation-cover.webp">
             <div>
               <div class="name"><span class="date">2025</span><span data-translate="AB Mobile Entry">A&amp;B Project EE</span></div>
               <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="AB Mobile Body">Volunteer-built Flutter + Django app coordinating blood donations and connecting donors with people in need.</p>
@@ -134,7 +147,7 @@
               <small><button type="button" style="background:none;border:none;color:inherit;text-decoration:underline;cursor:pointer;padding:0;font:inherit;" onclick="document.getElementById('ab-ee-mobile-modal').showModal()" data-translate="View Screens">View screens</button></small>
             </div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/koutonou-marketplace/koutonou-marketplace-01.webp">
             <div>
               <div class="name"><span class="date">2025</span><span data-translate="Benin Marketplace Entry">Bénin Digital</span></div>
               <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="Benin Marketplace Body">On-site marketplace application enabling buyers and sellers to trade products through a mobile-friendly ecommerce experience.</p>
@@ -152,7 +165,7 @@
           <p class="eyebrow" data-translate="Websites Section">Websites</p>
         </div>
         <div class="row-list">
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/mc-agence.webp">
             <div>
               <div class="name"><span class="date">2024</span><span data-translate="MC Agence Entry">MC Agence</span></div>
               <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="MC Agence Body">Responsive Webflow site for a marketing agency, with cinematic scroll and analytics-ready forms.</p>
@@ -164,7 +177,7 @@
               <small><a href="https://mc-agence.webflow.io" target="_blank" rel="noreferrer" data-translate="Visit Website">Visit site</a></small>
             </div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/A&amp;B-projet-EE.webp">
             <div>
               <div class="name"><span class="date">2025</span><span data-translate="AB Website Entry">A&amp;B Project EE</span></div>
               <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="AB Website Body">Public website for a nonprofit focused on social, humanitarian, and solidarity support.</p>
@@ -176,7 +189,7 @@
               <small><a href="https://www.ab-project-ee.org" target="_blank" rel="noreferrer" data-translate="Visit Website">Visit site</a></small>
             </div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/keoni.webp">
             <div>
               <div class="name"><span class="date">2025</span><span data-translate="Keoni Entry">Keoni Consulting</span></div>
               <p style="color:var(--ink-soft); max-width:56ch; margin-top:10px;" data-translate="Keoni Body">WordPress consulting site built for Bénin Digital, with clear service pages and lead capture.</p>
