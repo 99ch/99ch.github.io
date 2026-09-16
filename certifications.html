@@ -28,6 +28,14 @@
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body class="page-certifications">
+    <div id="splash-screen" class="splash-screen" role="dialog" aria-live="polite" aria-label="Loading certifications">
+      <img src="/image/logo.png" alt="Logo Chilavert N'dah" class="splash-logo" width="120" height="120" data-priority="true">
+      <div id="splash-greeting" class="splash-greeting" role="status" aria-live="polite"></div>
+      <div class="splash-loading" aria-hidden="true">
+        <div id="loading-progress" class="loading-progress"></div>
+      </div>
+    </div>
+
     <button type="button" id="nav-toggle" aria-label="Menu" data-translate-aria="Menu" aria-expanded="false" class="nav-toggle">
       <span></span><span></span>
     </button>
@@ -64,58 +72,63 @@
       <span data-translate="Brand Mark">Code by Chilavert</span>
     </a>
 
-    <main id="main-content" class="section-white" style="padding-top:120px; color:var(--ink);">
+    <div class="hover-preview" id="hover-preview" aria-hidden="true">
+      <img id="hover-preview-img" alt="">
+      <span class="view-pill">View</span>
+    </div>
+
+    <main id="main-content" class="section-white" style="padding-top:120px; color:var(--ink); opacity: 0; transition: opacity 1s ease-in-out;" aria-hidden="true">
       <div class="container">
         <p class="eyebrow" data-translate="Certifications Heading">Certifications</p>
         <h1 style="font-size: clamp(2.2rem, 6vw, 3.8rem); margin-bottom: 20px;" data-translate="Certifications">Certifications</h1>
         <p style="color: var(--ink-soft); max-width: 56ch; margin-bottom: 12px;" data-translate="Cert Intro">Every certificate earned, dated and linked to its issuer's verification page — nothing self-reported.</p>
 
         <div class="row-list">
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert1.webp">
             <div class="name"><span class="date">Jul 2024</span><span data-translate="Python Cert Entry">Programming in Python</span></div>
             <div class="meta"><span data-translate="Python Cert Issuer">Meta, via Coursera</span><small><a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert2.webp">
             <div class="name"><span class="date">Sep 2024</span><span data-translate="JS Cert Entry">JavaScript Algorithms and Data Structures</span></div>
             <div class="meta"><span data-translate="JS Cert Issuer">freeCodeCamp</span><small><a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert3.webp">
             <div class="name"><span class="date">Mar 2024</span><span data-translate="AI Cert Entry">Artificial Intelligence</span></div>
             <div class="meta"><span data-translate="AI Cert Issuer">Cheikh Hamidou Kane Digital University</span><small><a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert4.webp">
             <div class="name"><span class="date">Feb 2024</span><span data-translate="Excel Cert Entry">Microsoft Excel</span></div>
             <div class="meta"><span data-translate="Excel Cert Issuer">Microsoft, via Coursera</span><small><a href="https://coursera.org/verify/D25B5LG4WQCF" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert5.webp">
             <div class="name"><span class="date">Jan 2024</span><span data-translate="Logic Cert Entry">Think Like a Computer: The Logic of Programming</span></div>
             <div class="meta"><span data-translate="Logic Cert Issuer">OpenClassrooms</span><small><a href="#" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert6.webp">
             <div class="name"><span class="date">Jan 2024</span><span data-translate="Cyber Cert Entry">Foundations of Cybersecurity</span></div>
             <div class="meta"><span data-translate="Cyber Cert Issuer">Google, via Coursera</span><small><a href="https://coursera.org/verify/6GN7VCA2WMAX" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert7.webp">
             <div class="name"><span class="date">Jul 2024</span><span data-translate="DataSec Cert Entry">Data Security</span></div>
             <div class="meta"><span data-translate="DataSec Cert Issuer">Cisco, via Coursera</span><small><a href="https://coursera.org/verify/7H8GLGF5TGUC" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert8.webp">
             <div class="name"><span class="date">Jul 2024</span><span data-translate="UI Cert Entry">Visual Elements of User Interface Design</span></div>
             <div class="meta"><span data-translate="UI Cert Issuer">California Institute of the Arts, via Coursera</span><small><a href="https://coursera.org/verify/S63NWXR2XG4J" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert9.webp">
             <div class="name"><span class="date">Jul 2024</span><span data-translate="SDPM Cert Entry">Software Design and Project Management</span></div>
             <div class="meta"><span data-translate="SDPM Cert Issuer">HKUST, via Coursera</span><small><a href="https://coursera.org/verify/MRTJ7J8UA3AA" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert10.webp">
             <div class="name"><span class="date">Aug 2024</span><span data-translate="RWD Cert Entry">Responsive Web Design</span></div>
             <div class="meta"><span data-translate="RWD Cert Issuer">freeCodeCamp</span><small><a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/responsive-web-design" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert11.webp">
             <div class="name"><span class="date">Aug 2024</span><span data-translate="Git Cert Entry">Introduction to Git</span></div>
             <div class="meta"><span data-translate="Git Cert Issuer">Microsoft Learn</span><small><a href="https://learn.microsoft.com/en-us/users/chilavertndah-3078/achievements/9fc7nyxu?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>
-          <div class="row-list-item">
+          <div class="row-list-item" data-preview="/image/certifications/cert12.webp">
             <div class="name"><span class="date">Aug 2024</span><span data-translate="GitHub Cert Entry">Introduction to GitHub</span></div>
             <div class="meta"><span data-translate="GitHub Cert Issuer">Microsoft Learn</span><small><a href="https://learn.microsoft.com/en-us/users/chilavertndah-3078/achievements/pse97um4?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer" data-translate="Verify">Verify</a></small></div>
           </div>

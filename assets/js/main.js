@@ -15,7 +15,7 @@ const TRANSLATIONS = {
     "Hero Tagline 2": "Full-stack & Mobile Developer",
     "Location Line 1": "Located",
     "Location Line 2": "in",
-    "Location Line 3": "Cotonou, Bénin",
+    "Location Line 3": "Cotonou Bénin",
     "Brand Mark": "Code by Chilavert",
 
     "Manifesto Text": "Helping teams ship software that actually works. Real projects, real deadlines, always shipped and verified.",
@@ -77,7 +77,7 @@ const TRANSLATIONS = {
     "Get In Touch": "Get in touch",
     "WhatsApp Label": "WhatsApp",
     "Version Label": "Version",
-    "Version Value": "2026 Edition",
+    "Version Value": "2026 © Edition",
     "Local Time Label": "Local time",
 
     "Work Heading": "Work",
@@ -186,7 +186,7 @@ const TRANSLATIONS = {
     "Hero Tagline 2": "Développeur Full-stack & Mobile",
     "Location Line 1": "Basé",
     "Location Line 2": "à",
-    "Location Line 3": "Cotonou, Bénin",
+    "Location Line 3": "Cotonou Bénin",
     "Brand Mark": "Codé par Chilavert",
 
     "Manifesto Text": "J'aide les équipes à livrer des logiciels qui fonctionnent vraiment. Des projets réels, des délais réels, toujours livrés et vérifiés.",
@@ -248,7 +248,7 @@ const TRANSLATIONS = {
     "Get In Touch": "Me contacter",
     "WhatsApp Label": "WhatsApp",
     "Version Label": "Version",
-    "Version Value": "Édition 2026",
+    "Version Value": "2026 © Édition",
     "Local Time Label": "Heure locale",
 
     "Work Heading": "Travaux",
@@ -343,7 +343,11 @@ const TRANSLATIONS = {
   }
 };
 
-const GREETINGS = ["Hello", "Bonjour", "Hola", "Ciao", "Hallo"];
+const SPLASH_GREETINGS = [
+  "Hello", "Bonjour", "Hola", "Ciao", "Olá",
+  "Привет", "こんにちは", "你好", "안녕하세요",
+  "مرحبا", "नमस्ते", "Hallo", "Γειά σου", "Salve"
+];
 
 const languageState = {
   current: localStorage.getItem('preferredLanguage') || 'en'
@@ -495,7 +499,7 @@ function initStatCounters() {
 }
 
 function initManifestoReveal() {
-  const container = document.querySelector('.manifesto p');
+  const container = document.querySelector('.manifesto-text');
   if (!container) return;
 
   const text = container.textContent.trim();
@@ -532,29 +536,70 @@ function initManifestoReveal() {
   wordEls.forEach((el) => observer.observe(el));
 }
 
-function initGreetingCycler() {
-  const section = document.querySelector('.greeting-section');
-  if (!section) return;
-  const wordEl = section.querySelector('.greeting-word .word');
-  if (!wordEl) return;
+function initSplashScreen() {
+  const splashScreen = document.getElementById('splash-screen');
+  const loadingBar = document.getElementById('loading-progress');
+  const splashGreeting = document.getElementById('splash-greeting');
+  const mainContent = document.getElementById('main-content');
+
+  if (!splashScreen || !loadingBar || !splashGreeting || !mainContent) return;
 
   if (prefersReducedMotion.matches) {
-    wordEl.classList.add('is-active');
+    splashScreen.style.display = 'none';
+    mainContent.style.opacity = '1';
+    mainContent.removeAttribute('aria-hidden');
     return;
   }
 
-  let i = 0;
-  wordEl.textContent = GREETINGS[0];
-  wordEl.classList.add('is-active');
+  mainContent.style.opacity = '0';
+  mainContent.setAttribute('aria-hidden', 'true');
 
-  setInterval(() => {
-    wordEl.classList.remove('is-active');
+  let currentGreetingIndex = 0;
+  const cycleGreetings = () => {
+    splashGreeting.textContent = SPLASH_GREETINGS[currentGreetingIndex];
+    currentGreetingIndex = (currentGreetingIndex + 1) % SPLASH_GREETINGS.length;
+  };
+
+  const greetingInterval = setInterval(cycleGreetings, 600);
+  cycleGreetings();
+
+  setTimeout(() => {
+    loadingBar.style.width = '100%';
+  }, 100);
+
+  setTimeout(() => {
+    splashScreen.style.opacity = '0';
+    mainContent.style.opacity = '1';
+    mainContent.removeAttribute('aria-hidden');
+    clearInterval(greetingInterval);
     setTimeout(() => {
-      i = (i + 1) % GREETINGS.length;
-      wordEl.textContent = GREETINGS[i];
-      wordEl.classList.add('is-active');
+      splashScreen.style.display = 'none';
     }, 500);
-  }, 1800);
+  }, 3000);
+}
+
+function initHoverPreview() {
+  const preview = document.getElementById('hover-preview');
+  const img = document.getElementById('hover-preview-img');
+  if (!preview || !img) return;
+
+  const items = document.querySelectorAll('.row-list-item[data-preview]');
+  if (!items.length) return;
+
+  const move = (event) => {
+    preview.style.transform = `translate(${event.clientX + 26}px, ${event.clientY - 100}px)`;
+  };
+
+  items.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      img.src = item.getAttribute('data-preview');
+      preview.classList.add('is-visible');
+    });
+    item.addEventListener('mousemove', move);
+    item.addEventListener('mouseleave', () => {
+      preview.classList.remove('is-visible');
+    });
+  });
 }
 
 function initLocalClock() {
@@ -576,13 +621,14 @@ function initLocalClock() {
 
 function initPage() {
   enhanceLazyImages();
+  initSplashScreen();
   initNavOverlay();
   initLanguageSelectors();
   applyLanguage(languageState.current);
   initScrollReveal();
   initStatCounters();
   initManifestoReveal();
-  initGreetingCycler();
+  initHoverPreview();
   initLocalClock();
 }
 

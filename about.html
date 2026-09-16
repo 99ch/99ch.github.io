@@ -28,6 +28,14 @@
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body class="page-about">
+    <div id="splash-screen" class="splash-screen" role="dialog" aria-live="polite" aria-label="Loading about page">
+      <img src="/image/logo.png" alt="Logo Chilavert N'dah" class="splash-logo" width="120" height="120" data-priority="true">
+      <div id="splash-greeting" class="splash-greeting" role="status" aria-live="polite"></div>
+      <div class="splash-loading" aria-hidden="true">
+        <div id="loading-progress" class="loading-progress"></div>
+      </div>
+    </div>
+
     <button type="button" id="nav-toggle" aria-label="Menu" data-translate-aria="Menu" aria-expanded="false" class="nav-toggle">
       <span></span><span></span>
     </button>
@@ -64,7 +72,7 @@
       <span data-translate="Brand Mark">Code by Chilavert</span>
     </a>
 
-    <main id="main-content" class="section-white" style="padding-top:120px; color:var(--ink);">
+    <main id="main-content" class="section-white" style="padding-top:120px; color:var(--ink); opacity: 0; transition: opacity 1s ease-in-out;" aria-hidden="true">
       <div class="container">
         <div class="intro-row" style="padding-top:0;">
           <div>
