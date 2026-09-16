@@ -374,6 +374,16 @@ a {
   position: relative;
 }
 
+.footer-social-link {
+  color: #93c5fd;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.footer-social-link:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
 .footer-marquee-container {
   width: 100%;
   overflow: hidden;
