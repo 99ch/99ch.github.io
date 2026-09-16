@@ -28,6 +28,14 @@
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body class="page-home">
+    <div id="splash-screen" class="splash-screen" role="dialog" aria-live="polite" aria-label="Loading home page">
+      <img src="/image/logo.png" alt="Logo Chilavert N'dah" class="splash-logo" width="120" height="120" data-priority="true">
+      <div id="splash-greeting" class="splash-greeting" role="status" aria-live="polite"></div>
+      <div class="splash-loading" aria-hidden="true">
+        <div id="loading-progress" class="loading-progress"></div>
+      </div>
+    </div>
+
     <button type="button" id="nav-toggle" aria-label="Menu" data-translate-aria="Menu" aria-expanded="false" class="nav-toggle">
       <span></span><span></span>
     </button>
@@ -64,8 +72,18 @@
       <span data-translate="Brand Mark">Code by Chilavert</span>
     </a>
 
-    <main id="main-content">
+    <div class="hover-preview" id="hover-preview" aria-hidden="true">
+      <img id="hover-preview-img" alt="">
+      <span class="view-pill">View</span>
+    </div>
+
+    <main id="main-content" style="opacity: 0; transition: opacity 1s ease-in-out;" aria-hidden="true">
       <section class="hero">
+        <nav class="hero-nav-links" aria-label="Primary navigation">
+          <a href="/work.html" data-translate="Work">Work</a>
+          <a href="/about.html" data-translate="About">About</a>
+          <a href="/certifications.html" data-translate="Certifications">Certifications</a>
+        </nav>
         <div class="hero-top">
           <div class="hero-tagline">
             <span class="arrow" aria-hidden="true">↘</span>
@@ -83,7 +101,7 @@
           <span>
             <span data-translate="Location Line 1">Located</span><br>
             <span data-translate="Location Line 2">in</span><br>
-            <span data-translate="Location Line 3">Cotonou, Bénin</span>
+            <span data-translate="Location Line 3">Cotonou Bénin</span>
           </span>
           <span class="globe" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 14.3 0 18M12 3c-2.5 2.7-2.5 14.3 0 18"/></svg>
@@ -99,42 +117,35 @@
         </div>
       </section>
 
-      <section class="greeting-section">
-        <p class="greeting-word"><span class="dot" aria-hidden="true"></span><span class="word">Hello</span></p>
-      </section>
-
-      <section class="manifesto">
-        <div class="container">
-          <p data-translate="Manifesto Text">Helping teams ship software that actually works. Real projects, real deadlines, always shipped and verified.</p>
-        </div>
-      </section>
-
       <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C360,90 1080,-10 1440,40 L1440,80 L0,80 Z"/></svg>
 
       <section class="section-white">
         <div class="container">
-          <div class="intro-row">
-            <p data-translate="Intro Blurb">The combination of my passion for full-stack development, mobile apps, and open-source positions me in a unique place in the Beninese tech scene.</p>
-            <a href="/about.html" class="circle-btn" data-translate="About Me Button">About me</a>
+          <div class="manifesto-row">
+            <p class="manifesto-text" data-translate="Manifesto Text">Helping teams ship software that actually works. Real projects, real deadlines, always shipped and verified.</p>
+            <div class="intro-col">
+              <p data-translate="Intro Blurb">The combination of my passion for full-stack development, mobile apps, and open-source positions me in a unique place in the Beninese tech scene.</p>
+              <a href="/about.html" class="circle-btn" data-translate="About Me Button">About me</a>
+            </div>
           </div>
 
           <div class="section-head">
             <p class="eyebrow" data-translate="Recent Work">Recent work</p>
           </div>
           <div class="row-list">
-            <div class="row-list-item">
+            <div class="row-list-item" data-preview="/image/monsterui.webp">
               <div class="name"><span class="date">2024</span>MonsterUI</div>
               <div class="meta" data-translate="Open Source Category">Interaction &amp; Open Source</div>
             </div>
-            <div class="row-list-item">
+            <div class="row-list-item" data-preview="/image/blood-donation/blood-donation-cover.webp">
               <div class="name"><span class="date">2025</span>A&amp;B Project EE</div>
               <div class="meta" data-translate="Mobile Category">Design &amp; Development</div>
             </div>
-            <div class="row-list-item">
+            <div class="row-list-item" data-preview="/image/mc-agence.webp">
               <div class="name"><span class="date">2024</span>MC Agence</div>
               <div class="meta" data-translate="Website Category">Design &amp; Development</div>
             </div>
-            <div class="row-list-item">
+            <div class="row-list-item" data-preview="/image/keoni.webp">
               <div class="name"><span class="date">2025</span>Keoni Consulting</div>
               <div class="meta" data-translate="Website Category">Design &amp; Development</div>
             </div>
@@ -204,7 +215,7 @@
         <div class="footer-meta">
           <div class="col">
             <p class="eyebrow" data-translate="Version Label">Version</p>
-            <p data-translate="Version Value">2026 Edition</p>
+            <p data-translate="Version Value">2026 © Edition</p>
           </div>
           <div class="col">
             <p class="eyebrow" data-translate="Local Time Label">Local time</p>
