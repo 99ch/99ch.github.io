@@ -150,6 +150,7 @@ const TRANSLATIONS = {
     "View Certificate": "View Certificate",
     "See More": "See More",
     "GitHub Stats & Contributions": "GitHub Stats & Contributions",
+    "View live stats on GitHub": "View live stats on GitHub",
     "Let's Connect": "Let's Connect",
     "Feel free to reach out to me via email.": "Feel free to reach out to me via email.",
     "Send Email": "Send Email",
@@ -325,6 +326,7 @@ const TRANSLATIONS = {
     "View Certificate": "Voir le certificat",
     "See More": "Voir plus",
     "GitHub Stats & Contributions": "Statistiques & contributions GitHub",
+    "View live stats on GitHub": "Voir les statistiques sur GitHub",
     "Let's Connect": "Restons en contact",
     "Feel free to reach out to me via email.": "Contactez-moi par email.",
     "Send Email": "Envoyer un email",
@@ -528,6 +530,34 @@ function initScrollAnimations() {
   animatedElements.forEach((element) => observer.observe(element));
 }
 
+function initGithubStatsFallback() {
+  const images = document.querySelectorAll('#github img[data-retry-src]');
+  images.forEach((img) => {
+    let attempted = false;
+    img.addEventListener('error', () => {
+      if (!attempted) {
+        attempted = true;
+        const retryUrl = new URL(img.dataset.retrySrc, window.location.href);
+        retryUrl.searchParams.set('cb', Date.now().toString());
+        window.setTimeout(() => {
+          img.src = retryUrl.toString();
+        }, 2500);
+        return;
+      }
+
+      const fallback = document.createElement('a');
+      fallback.href = 'https://github.com/99ch';
+      fallback.target = '_blank';
+      fallback.rel = 'noreferrer';
+      fallback.dataset.translate = 'View live stats on GitHub';
+      fallback.textContent = 'View live stats on GitHub';
+      fallback.className = 'github-stats-fallback';
+      img.replaceWith(fallback);
+      applyLanguage(languageState.current);
+    });
+  });
+}
+
 function enhanceLazyImages() {
   document.querySelectorAll('img:not([loading])').forEach((img) => {
     if (img.dataset.priority === 'true') return;
@@ -591,6 +621,7 @@ function initPage() {
   initScrollAnimations();
   enhanceLazyImages();
   initContactBackgroundFallback();
+  initGithubStatsFallback();
   applyLanguage(languageState.current);
 
   const navbarPromise = document.querySelector('[data-partial="navbar"]')

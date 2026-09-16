@@ -374,6 +374,16 @@ a {
   position: relative;
 }
 
+.footer-social-link {
+  color: #93c5fd;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.footer-social-link:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
 .footer-marquee-container {
   width: 100%;
   overflow: hidden;
@@ -401,7 +411,7 @@ a {
 }
 
 .project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
   overflow: hidden;
   background: rgba(30, 41, 59, 0.9);
@@ -412,6 +422,7 @@ a {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .project-card img {
@@ -420,6 +431,24 @@ a {
 
 .project-card:hover img {
   transform: scale(1.03);
+}
+
+.project-thumb {
+  aspect-ratio: 16 / 9;
+}
+
+.project-thumb img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project-card-link svg {
+  transition: transform 0.2s ease;
+}
+
+.project-card-link:hover svg {
+  transform: translate(2px, -2px);
 }
 
 .project-tech-badge {
@@ -480,6 +509,24 @@ a {
   border-radius: 0.75rem;
 }
 
+.github-stats-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(148, 163, 184, 0.3);
+  color: #93c5fd;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.github-stats-fallback:hover {
+  border-color: rgba(147, 197, 253, 0.6);
+  color: #bfdbfe;
+}
+
 .contact-section {
   position: relative;
 }
@@ -508,26 +555,44 @@ a {
   z-index: 1;
 }
 
-.skills img {
+.skill-tile {
   position: relative;
-  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  padding: 14px;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.skills img:hover {
-  transform: scale(1.08);
+.skill-tile img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-.skills img:hover::after {
+.skill-tile:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-tile:hover::after {
   content: attr(title);
   position: absolute;
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
+  margin-bottom: 8px;
+  background: rgba(15, 23, 42, 0.95);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.75rem;
+  white-space: nowrap;
   z-index: 10;
 }
 
