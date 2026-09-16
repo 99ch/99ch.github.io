@@ -36,6 +36,10 @@ body {
   margin: 0;
 }
 
+body.page-home {
+  padding-top: 0;
+}
+
 #main-content {
   background: transparent !important;
   color: inherit;
