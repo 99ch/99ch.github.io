@@ -124,6 +124,38 @@
           </div>
         </div>
       </section>
+      <section class="uk-section" id="heritage" aria-labelledby="heritage-heading">
+        <div class="uk-container uk-container-xlarge">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 py-12 items-center">
+            <div class="heritage-photo">
+              <span class="fig-tag">FIG — TATA SOMBA</span>
+              <picture>
+                <source srcset="/image/heritage/tata-somba-01.webp" type="image/webp">
+                <img src="/image/heritage/tata-somba-01.jpg" alt="Traditional Tata Somba tower-house in the Koutammakou" loading="lazy">
+              </picture>
+            </div>
+            <div>
+              <p class="text-sm uppercase tracking-[0.4rem] text-blue-300" data-translate="Heritage Tagline">Where I'm from</p>
+              <h2 id="heritage-heading" data-translate="Heritage Heading" class="uk-h2 text-3xl font-semibold mb-4 text-slate-100">Otammari Roots</h2>
+              <p class="text-slate-300 mb-8" data-translate="Heritage Copy">I come from the Otammari people (Batammariba). Our ancestral homeland, the Koutammakou, is inscribed on the UNESCO World Heritage List as a living cultural landscape. Our traditional earthen tower-houses, the Tata Somba (takienta), reflect generations of inherited architectural knowledge.</p>
+              <div class="idx-card" style="max-width: 340px;">
+                <span class="idx-tab">ALBUM</span>
+                <div class="idx-body">
+                  <div class="photo-stack">
+                    <img src="/image/gallery/gallery-01.jpg" class="stack-1" alt="" loading="lazy">
+                    <img src="/image/gallery/gallery-05.jpg" class="stack-2" alt="" loading="lazy">
+                    <img src="/image/gallery/gallery-09.jpg" class="stack-3" alt="" loading="lazy">
+                  </div>
+                  <p class="idx-contact-label" data-translate="Album Label">Personal photos</p>
+                  <button type="button" class="btn btn-secondary mt-2" onclick="document.getElementById('photo-album-modal').showModal()">
+                    <span data-translate="View Photo Album">View Photo Album</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="uk-section" id="story" aria-labelledby="story-heading">
         <div class="uk-container uk-container-xlarge">
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-12">
@@ -259,6 +291,81 @@
           </div>
         </div>
       </section>
+      <dialog id="photo-album-modal" class="modal">
+        <form method="dialog" class="modal-box max-w-5xl bg-slate-900 text-slate-100">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-lg" data-translate="Photo Album Heading">Photo Album</h3>
+            <button class="btn btn-sm btn-circle btn-ghost">✕</button>
+          </div>
+          <div class="photo-masonry max-h-[70vh] overflow-y-auto pr-2">
+              <picture>
+                <source srcset="/image/gallery/gallery-01.webp" type="image/webp">
+                <img src="/image/gallery/gallery-01.jpg" alt="Personal photo 1" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-02.webp" type="image/webp">
+                <img src="/image/gallery/gallery-02.jpg" alt="Personal photo 2" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-03.webp" type="image/webp">
+                <img src="/image/gallery/gallery-03.jpg" alt="Personal photo 3" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-04.webp" type="image/webp">
+                <img src="/image/gallery/gallery-04.jpg" alt="Personal photo 4" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-05.webp" type="image/webp">
+                <img src="/image/gallery/gallery-05.jpg" alt="Personal photo 5" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-06.webp" type="image/webp">
+                <img src="/image/gallery/gallery-06.jpg" alt="Personal photo 6" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-07.webp" type="image/webp">
+                <img src="/image/gallery/gallery-07.jpg" alt="Personal photo 7" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-08.webp" type="image/webp">
+                <img src="/image/gallery/gallery-08.jpg" alt="Personal photo 8" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-09.webp" type="image/webp">
+                <img src="/image/gallery/gallery-09.jpg" alt="Personal photo 9" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-10.webp" type="image/webp">
+                <img src="/image/gallery/gallery-10.jpg" alt="Personal photo 10" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-11.webp" type="image/webp">
+                <img src="/image/gallery/gallery-11.jpg" alt="Personal photo 11" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-12.webp" type="image/webp">
+                <img src="/image/gallery/gallery-12.jpg" alt="Personal photo 12" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-13.webp" type="image/webp">
+                <img src="/image/gallery/gallery-13.jpg" alt="Personal photo 13" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-14.webp" type="image/webp">
+                <img src="/image/gallery/gallery-14.jpg" alt="Personal photo 14" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-15.webp" type="image/webp">
+                <img src="/image/gallery/gallery-15.jpg" alt="Personal photo 15" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="/image/gallery/gallery-16.webp" type="image/webp">
+                <img src="/image/gallery/gallery-16.jpg" alt="Personal photo 16" loading="lazy">
+              </picture>
+
+          </div>
+        </form>
+      </dialog>
       <div data-partial="footer" data-swap="outer">
         <noscript>
           <footer class="uk-section py-12">
