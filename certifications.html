@@ -38,6 +38,9 @@
               slate: { 900: '#0b3550', 800: '#0e3f60', 700: '#155075', 400: '#8fb8d6', 100: '#eaf6ff' },
               blue: { 100: '#bfe3ff', 300: '#8fd0ff', 400: '#5fb8f5', 500: '#3aa0e8', 600: '#1c6f9c', 700: '#155075' },
               yellow: { 400: '#ffb454', 500: '#f2941f' }
+            },
+            borderRadius: {
+              lg: '2px'
             }
           }
         }
@@ -94,8 +97,8 @@
             <h1 id="certifications-heading" data-translate="Certifications" class="uk-h1 text-4xl md:text-5xl font-bold text-white mb-6">Certifications</h1>
             <p data-translate="Certifications Intro" class="max-w-3xl text-xl text-slate-200 mb-10">Proof that I'm always leveling up my craft through structured programs, labs, and exams.</p>
             <div class="flex flex-wrap justify-center gap-4">
-              <a href="/" class="inline-flex items-center gap-2 border border-blue-500 text-blue-100 hover:bg-blue-500/20 px-6 py-3 rounded-lg transition-colors" data-translate="Back to Home">Back to Home</a>
-              <a href="https://drive.google.com/drive/folders/1U5WnFJoznvbjn5cFtCkWaqCLff0av-R-?usp=sharing" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors" data-translate="Download Transcript">Download Transcript</a>
+              <a href="/" class="btn btn-secondary" data-translate="Back to Home">Back to Home</a>
+              <a href="https://drive.google.com/drive/folders/1U5WnFJoznvbjn5cFtCkWaqCLff0av-R-?usp=sharing" target="_blank" rel="noreferrer" class="btn btn-primary btn-bracket" data-translate="Download Transcript">Download Transcript</a>
             </div>
           </div>
         </div>
@@ -105,141 +108,129 @@
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-16">
             <h2 id="certifications-grid-heading" data-translate="Certifications" class="uk-h2 text-3xl font-semibold mb-8 text-slate-100">Certifications</h2>
             <p class="text-slate-300 mb-12 text-center max-w-2xl" data-translate="Certifications Intro">Proof that I'm always leveling up my craft through structured programs, labs, and exams.</p>
-            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 certifications-grid" role="list" aria-label="Certification cards">
-              <article class="project-card animate-on-scroll" data-animation="fadeInLeft" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert1.webp" type="image/webp">
-                  <img src="/image/certifications/cert1.webp" alt="Programming in Python certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Programming in Python" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Programming in Python</h3>
-                  <p data-translate="Meta through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Meta through Coursera - Issued: Jul 2024</p>
-                  <a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Certification cards">
+              <article class="term-card animate-on-scroll" data-animation="fadeInLeft" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_01.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_01.meta</div>
+                  <p class="term-title" data-translate="Programming in Python">Programming in Python</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="Meta through Coursera - Issued: Jul 2024">Meta through Coursera - Issued: Jul 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_01.webp</div><img src="/image/certifications/cert1.webp" alt="Programming in Python certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeIn" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert2.webp" type="image/webp">
-                  <img src="/image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="JavaScript Algorithms and Data Structures" class="uk-h3 text-xl font-medium mb-2 text-slate-100">JavaScript Algorithms and Data Structures</h3>
-                  <p data-translate="freeCodeCamp - Issued: Sep 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Sep 2024</p>
-                  <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeIn" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_02.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_02.meta</div>
+                  <p class="term-title" data-translate="JavaScript Algorithms and Data Structures">JavaScript Algorithms and Data Structures</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="freeCodeCamp - Issued: Sep 2024">freeCodeCamp - Issued: Sep 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_02.webp</div><img src="/image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeInRight" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert3.webp" type="image/webp">
-                  <img src="/image/certifications/cert3.webp" alt="Artificial Intelligence certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Artificial Intelligence" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Artificial Intelligence</h3>
-                  <p data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024" class="text-slate-400 text-sm mb-4">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</p>
-                  <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeInRight" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_03.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_03.meta</div>
+                  <p class="term-title" data-translate="Artificial Intelligence">Artificial Intelligence</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_03.webp</div><img src="/image/certifications/cert3.webp" alt="Artificial Intelligence certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeInLeft" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert4.webp" type="image/webp">
-                  <img src="/image/certifications/cert4.webp" alt="Microsoft Excel certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Microsoft Excel" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Microsoft Excel</h3>
-                  <p data-translate="Microsoft through Coursera - Issued: Feb 2024" class="text-slate-400 text-sm mb-4">Microsoft through Coursera - Issued: Feb 2024</p>
-                  <a href="https://coursera.org/verify/D25B5LG4WQCF" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeInLeft" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_04.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_04.meta</div>
+                  <p class="term-title" data-translate="Microsoft Excel">Microsoft Excel</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="Microsoft through Coursera - Issued: Feb 2024">Microsoft through Coursera - Issued: Feb 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_04.webp</div><img src="/image/certifications/cert4.webp" alt="Microsoft Excel certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://coursera.org/verify/D25B5LG4WQCF" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeIn" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert5.webp" type="image/webp">
-                  <img src="/image/certifications/cert5.webp" alt="Think Like a Computer certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Think Like a Computer: The Logic of Programming" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Think Like a Computer: The Logic of Programming</h3>
-                  <p data-translate="OpenClassrooms - Issued: Jan 2024" class="text-slate-400 text-sm mb-4">OpenClassrooms - Issued: Jan 2024</p>
-                  <a href="#" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeIn" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_05.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_05.meta</div>
+                  <p class="term-title" data-translate="Think Like a Computer: The Logic of Programming">Think Like a Computer: The Logic of Programming</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="OpenClassrooms - Issued: Jan 2024">OpenClassrooms - Issued: Jan 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_05.webp</div><img src="/image/certifications/cert5.webp" alt="Think Like a Computer: The Logic of Programming certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="#" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeInRight" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert6.webp" type="image/webp">
-                  <img src="/image/certifications/cert6.webp" alt="Foundations of Cybersecurity certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Foundations of Cybersecurity" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Foundations of Cybersecurity</h3>
-                  <p data-translate="Google through Coursera - Issued: Jan 2024" class="text-slate-400 text-sm mb-4">Google through Coursera - Issued: Jan 2024</p>
-                  <a href="https://coursera.org/verify/6GN7VCA2WMAX" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeInRight" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_06.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_06.meta</div>
+                  <p class="term-title" data-translate="Foundations of Cybersecurity">Foundations of Cybersecurity</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="Google through Coursera - Issued: Jan 2024">Google through Coursera - Issued: Jan 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_06.webp</div><img src="/image/certifications/cert6.webp" alt="Foundations of Cybersecurity certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://coursera.org/verify/6GN7VCA2WMAX" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeInLeft" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert7.webp" type="image/webp">
-                  <img src="/image/certifications/cert7.webp" alt="Data Security certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Data Security" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Data Security</h3>
-                  <p data-translate="Cisco through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Cisco through Coursera - Issued: Jul 2024</p>
-                  <a href="https://coursera.org/verify/7H8GLGF5TGUC" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeInLeft" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_07.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_07.meta</div>
+                  <p class="term-title" data-translate="Data Security">Data Security</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="Cisco through Coursera - Issued: Jul 2024">Cisco through Coursera - Issued: Jul 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_07.webp</div><img src="/image/certifications/cert7.webp" alt="Data Security certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://coursera.org/verify/7H8GLGF5TGUC" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeIn" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert8.webp" type="image/webp">
-                  <img src="/image/certifications/cert8.webp" alt="Visual Elements of User Interface Design certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Visual Elements of User Interface Design" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Visual Elements of User Interface Design</h3>
-                  <p data-translate="California Institute of the Arts through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">California Institute of the Arts through Coursera - Issued: Jul 2024</p>
-                  <a href="https://coursera.org/verify/S63NWXR2XG4J" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeIn" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_08.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_08.meta</div>
+                  <p class="term-title" data-translate="Visual Elements of User Interface Design">Visual Elements of User Interface Design</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="California Institute of the Arts through Coursera - Issued: Jul 2024">California Institute of the Arts through Coursera - Issued: Jul 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_08.webp</div><img src="/image/certifications/cert8.webp" alt="Visual Elements of User Interface Design certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://coursera.org/verify/S63NWXR2XG4J" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeInRight" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert9.webp" type="image/webp">
-                  <img src="/image/certifications/cert9.webp" alt="Software Design and Project Management certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Software Design and Project Management" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Software Design and Project Management</h3>
-                  <p data-translate="The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024</p>
-                  <a href="https://coursera.org/verify/MRTJ7J8UA3AA" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeInRight" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_09.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_09.meta</div>
+                  <p class="term-title" data-translate="Software Design and Project Management">Software Design and Project Management</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024">The Hong Kong University of Science and Technology through Coursera - Issued: Jul 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_09.webp</div><img src="/image/certifications/cert9.webp" alt="Software Design and Project Management certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://coursera.org/verify/MRTJ7J8UA3AA" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeInLeft" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert10.webp" type="image/webp">
-                  <img src="/image/certifications/cert10.webp" alt="Responsive Web Design certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Responsive Web Design" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Responsive Web Design</h3>
-                  <p data-translate="freeCodeCamp - Issued: Aug 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Aug 2024</p>
-                  <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/responsive-web-design" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeInLeft" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_10.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_10.meta</div>
+                  <p class="term-title" data-translate="Responsive Web Design">Responsive Web Design</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="freeCodeCamp - Issued: Aug 2024">freeCodeCamp - Issued: Aug 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_10.webp</div><img src="/image/certifications/cert10.webp" alt="Responsive Web Design certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/responsive-web-design" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeIn" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert11.webp" type="image/webp">
-                  <img src="/image/certifications/cert11.webp" alt="Introduction to Git certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Introduction to Git" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Introduction to Git</h3>
-                  <p data-translate="Microsoft Learn - Issued: Aug 2024" class="text-slate-400 text-sm mb-4">Microsoft Learn - Issued: Aug 2024</p>
-                  <a href="https://learn.microsoft.com/en-us/users/chilavertndah-3078/achievements/9fc7nyxu?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeIn" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_11.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_11.meta</div>
+                  <p class="term-title" data-translate="Introduction to Git">Introduction to Git</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="Microsoft Learn - Issued: Aug 2024">Microsoft Learn - Issued: Aug 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_11.webp</div><img src="/image/certifications/cert11.webp" alt="Introduction to Git certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://learn.microsoft.com/en-us/users/chilavertndah-3078/achievements/9fc7nyxu?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
-              <article class="project-card animate-on-scroll" data-animation="fadeInRight" role="listitem">
-                <picture>
-                  <source srcset="/image/certifications/cert12.webp" type="image/webp">
-                  <img src="/image/certifications/cert12.webp" alt="Introduction to GitHub certificate" class="cert-image" width="480" height="340" loading="lazy">
-                </picture>
-                <div class="uk-card-body">
-                  <h3 data-translate="Introduction to GitHub" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Introduction to GitHub</h3>
-                  <p data-translate="Microsoft Learn - Issued: Aug 2024" class="text-slate-400 text-sm mb-4">Microsoft Learn - Issued: Aug 2024</p>
-                  <a href="https://learn.microsoft.com/en-us/users/chilavertndah-3078/achievements/pse97um4?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate<i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+              <article class="term-card animate-on-scroll" data-animation="fadeInRight" role="listitem">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_12.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_12.meta</div>
+                  <p class="term-title" data-translate="Introduction to GitHub">Introduction to GitHub</p>
+                  <div><span class="key">meta:</span> <span class="str" data-translate="Microsoft Learn - Issued: Aug 2024">Microsoft Learn - Issued: Aug 2024</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_12.webp</div><img src="/image/certifications/cert12.webp" alt="Introduction to GitHub certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://learn.microsoft.com/en-us/users/chilavertndah-3078/achievements/pse97um4?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </article>
             </div>
-            <a href="javascript:history.back()" data-translate="Back" class="inline-flex items-center gap-2 border border-slate-600 text-slate-200 hover:bg-white/10 px-6 py-3 rounded-lg mt-10 transition-colors">Back<i class="fas fa-arrow-left"></i></a>
+            <a href="javascript:history.back()" data-translate="Back" class="btn btn-ghost mt-10">Back<i class="fas fa-arrow-left"></i></a>
           </div>
         </div>
       </section>

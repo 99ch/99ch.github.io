@@ -21,6 +21,7 @@
   --bp-muted: #8fb8d6;
   --bp-accent: #ffb454;
   --bp-accent-dim: rgba(255, 180, 84, 0.6);
+  --cyan: #3aa0e8;
 }
 
 * {
@@ -1145,6 +1146,270 @@ a.idx-card:hover .idx-body {
   font-family: 'JetBrains Mono', monospace;
   color: var(--bp-accent);
   font-size: 0.8rem;
+}
+
+/* ===== Button system ===== */
+
+.btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.btn svg,
+.btn i {
+  transition: transform 0.2s ease;
+}
+
+.btn:hover svg,
+.btn:hover i {
+  transform: translate(2px, -2px);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.78rem;
+}
+
+.btn-primary {
+  background: var(--bp-accent);
+  color: var(--paper);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #ffc879;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #8fd0ff;
+  border-color: var(--cyan);
+}
+
+.btn-secondary:hover {
+  background: rgba(58, 160, 232, 0.12);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.btn-ghost:hover {
+  background: var(--line-faint);
+  border-color: var(--ink);
+}
+
+.btn-bracket {
+  border-radius: 0;
+}
+
+.btn-bracket::before,
+.btn-bracket::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--paper);
+}
+
+.btn-bracket::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.btn-bracket::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+.contact-button,
+.whatsapp-button {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ===== About Me / Skills / GitHub stats index wrappers ===== */
+
+.about-photo-wrap {
+  position: relative;
+}
+
+.about-photo-wrap .fig-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  background: rgba(11, 53, 80, 0.8);
+  padding: 2px 8px;
+  border: 1px solid var(--line-strong);
+  z-index: 2;
+}
+
+.bio-idx .idx-body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.skills-idx .idx-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.gh-idx-body {
+  padding: 10px;
+}
+
+.gh-idx-body img {
+  border-radius: 2px;
+}
+
+/* ===== Certifications: Terminal Log ===== */
+
+.term-card {
+  background: #071f30;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'JetBrains Mono', monospace;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.term-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--line);
+}
+
+.term-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.term-dot.a {
+  background: #ff6b6b;
+}
+
+.term-dot.b {
+  background: var(--bp-accent);
+}
+
+.term-dot.c {
+  background: #63d3a6;
+}
+
+.term-file {
+  margin-left: 8px;
+  font-size: 0.7rem;
+  color: var(--bp-muted);
+}
+
+.term-body {
+  padding: 18px 18px 20px;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.term-body .prompt {
+  color: var(--bp-accent);
+}
+
+.term-body .key {
+  color: var(--bp-muted);
+}
+
+.term-body .str {
+  color: #a8e6c1;
+}
+
+.term-title {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  margin: 2px 0 10px;
+}
+
+.term-preview {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.term-preview .cap {
+  font-size: 0.62rem;
+  color: var(--bp-muted);
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--line);
+  letter-spacing: 0.08em;
+}
+
+.term-preview img {
+  display: block;
+  width: 100%;
+}
+
+.term-preview.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  color: var(--bp-muted);
+  font-size: 0.68rem;
+  text-align: center;
+  padding: 12px;
+}
+
+.term-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: var(--bp-accent);
+  vertical-align: text-bottom;
+  animation: blink 1s steps(1) infinite;
+}
+
+.term-run {
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--bp-accent);
+}
+
+.term-run a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 [data-theme='light'] body {
