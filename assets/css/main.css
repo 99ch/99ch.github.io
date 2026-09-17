@@ -366,10 +366,7 @@ a {
   bottom: 2rem;
   left: 2rem;
   z-index: 10;
-  background-color: rgba(11, 53, 80, 0.9);
-  border: 1px solid var(--line-strong);
-  padding: 1rem;
-  border-radius: 0.25rem;
+  width: 220px;
 }
 
 @media (max-width: 767px) {
@@ -385,7 +382,7 @@ a {
   .services-section {
     bottom: 1rem;
     left: 1rem;
-    padding: 0.75rem;
+    width: 190px;
   }
 }
 
@@ -1037,6 +1034,117 @@ main h2.uk-h2::before {
   font-size: 0.9rem;
   color: var(--bp-muted);
   margin-bottom: 0.6rem;
+}
+
+/* ===== Index card system: generic (stats, contact, services) ===== */
+
+.idx-card {
+  position: relative;
+  margin-top: 13px;
+  height: calc(100% - 13px);
+}
+
+.idx-tab {
+  position: absolute;
+  top: -13px;
+  left: 16px;
+  background: var(--bp-accent);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  letter-spacing: 0.06em;
+  z-index: 2;
+}
+
+.idx-body {
+  background: rgba(14, 63, 96, 0.55);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--bp-accent);
+  padding: 22px 20px 18px;
+  height: 100%;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+a.idx-card:hover .idx-body {
+  border-color: var(--bp-accent-dim);
+  transform: translateY(-3px);
+}
+
+.idx-stat-num {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.idx-stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--bp-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.idx-contact-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--bp-accent);
+  margin-bottom: 14px;
+}
+
+.idx-contact-label {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.idx-contact-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--bp-muted);
+}
+
+.idx-services {
+  max-width: 320px;
+}
+
+.idx-services .idx-body {
+  padding: 24px 22px;
+}
+
+.idx-services-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.idx-services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px dashed var(--line);
+  padding-top: 12px;
+}
+
+.idx-services-list li {
+  font-size: 0.95rem;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+}
+
+.idx-services-list li::before {
+  content: '//';
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--bp-accent);
+  font-size: 0.8rem;
 }
 
 [data-theme='light'] body {
