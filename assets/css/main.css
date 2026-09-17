@@ -988,22 +988,22 @@ main h2.uk-h2::before {
 
 /* ===== Experience timeline ===== */
 
-.timeline {
+.bp-timeline {
   position: relative;
   padding-left: 2rem;
   border-left: 1px dashed var(--line-strong);
 }
 
-.timeline-item {
+.bp-timeline-item {
   position: relative;
   padding-bottom: 2.5rem;
 }
 
-.timeline-item:last-child {
+.bp-timeline-item:last-child {
   padding-bottom: 0;
 }
 
-.timeline-item::before {
+.bp-timeline-item::before {
   content: '';
   position: absolute;
   left: -2.4rem;
@@ -1015,7 +1015,7 @@ main h2.uk-h2::before {
   box-shadow: 0 0 0 4px var(--paper), 0 0 0 5px var(--line-strong);
 }
 
-.timeline-dates {
+.bp-timeline-dates {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
   color: var(--bp-accent);
@@ -1024,14 +1024,14 @@ main h2.uk-h2::before {
   margin-bottom: 0.35rem;
 }
 
-.timeline-role {
+.bp-timeline-role {
   font-size: 1.15rem;
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 0.25rem;
 }
 
-.timeline-org {
+.bp-timeline-org {
   font-size: 0.9rem;
   color: var(--bp-muted);
   margin-bottom: 0.6rem;
