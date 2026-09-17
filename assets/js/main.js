@@ -252,7 +252,13 @@ const TRANSLATIONS = {
     "Introduction to Node.js, v3": "Introduction to Node.js, v3",
     "Building Your Own Programming Language": "Building Your Own Programming Language",
     "iOS App Development with Swift": "iOS App Development with Swift",
-    "Testing Fundamentals": "Testing Fundamentals"
+    "Testing Fundamentals": "Testing Fundamentals",
+    "Heritage Tagline": "Where I'm from",
+    "Heritage Heading": "Otammari Roots",
+    "Heritage Copy": "I come from the Otammari people (Batammariba). Our ancestral homeland, the Koutammakou, is inscribed on the UNESCO World Heritage List as a living cultural landscape. Our traditional earthen tower-houses, the Tata Somba (takienta), reflect generations of inherited architectural knowledge.",
+    "Album Label": "Personal photos",
+    "View Photo Album": "View Photo Album",
+    "Photo Album Heading": "Photo Album"
   },
   fr: {
     "Home": "Accueil",
@@ -507,7 +513,13 @@ const TRANSLATIONS = {
     "Introduction to Node.js, v3": "Introduction à Node.js, v3",
     "Building Your Own Programming Language": "Créer son propre langage de programmation",
     "iOS App Development with Swift": "Développement d'applications iOS avec Swift",
-    "Testing Fundamentals": "Fondamentaux des tests"
+    "Testing Fundamentals": "Fondamentaux des tests",
+    "Heritage Tagline": "D'où je viens",
+    "Heritage Heading": "Racines Otammari",
+    "Heritage Copy": "Je suis originaire du peuple Otammari (Batammariba). Notre territoire ancestral, le Koutammakou, est inscrit au patrimoine mondial de l'UNESCO comme paysage culturel vivant. Nos tours de terre traditionnelles, les Tata Somba (takienta), témoignent d'un savoir-faire architectural transmis de génération en génération.",
+    "Album Label": "Photos personnelles",
+    "View Photo Album": "Voir l'album photo",
+    "Photo Album Heading": "Album photo"
   }
 };
 
