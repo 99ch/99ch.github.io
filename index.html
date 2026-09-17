@@ -38,6 +38,9 @@
               slate: { 900: '#0b3550', 800: '#0e3f60', 700: '#155075', 400: '#8fb8d6', 100: '#eaf6ff' },
               blue: { 100: '#bfe3ff', 300: '#8fd0ff', 400: '#5fb8f5', 500: '#3aa0e8', 600: '#1c6f9c', 700: '#155075' },
               yellow: { 400: '#ffb454', 500: '#f2941f' }
+            },
+            borderRadius: {
+              lg: '2px'
             }
           }
         }
@@ -181,7 +184,7 @@
                 </div>
               </article>
             </div>
-            <a href="/work.html" data-translate="See More" data-animation="fadeIn" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg mt-10 transition-colors animate-on-scroll">See More</a>
+            <a href="/work.html" data-translate="See More" data-animation="fadeIn" class="btn btn-primary btn-bracket mt-10 animate-on-scroll">See More</a>
           </div>
         </div>
       </section>
@@ -190,15 +193,21 @@
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32">
             <h2 id="about-heading" data-translate="About Me" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">About Me</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
-              <div class="flex items-center justify-center">
+              <div class="about-photo-wrap flex items-center justify-center">
+                <span class="fig-tag">FIG — PORTRAIT</span>
                 <picture>
                   <source srcset="/image/full_profil.webp" type="image/webp">
-                  <img src="/image/full_profil.png" alt="Chilavert N'dah portrait" loading="lazy" data-animation="fadeInLeft" class="w-full h-auto rounded-2xl shadow-2xl border-4 border-slate-700/20 animate-on-scroll" style="max-width: 500px;">
+                  <img src="/image/full_profil.png" alt="Chilavert N'dah portrait" loading="lazy" data-animation="fadeInLeft" class="w-full h-auto animate-on-scroll" style="max-width: 500px;">
                 </picture>
               </div>
-              <div class="flex flex-col items-start">
-                <p data-translate="I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅" data-animation="fadeInRight" class="text-xl max-w-2xl leading-relaxed text-slate-300 animate-on-scroll mb-12">I&#x27;m a Computer Science graduate from UCAO in Cotonou.</p>
-                <a href="/about.html" data-translate="See More" data-animation="fadeIn" class="inline-flex items-center gap-2 border border-blue-500 text-blue-100 hover:bg-blue-500/20 px-6 py-3 rounded-lg mt-6 transition-colors animate-on-scroll">See More</a>
+              <div class="flex flex-col items-start w-full">
+                <div class="idx-card bio-idx w-full">
+                  <span class="idx-tab">BIO</span>
+                  <div class="idx-body">
+                    <p data-translate="I'm a Computer Science graduate from UCAO in Cotonou. Currently, I work as a freelance Software Developer and actively contribute to various open-source projects to enhance my skills in full-stack development and cloud technologies. Outside of coding, I enjoy playing basketball, listening to music, and traveling. Fun fact: I once spent 3 hours debugging only to realize I forgot to save the file. 😅" data-animation="fadeInRight" class="animate-on-scroll">I&#x27;m a Computer Science graduate from UCAO in Cotonou.</p>
+                  </div>
+                </div>
+                <a href="/about.html" data-translate="See More" data-animation="fadeIn" class="btn btn-secondary mt-6 animate-on-scroll">See More</a>
               </div>
             </div>
           </div>
@@ -208,7 +217,9 @@
         <div class="uk-container mt-5 uk-container-xlarge">
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32">
             <h2 id="skills-heading" data-translate="Things I Can Do Without Googling... Mostly" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Things I Can Do Without Googling... Mostly</h2>
-            <div class="flex flex-wrap justify-center gap-4 skills">
+            <div class="idx-card skills-idx w-full">
+              <span class="idx-tab">STACK</span>
+            <div class="idx-body flex flex-wrap justify-center gap-4 skills">
               <div class="skill-tile animate-on-scroll" data-animation="fadeIn" title="Python"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" loading="lazy" alt="Python"></div>
               <div class="skill-tile animate-on-scroll" data-animation="fadeIn" title="Django"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/django/django.png" loading="lazy" alt="Django"></div>
               <div class="skill-tile animate-on-scroll" data-animation="fadeIn" title="C++"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" loading="lazy" alt="C++"></div>
@@ -224,6 +235,7 @@
               <div class="skill-tile animate-on-scroll" data-animation="fadeIn" title="TensorFlow"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png" loading="lazy" alt="TensorFlow"></div>
               <div class="skill-tile animate-on-scroll" data-animation="fadeIn" title="VS Code"><img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" loading="lazy" alt="VS Code"></div>
             </div>
+            </div>
           </div>
         </div>
       </section>
@@ -231,87 +243,42 @@
         <div class="uk-container mt-5 uk-container-xlarge">
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32">
             <h2 id="certifications-heading" data-translate="Certifications" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Certifications</h2>
-            <div class="hidden md:block">
-              <div class="certifications-grid">
-                <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
-                  <div class="uk-card-body space-y-6">
-                    <div class="overflow-hidden">
-                      <img src="/image/certifications/cert1.webp" alt="Programming in Python Certificate" loading="lazy" class="cert-image">
-                    </div>
-                    <div class="uk-card-body">
-                      <h3 data-translate="Programming in Python" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Programming in Python</h3>
-                      <p data-translate="Meta through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Meta through Coursera - Issued: Jul 2024</p>
-                      <a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                    </div>
-                  </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+              <div class="term-card animate-on-scroll" data-animation="fadeInLeft">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_01.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_01.meta</div>
+                  <p class="term-title" data-translate="Programming in Python">Programming in Python</p>
+                  <div><span class="key">issuer:</span> <span class="str">"Meta through Coursera"</span></div>
+                  <div><span class="key">issued:</span> <span class="str">"Jul 2024"</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_01.webp</div><img src="/image/certifications/cert1.webp" alt="Programming in Python certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
-                <div data-animation="fadeIn" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
-                  <div class="uk-card-body space-y-6">
-                    <div class="overflow-hidden">
-                      <img src="/image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures Certificate" loading="lazy" class="cert-image">
-                    </div>
-                    <div class="uk-card-body">
-                      <h3 data-translate="JavaScript Algorithms and Data Structures" class="uk-h3 text-xl font-medium mb-2 text-slate-100">JavaScript Algorithms and Data Structures</h3>
-                      <p data-translate="freeCodeCamp - Issued: Sep 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Sep 2024</p>
-                      <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                    </div>
-                  </div>
+              </div>
+              <div class="term-card animate-on-scroll" data-animation="fadeIn">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_02.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_02.meta</div>
+                  <p class="term-title" data-translate="JavaScript Algorithms and Data Structures">JavaScript Algorithms and Data Structures</p>
+                  <div><span class="key">issuer:</span> <span class="str">"freeCodeCamp"</span></div>
+                  <div><span class="key">issued:</span> <span class="str">"Sep 2024"</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_02.webp</div><img src="/image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
-                <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
-                  <div class="uk-card-body space-y-6">
-                    <div class="overflow-hidden">
-                      <img src="/image/certifications/cert3.webp" alt="Artificial Intelligence Certificate" loading="lazy" class="cert-image">
-                    </div>
-                    <div class="uk-card-body">
-                      <h3 data-translate="Artificial Intelligence" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Artificial Intelligence</h3>
-                      <p data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024" class="text-slate-400 text-sm mb-4">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</p>
-                      <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                    </div>
-                  </div>
+              </div>
+              <div class="term-card animate-on-scroll" data-animation="fadeInRight">
+                <div class="term-bar"><span class="term-dot a"></span><span class="term-dot b"></span><span class="term-dot c"></span><span class="term-file">cert_03.log</span></div>
+                <div class="term-body">
+                  <div><span class="prompt">$</span> cat cert_03.meta</div>
+                  <p class="term-title" data-translate="Artificial Intelligence">Artificial Intelligence</p>
+                  <div><span class="key">issuer:</span> <span class="str">"Cheikh Hamidou Kane Digital University"</span></div>
+                  <div><span class="key">issued:</span> <span class="str">"Mar 2024"</span><span class="term-cursor"></span></div>
+                  <div class="term-preview"><div class="cap">cert_03.webp</div><img src="/image/certifications/cert3.webp" alt="Artificial Intelligence certificate" loading="lazy"></div>
+                  <div class="term-run">$ open <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" rel="noreferrer" data-translate="View Certificate">View Certificate</a> ↗</div>
                 </div>
               </div>
             </div>
-            <div class="block md:hidden w-full">
-              <div class="certifications-carousel">
-                <div class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
-                  <div class="uk-card-body space-y-6">
-                    <div class="overflow-hidden">
-                      <img src="/image/certifications/cert1.webp" alt="Programming in Python Certificate" loading="lazy" class="cert-image">
-                    </div>
-                    <div class="uk-card-body">
-                      <h3 data-translate="Programming in Python" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Programming in Python</h3>
-                      <p data-translate="Meta through Coursera - Issued: Jul 2024" class="text-slate-400 text-sm mb-4">Meta through Coursera - Issued: Jul 2024</p>
-                      <a href="https://coursera.org/verify/TUD2GS7HJMWA" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
-                  <div class="uk-card-body space-y-6">
-                    <div class="overflow-hidden">
-                      <img src="/image/certifications/cert2.webp" alt="JavaScript Algorithms and Data Structures Certificate" loading="lazy" class="cert-image">
-                    </div>
-                    <div class="uk-card-body">
-                      <h3 data-translate="JavaScript Algorithms and Data Structures" class="uk-h3 text-xl font-medium mb-2 text-slate-100">JavaScript Algorithms and Data Structures</h3>
-                      <p data-translate="freeCodeCamp - Issued: Sep 2024" class="text-slate-400 text-sm mb-4">freeCodeCamp - Issued: Sep 2024</p>
-                      <a href="https://freecodecamp.org/certification/fcc2ab33543-32d3-4db7-aa84-21227a34c7d1/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
-                  <div class="uk-card-body space-y-6">
-                    <div class="overflow-hidden">
-                      <img src="/image/certifications/cert3.webp" alt="Artificial Intelligence Certificate" loading="lazy" class="cert-image">
-                    </div>
-                    <div class="uk-card-body">
-                      <h3 data-translate="Artificial Intelligence" class="uk-h3 text-xl font-medium mb-2 text-slate-100">Artificial Intelligence</h3>
-                      <p data-translate="Cheikh Hamidou Kane Digital University - Issued: Mar 2024" class="text-slate-400 text-sm mb-4">Cheikh Hamidou Kane Digital University - Issued: Mar 2024</p>
-                      <a href="https://formation.force-n.sn/mod/customcert/verify_certificate.php?contextid=249821&amp;code=ySWBmWn5pR&amp;qrcode=1" target="_blank" rel="noreferrer" data-translate="View Certificate" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">View Certificate</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a href="/certifications.html" data-translate="See More" data-animation="fadeIn" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg mt-8 transition-colors animate-on-scroll">See More</a>
+            <a href="/certifications.html" data-translate="See More" data-animation="fadeIn" class="btn btn-primary btn-bracket mt-10 animate-on-scroll">See More</a>
           </div>
         </div>
       </section>
@@ -319,13 +286,17 @@
         <div class="uk-container mt-5 uk-container-xlarge">
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32">
             <h2 id="github-heading" data-translate="GitHub Stats &amp; Contributions" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">GitHub Stats &amp; Contributions</h2>
-            <div class="flex flex-col gap-12 h-full w-full">
-              <img src="https://streak-stats.demolab.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=true&amp;background=0f172a" data-retry-src="https://streak-stats.demolab.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=true&amp;background=0f172a" loading="lazy" data-animation="fadeInDown" class="w-full mb-8 rounded-lg animate-on-scroll" alt="GitHub streak stats for 99ch">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" data-retry-src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="rounded-lg animate-on-scroll" alt="Most used languages for 99ch">
-                <div class="h-full">
-                  <img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" data-retry-src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0f172a&amp;height=300" loading="lazy" data-animation="fadeInRight" class="w-full h-full rounded-lg animate-on-scroll object-contain" alt="GitHub stats for 99ch">
-                </div>
+            <div class="flex flex-col gap-6 h-full w-full">
+              <div class="idx-card"><span class="idx-tab">GH.01</span><div class="idx-body gh-idx-body">
+                <img src="https://streak-stats.demolab.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=true&amp;background=0e3f60" data-retry-src="https://streak-stats.demolab.com?user=99ch&amp;theme=github-dark-blue&amp;hide_border=true&amp;background=0e3f60" loading="lazy" data-animation="fadeInDown" class="w-full animate-on-scroll" alt="GitHub streak stats for 99ch">
+              </div></div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch h-full">
+                <div class="idx-card"><span class="idx-tab">GH.02</span><div class="idx-body gh-idx-body h-full">
+                  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0e3f60&amp;height=300" data-retry-src="https://github-readme-stats.vercel.app/api/top-langs/?username=99ch&amp;layout=compact&amp;theme=github_dark&amp;hide_border=True&amp;langs_count=10&amp;bg_color=0e3f60&amp;height=300" loading="lazy" data-animation="fadeInRight" class="animate-on-scroll" alt="Most used languages for 99ch">
+                </div></div>
+                <div class="idx-card"><span class="idx-tab">GH.03</span><div class="idx-body gh-idx-body h-full">
+                  <img src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0e3f60&amp;height=300" data-retry-src="https://github-readme-stats.vercel.app/api?username=99ch&amp;show_icons=true&amp;theme=github_dark&amp;hide_border=True&amp;bg_color=0e3f60&amp;height=300" loading="lazy" data-animation="fadeInRight" class="w-full h-full animate-on-scroll object-contain" alt="GitHub stats for 99ch">
+                </div></div>
               </div>
             </div>
           </div>
@@ -334,9 +305,25 @@
       <section class="uk-section contact-section" id="contact" aria-labelledby="contact-heading">
         <div class="uk-container mt-5 uk-container-xlarge">
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32 contact-content">
-            <h2 id="contact-heading" data-translate="Let's Connect" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll">Let&#x27;s Connect</h2>
-            <p data-translate="Feel free to reach out to me via email." data-animation="fadeInUp" class="text-xl text-center mb-8 animate-on-scroll">Feel free to reach out to me via email.</p>
-            <a href="mailto:chilavertndah99@gmail.com" data-translate="Send Email" data-animation="fadeIn" class="text-lg bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors animate-on-scroll">Send Email</a>
+            <h2 id="contact-heading" data-translate="Let's Connect" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-6 animate-on-scroll">Let&#x27;s Connect</h2>
+            <p data-translate="Feel free to reach out to me via email." data-animation="fadeInUp" class="text-xl text-center mb-12 animate-on-scroll">Feel free to reach out to me via email.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+              <a href="mailto:chilavertndah99@gmail.com" class="idx-card" aria-label="Email Chilavert"><span class="idx-tab">MAIL</span><div class="idx-body">
+                <i class="fas fa-envelope idx-contact-icon"></i>
+                <p class="idx-contact-label">Email</p>
+                <p class="idx-contact-value">chilavertndah99@gmail.com</p>
+              </div></a>
+              <a href="tel:+2290149674848" class="idx-card" aria-label="Call Chilavert"><span class="idx-tab">TEL</span><div class="idx-body">
+                <i class="fas fa-phone idx-contact-icon"></i>
+                <p class="idx-contact-label" data-translate="Call">Call</p>
+                <p class="idx-contact-value">+229 014 967 4848</p>
+              </div></a>
+              <a href="https://wa.me/+2290149674848" target="_blank" rel="noreferrer" class="idx-card" aria-label="Message on WhatsApp"><span class="idx-tab">WA</span><div class="idx-body">
+                <i class="fab fa-whatsapp idx-contact-icon"></i>
+                <p class="idx-contact-label" data-translate="Text">Text</p>
+                <p class="idx-contact-value">Instant chats & quick briefs</p>
+              </div></a>
+            </div>
           </div>
         </div>
       </section>
