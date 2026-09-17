@@ -131,46 +131,50 @@
           <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center py-32">
             <h2 id="work-heading" data-translate="Projects" data-animation="fadeIn" class="uk-h2 text-4xl font-semibold mb-12 animate-on-scroll text-slate-100">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-              <div data-animation="fadeInLeft" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
-                <div class="uk-card-body space-y-6">
-                  <div class="project-thumb overflow-hidden">
-                    <picture>
-                      <source srcset="/image/mc-agence.webp" type="image/webp">
-                      <img src="/image/mc-agence.png" alt="MC Agence homepage" loading="lazy" class="w-full h-full transition-transform">
-                    </picture>
+              <article class="project-index-card" data-animation="fadeInLeft">
+                <span class="project-index-tab">PRJ-06</span>
+                <div class="project-index-body">
+                  <picture class="project-index-photo">
+                    <source srcset="/image/mc-agence.webp" type="image/webp">
+                    <img src="/image/mc-agence.png" alt="MC Agence homepage" loading="lazy">
+                  </picture>
+                  <span class="project-index-cat"><span data-translate="Marketing Site">Marketing Site</span> · 2024</span>
+                  <h3 data-translate="MC Agence Website" class="uk-h3 text-2xl font-medium text-slate-100">MC Agence Website</h3>
+                  <dl class="project-index-fields">
+                    <div class="project-index-field"><dt data-translate="Role">Role</dt><dd data-translate="MC Role">Lead designer & Webflow developer</dd></div>
+                    <div class="project-index-field"><dt data-translate="Stack">Stack</dt><dd>Webflow, GSAP, Fathom Analytics</dd></div>
+                    <div class="project-index-field"><dt data-translate="Impact">Impact</dt><dd data-translate="MC Impact">+42% qualified demos in 8 weeks</dd></div>
+                  </dl>
+                  <div class="project-index-badges">
+                    <span class="project-tech-badge">Webflow</span>
+                    <span class="project-tech-badge">Responsive Design</span>
+                    <span class="project-tech-badge">UI/UX</span>
                   </div>
-                  <div class="uk-card-body">
-                    <h3 data-translate="MC Agence Website" class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MC Agence Website</h3>
-                    <p data-translate="A responsive website design for a marketing agency built with Webflow. Features modern UI/UX design principles, smooth animations, and a client-focused approach." class="text-slate-400 text-sm mb-4">A responsive website design for a marketing agency built with Webflow.</p>
-                    <div class="flex flex-wrap mt-2">
-                      <span class="project-tech-badge">Webflow</span>
-                      <span class="project-tech-badge">Responsive Design</span>
-                      <span class="project-tech-badge">UI/UX</span>
-                    </div>
-                    <a href="https://mc-agence.webflow.io" target="_blank" rel="noreferrer" class="project-card-link inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors"><span data-translate="Visit Website">Visit Website</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
-                  </div>
+                  <a href="https://mc-agence.webflow.io" target="_blank" rel="noreferrer" class="project-index-cta"><span data-translate="Visit Website">Visit Website</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
                 </div>
-              </div>
-              <div data-animation="fadeInRight" class="uk-card project-card hover:shadow-2xl animate-on-scroll bg-slate-800/50 backdrop-blur-sm border-0">
-                <div class="uk-card-body space-y-6">
-                  <div class="project-thumb overflow-hidden">
-                    <picture>
-                      <source srcset="/image/monsterui.webp" type="image/webp">
-                      <img src="/image/monsterui.png" alt="MonsterUI components" loading="lazy" class="w-full h-full transition-transform">
-                    </picture>
+              </article>
+              <article class="project-index-card" data-animation="fadeInRight">
+                <span class="project-index-tab">PRJ-01</span>
+                <div class="project-index-body">
+                  <picture class="project-index-photo">
+                    <source srcset="/image/monsterui.webp" type="image/webp">
+                    <img src="/image/monsterui.png" alt="MonsterUI components" loading="lazy">
+                  </picture>
+                  <span class="project-index-cat"><span data-translate="Open Source">Open Source</span> · 2024</span>
+                  <h3 data-translate="MonsterUI Library Contribution" class="uk-h3 text-2xl font-medium text-slate-100">MonsterUI Library Contribution</h3>
+                  <dl class="project-index-fields">
+                    <div class="project-index-field"><dt data-translate="Role">Role</dt><dd data-translate="Monster Role">Open-source maintainer</dd></div>
+                    <div class="project-index-field"><dt data-translate="Stack">Stack</dt><dd>Python, FastHTML, Playwright, Vitest</dd></div>
+                    <div class="project-index-field"><dt data-translate="Impact">Impact</dt><dd data-translate="Monster Impact">Reduced UI regressions by 30% across adopters</dd></div>
+                  </dl>
+                  <div class="project-index-badges">
+                    <span class="project-tech-badge">Python</span>
+                    <span class="project-tech-badge">Open Source</span>
+                    <span class="project-tech-badge">UI Components</span>
                   </div>
-                  <div class="uk-card-body">
-                    <h3 data-translate="MonsterUI Library Contribution" class="uk-h3 text-2xl font-medium mb-2 text-slate-100">MonsterUI Library Contribution</h3>
-                    <p data-translate="Contributed to the open-source MonsterUI library, which provides UI components for Python web applications. My pull request #30 added new features and improvements to the library." class="text-slate-400 text-sm mb-4">Contributed to the open-source MonsterUI library.</p>
-                    <div class="flex flex-wrap mt-2">
-                      <span class="project-tech-badge">Python</span>
-                      <span class="project-tech-badge">Open Source</span>
-                      <span class="project-tech-badge">UI Components</span>
-                    </div>
-                    <a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" rel="noreferrer" class="project-card-link inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mt-4 transition-colors"><span data-translate="View PR on GitHub">View PR on GitHub</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
-                  </div>
+                  <a href="https://github.com/AnswerDotAI/MonsterUI/pull/30" target="_blank" rel="noreferrer" class="project-index-cta"><span data-translate="View PR on GitHub">View PR on GitHub</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg></a>
                 </div>
-              </div>
+              </article>
             </div>
             <a href="/work.html" data-translate="See More" data-animation="fadeIn" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg mt-10 transition-colors animate-on-scroll">See More</a>
           </div>

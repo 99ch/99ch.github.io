@@ -18,9 +18,9 @@
   --line-strong: rgba(180, 225, 255, 0.65);
   --line-faint: rgba(140, 210, 255, 0.16);
   --ink: #eaf6ff;
-  --muted: #8fb8d6;
-  --accent: #ffb454;
-  --accent-dim: rgba(255, 180, 84, 0.6);
+  --bp-muted: #8fb8d6;
+  --bp-accent: #ffb454;
+  --bp-accent-dim: rgba(255, 180, 84, 0.6);
 }
 
 * {
@@ -180,7 +180,7 @@ a {
   position: absolute;
   inset: 0;
   width: 0;
-  background-color: var(--accent);
+  background-color: var(--bp-accent);
   transition: width 1.5s ease-in-out;
 }
 
@@ -198,13 +198,13 @@ a {
 }
 
 .fixed-navbar a:hover {
-  color: var(--accent);
+  color: var(--bp-accent);
 }
 
 .fixed-navbar nav a[data-translate]::before,
 .fixed-navbar #mobile-menu a[data-translate]::before {
   content: '// ';
-  color: var(--accent);
+  color: var(--bp-accent);
   opacity: 0.85;
 }
 
@@ -342,12 +342,12 @@ a {
 .contact-button {
   bottom: 2rem;
   animation: float 3s ease-in-out infinite, blink 3s infinite;
-  background: linear-gradient(135deg, var(--accent), #f2941f);
+  background: linear-gradient(135deg, var(--bp-accent), #f2941f);
   color: #0b3550;
 }
 
 .contact-button:hover {
-  background: linear-gradient(135deg, #ffc879, var(--accent));
+  background: linear-gradient(135deg, #ffc879, var(--bp-accent));
 }
 
 .whatsapp-button {
@@ -406,7 +406,7 @@ a {
 }
 
 .footer-social-link {
-  color: var(--accent);
+  color: var(--bp-accent);
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -449,7 +449,7 @@ a {
 .spec-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
-  color: var(--accent);
+  color: var(--bp-accent);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -462,7 +462,7 @@ a {
   content: '';
   width: 28px;
   height: 1px;
-  background: var(--accent);
+  background: var(--bp-accent);
 }
 
 main {
@@ -481,7 +481,7 @@ main h2.uk-h2::before {
   left: 0;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.55em;
-  color: var(--accent);
+  color: var(--bp-accent);
   letter-spacing: 0.05em;
   top: 0.35em;
 }
@@ -543,7 +543,7 @@ main h2.uk-h2::before {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
-  border-color: var(--accent-dim);
+  border-color: var(--bp-accent-dim);
 }
 
 .project-card img {
@@ -602,12 +602,147 @@ main h2.uk-h2::before {
   align-items: center;
   background-color: var(--line-faint);
   border: 1px solid var(--line);
-  color: var(--muted);
+  color: var(--bp-muted);
   font-family: 'JetBrains Mono', monospace;
   border-radius: 3px;
   padding: 0.2rem 0.6rem;
   font-size: 0.72rem;
   margin: 0 0.5rem 0.5rem 0;
+}
+
+/* ===== Project index card ===== */
+
+.project-index-card {
+  position: relative;
+  margin-top: 20px;
+  height: calc(100% - 20px);
+}
+
+.project-index-tab {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background: var(--bp-accent);
+  color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  letter-spacing: 0.06em;
+  z-index: 2;
+}
+
+.project-index-body {
+  background: rgba(14, 63, 96, 0.55);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--bp-accent);
+  padding: 26px 22px 22px;
+  border-radius: 2px;
+  height: 100%;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-index-card:hover .project-index-body {
+  border-color: var(--bp-accent-dim);
+  transform: translateY(-3px);
+}
+
+.project-index-body::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.project-index-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--bp-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.project-index-body h3 {
+  margin: 0 0 4px;
+}
+
+.project-index-fields {
+  border-top: 1px dashed var(--line);
+  padding-top: 14px;
+  margin: 0;
+}
+
+.project-index-field {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  padding: 5px 0;
+  align-items: baseline;
+}
+
+.project-index-field dt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--bp-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  width: 68px;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.project-index-field dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+.project-index-photo {
+  float: right;
+  width: 120px;
+  margin: 0 0 10px 14px;
+  border: 4px solid #f4f0e8;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  transform: rotate(2deg);
+}
+
+.project-index-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-index-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.project-index-cta {
+  margin-top: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--bp-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.project-index-cta svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease;
+}
+
+.project-index-cta:hover svg {
+  transform: translate(2px, -2px);
 }
 
 .certifications-grid {
@@ -681,7 +816,7 @@ main h2.uk-h2::before {
 }
 
 .cert-log-row.head {
-  color: var(--accent);
+  color: var(--bp-accent);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.7rem;
@@ -694,7 +829,7 @@ main h2.uk-h2::before {
 
 .cert-log-issuer,
 .cert-log-date {
-  color: var(--muted);
+  color: var(--bp-muted);
 }
 
 @media (max-width: 640px) {
@@ -718,7 +853,7 @@ main h2.uk-h2::before {
   min-height: 300px;
   border-radius: 0.25rem;
   border: 1px dashed var(--line-strong);
-  color: var(--accent);
+  color: var(--bp-accent);
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
   text-decoration: none;
@@ -726,7 +861,7 @@ main h2.uk-h2::before {
 }
 
 .github-stats-fallback:hover {
-  border-color: var(--accent);
+  border-color: var(--bp-accent);
   color: var(--ink);
 }
 
@@ -782,7 +917,7 @@ main h2.uk-h2::before {
 .skill-tile:hover {
   transform: translateY(-4px) scale(1.06);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  border-color: var(--accent);
+  border-color: var(--bp-accent);
 }
 
 .skill-tile:hover::after {
@@ -818,7 +953,7 @@ main h2.uk-h2::before {
 
 .language-selector:hover,
 .language-selector:focus-visible {
-  border-color: var(--accent);
+  border-color: var(--bp-accent);
   outline: none;
 }
 
@@ -878,14 +1013,14 @@ main h2.uk-h2::before {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--bp-accent);
   box-shadow: 0 0 0 4px var(--paper), 0 0 0 5px var(--line-strong);
 }
 
 .timeline-dates {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
-  color: var(--accent);
+  color: var(--bp-accent);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 0.35rem;
@@ -900,7 +1035,7 @@ main h2.uk-h2::before {
 
 .timeline-org {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--bp-muted);
   margin-bottom: 0.6rem;
 }
 
