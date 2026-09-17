@@ -19,8 +19,8 @@
   --line-faint: rgba(140, 210, 255, 0.16);
   --ink: #eaf6ff;
   --bp-muted: #8fb8d6;
-  --bp-accent: #ffb454;
-  --bp-accent-dim: rgba(255, 180, 84, 0.6);
+  --bp-accent: #4ade80;
+  --bp-accent-dim: rgba(74, 222, 128, 0.6);
   --cyan: #3aa0e8;
 }
 
@@ -343,12 +343,12 @@ a {
 .contact-button {
   bottom: 2rem;
   animation: float 3s ease-in-out infinite, blink 3s infinite;
-  background: linear-gradient(135deg, var(--bp-accent), #f2941f);
+  background: linear-gradient(135deg, #ffb454, #f2941f);
   color: #0b3550;
 }
 
 .contact-button:hover {
-  background: linear-gradient(135deg, #ffc879, var(--bp-accent));
+  background: linear-gradient(135deg, #ffc879, #ffb454);
 }
 
 .whatsapp-button {
@@ -1188,7 +1188,7 @@ a.idx-card:hover .idx-body {
 }
 
 .btn-primary:hover {
-  background: #ffc879;
+  background: #86efac;
 }
 
 .btn-secondary {
