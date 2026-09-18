@@ -19,8 +19,8 @@
   --line-faint: rgba(140, 210, 255, 0.16);
   --ink: #eaf6ff;
   --bp-muted: #8fb8d6;
-  --bp-accent: #4ade80;
-  --bp-accent-dim: rgba(74, 222, 128, 0.6);
+  --bp-accent: #38bdf8;
+  --bp-accent-dim: rgba(56, 189, 248, 0.6);
   --cyan: #3aa0e8;
 }
 
@@ -1188,7 +1188,7 @@ a.idx-card:hover .idx-body {
 }
 
 .btn-primary:hover {
-  background: #86efac;
+  background: #7dd3fc;
 }
 
 .btn-secondary {
@@ -1395,7 +1395,7 @@ a.idx-card:hover .idx-body {
 }
 
 .term-dot.b {
-  background: var(--bp-accent);
+  background: #ffb454;
 }
 
 .term-dot.c {
