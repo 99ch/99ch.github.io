@@ -22,6 +22,8 @@
   --bp-accent: #38bdf8;
   --bp-accent-dim: rgba(56, 189, 248, 0.6);
   --cyan: #3aa0e8;
+  --red: #ff5a5f;
+  --red-dim: rgba(255, 90, 95, 0.55);
 }
 
 * {
@@ -199,13 +201,13 @@ a {
 }
 
 .fixed-navbar a:hover {
-  color: var(--bp-accent);
+  color: var(--red);
 }
 
 .fixed-navbar nav a[data-translate]::before,
 .fixed-navbar #mobile-menu a[data-translate]::before {
   content: '// ';
-  color: var(--bp-accent);
+  color: var(--red);
   opacity: 0.85;
 }
 
@@ -343,12 +345,12 @@ a {
 .contact-button {
   bottom: 2rem;
   animation: float 3s ease-in-out infinite, blink 3s infinite;
-  background: linear-gradient(135deg, #ffb454, #f2941f);
+  background: linear-gradient(135deg, #ff7377, #ff5a5f);
   color: #0b3550;
 }
 
 .contact-button:hover {
-  background: linear-gradient(135deg, #ffc879, #ffb454);
+  background: linear-gradient(135deg, #ff8a8d, #ff7377);
 }
 
 .whatsapp-button {
@@ -409,7 +411,7 @@ a {
 }
 
 .footer-social-link:hover {
-  color: var(--ink);
+  color: var(--red);
   transform: translateY(-3px);
 }
 
@@ -460,7 +462,7 @@ a {
   content: '';
   width: 28px;
   height: 1px;
-  background: var(--bp-accent);
+  background: var(--red);
 }
 
 main {
@@ -472,6 +474,15 @@ main h2.uk-h2 {
   padding-left: 2.6em;
 }
 
+main h2.uk-h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin: 0.45em 0 0 -2.6em;
+  background: var(--red);
+}
+
 main h2.uk-h2::before {
   counter-increment: section;
   content: '0' counter(section) ' /';
@@ -479,7 +490,7 @@ main h2.uk-h2::before {
   left: 0;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.55em;
-  color: var(--bp-accent);
+  color: var(--red);
   letter-spacing: 0.05em;
   top: 0.35em;
 }
@@ -500,6 +511,7 @@ main h2.uk-h2::before {
   left: 14px;
   border-top: 2px solid;
   border-left: 2px solid;
+  border-color: var(--red-dim);
 }
 
 .blueprint-crop.tr {
@@ -521,6 +533,7 @@ main h2.uk-h2::before {
   right: 14px;
   border-bottom: 2px solid;
   border-right: 2px solid;
+  border-color: var(--red-dim);
 }
 
 @media (max-width: 767px) {
@@ -1182,13 +1195,13 @@ a.idx-card:hover .idx-body {
 }
 
 .btn-primary {
-  background: var(--bp-accent);
+  background: var(--red);
   color: var(--paper);
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: #7dd3fc;
+  background: #ff8a8d;
 }
 
 .btn-secondary {
