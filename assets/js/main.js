@@ -223,7 +223,161 @@ const TRANSLATIONS = {
     "Heritage Copy": "I come from the Otammari people (Batammariba). Our ancestral homeland, the Koutammakou, is inscribed on the UNESCO World Heritage List as a living cultural landscape. Our traditional earthen tower-houses, the Tata Somba (takienta), reflect generations of inherited architectural knowledge.",
     "Album Label": "Personal photos",
     "View Photo Album": "View Photo Album",
-    "Photo Album Heading": "Photo Album"
+    "Photo Album Heading": "Photo Album",
+    /* wk-translations:start */
+    "View Repo": "View Repository",
+    "wk.stat1": "Apps in production",
+    "wk.stat2": "Commits on rhconsole",
+    "wk.stat3": "Pull requests merged upstream",
+    "wk.stat4": "Years of experience",
+    "wk.f.all": "All",
+    "wk.f.web": "Web",
+    "wk.f.mobile": "Mobile",
+    "wk.f.ngo": "NGO",
+    "wk.f.freelance": "Freelance",
+    "cs.cat.rh": "AI & Backend · Production",
+    "cs.rh.f1": "Git commits",
+    "cs.rh.f2": "REST endpoints",
+    "cs.rh.f3": "real CVs used to audit extraction",
+    "wk.openapp": "Open the app",
+    "wk.read": "Read the case study",
+    "wk.prod": "In production",
+    "cs.rh.summary": "AI CV/job matching for Bénin Digital: FastAPI, PostgreSQL + pgvector, Redis Streams and an explainable hybrid score, with no LLM.",
+    "cs.cat.kt": "E-commerce · Web & Mobile",
+    "cs.kt.f1": "modules & theme",
+    "cs.kt.f2": "test orders paid end to end",
+    "cs.kt.f3": "mobile apps",
+    "wk.openmarket": "Visit the marketplace",
+    "cs.kt.summary": "The Koutonou marketplace: FedaPay Mobile Money payments, Google sign-in, PrestaShop modules and theme for multiple vendors, plus iOS and Android apps.",
+    "cs.cat.ke": "WordPress · AI matching",
+    "cs.ke.f1": "CVs indexed",
+    "cs.ke.f2": "active job offers",
+    "cs.ke.f3": "automated tests passing",
+    "wk.openweb": "Visit the website",
+    "cs.ke.summary": "Keoni Consulting website in WordPress, and Keoni AI: a FastAPI + pgvector engine that scores 32,000+ CVs against each job offer.",
+    "wk.c.mobile": "Mobile app",
+    "wk.g1.t": "A&B Project EE — Mobile app",
+    "wk.g1.d": "Mobile app that streamlines matching between blood donors and beneficiaries.",
+    "wk.g1.r": "Volunteer Flutter & Django developer",
+    "wk.c.ngosite": "Nonprofit site",
+    "wk.g2.t": "A&B Project EE — Website",
+    "wk.g2.d": "Institutional website for a humanitarian NGO, built solo from the brief to launch.",
+    "wk.g2.r": "Volunteer web developer",
+    "wk.c.platform": "Web platform",
+    "wk.g3.t": "TugOnn Student Web App",
+    "wk.g3.d": "Team project for a Swiss-Beninese NGO: a Next.js front end and an Express + MongoDB back end, built with Git branches, reviews and merges.",
+    "wk.g3.r": "Volunteer full-stack developer",
+    "wk.c.marketing": "Marketing site",
+    "wk.g4.t": "MC Agence Website",
+    "wk.g4.d": "Marketing website for a client agency, designed and built in Webflow.",
+    "wk.g4.r": "Lead designer & Webflow developer",
+    "wk.c.showcase": "Showcase site",
+    "wk.g5.t": "Vino's Makeup Website",
+    "wk.g5.d": "Showcase website for a cosmetics brand.",
+    "wk.g5.r": "Freelance developer",
+    "wk.o.cat": "Open source",
+    "wk.o1.d": "Integrated Highlight.js into the headers with theme synchronization, in a FastHTML UI library.",
+    "wk.merged": "Merged",
+    "wk.o2.d": "GitHub Actions workflows that lint and test the package and publish it to PyPI.",
+    "wk.o3.d": "A pytest setup with tests for the feature engineer and the LLM interface.",
+    "wk.tag": "Selected work",
+    "wk.intro": "Production apps, open-source contributions and client projects, starting with the strongest work.",
+    "wk.featured": "In production",
+    "wk.featured.sub": "Three projects I designed, built or shipped end to end, each with a full write-up.",
+    "wk.others": "More work",
+    "wk.others.sub": "Websites and mobile apps for NGOs and freelance clients.",
+    "wk.os": "Open source",
+    "wk.os.sub": "Pull requests reviewed and merged by third-party maintainers.",
+    "cs.rh.role": "Solo end-to-end developer",
+    "cs.rh.period": "Sep 2025 – Jul 2026",
+    "cs.status.prod": "In production",
+    "wk.role": "Role",
+    "wk.period": "Period",
+    "wk.client": "Client",
+    "wk.status": "Status",
+    "cs.rh.b1": "A FastAPI REST API with 40+ endpoints, JWT authentication with three roles, rate limiting and Prometheus metrics, on PostgreSQL 16 with 25 Alembic migrations.",
+    "cs.rh.b2": "An event pipeline: a folder watcher and a standalone sync agent feed a Redis Streams queue, and a worker retries with exponential backoff before extraction, profiling, embeddings and scoring.",
+    "cs.rh.b3": "Text extraction that reads two-column CV layouts column by column, with a per-page Tesseract OCR fallback for scanned PDFs, tuned through audits on 13,000+ real CVs.",
+    "cs.rh.b4": "A four-layer skills taxonomy (2,162 hand-reviewed aliases, ROME 4.0, ESCO, O*NET and e-CF) with n-gram matching and a typo-tolerant fallback.",
+    "cs.rh.b5": "A hybrid 0–100 score: skills, experience, education, languages and contract, plus a multilingual e5 embedding signal and a French cross-encoder. Coverage caps and a penalty for missing key tools stop a generic semantic match from hiding a skills gap.",
+    "cs.rh.b6": "Every match comes with an explanation (why it matches, points of vigilance, evidence from the CV), three score levels and recruiter feedback stats, in a vanilla JavaScript dashboard.",
+    "cs.rh.b7": "Docker Compose for local and cloud, a hardened API container (read-only filesystem, no Linux capabilities), and GitHub Actions CI that blocks a merge when a model changes without its migration.",
+    "cs.back": "All work",
+    "cs.rh.headline": "AI CV/job matching console",
+    "cs.rh.lead": "A recruiting console that scores how well a CV fits a job offer, in real time and with an explanation: extraction, profiling, embeddings and a hybrid score behind a REST API, with no LLM in the loop.",
+    "cs.context": "Context",
+    "cs.rh.context": "Recruiting means reading many CVs against many job offers. rhconsole automates the first pass: CVs and offers are dropped in watched folders or uploaded in the dashboard, and each pair gets a 0–100 score with the reasons behind it, so a recruiter knows what to check before calling a candidate.",
+    "cs.built": "What I built",
+    "cs.arch": "How it fits together",
+    "cs.rh.dcap": "Simplified view of the matching pipeline.",
+    "cs.rh.sec.h": "Security",
+    "cs.rh.sec.p": "I audited the production app against OWASP practices and fixed real issues myself: a JWT secret left as an example value, a default administrator account exposed, and credentials present in the Git history.",
+    "cs.rh.d1.t": "One weight set, not one per domain",
+    "cs.rh.d1.d": "The score used to switch its weights by detected domain. One ambiguous word, such as \"patient\" in a tech CV, could flip the whole profile with no visible sign. I removed it: the domain is still shown as a label, and recruiters can pick an explicit weighting profile per offer.",
+    "cs.rh.d2.t": "Delete dead code that looks alive",
+    "cs.rh.d2.d": "A learned-weights feature had been built but never connected to the real scoring. I dropped its table in a migration instead of leaving settings that suggested it was active.",
+    "cs.rh.d3.t": "A missing signal is left out, not guessed",
+    "cs.rh.d3.d": "When a component has nothing to compare (an offer with no years of experience, for example), it is left out of the average and its weight goes to the others, instead of defaulting to a neutral value that would drag the score.",
+    "cs.decisions": "Decisions & trade-offs",
+    "cs.l.app": "Open the app",
+    "cs.l.engine": "Source repository",
+    "cs.links": "Links",
+    "cs.next": "Next case study",
+    "cs.kt.role": "Web & mobile developer",
+    "cs.kt.period": "2025 – 2026",
+    "cs.kt.status": "Live · payments validated in test mode",
+    "cs.kt.b1": "koutonoufedapay, a PrestaShop 8 payment module for FedaPay (Mobile Money and card, in CFA francs). The order is created only after the payment is read back from FedaPay, with amount checks, duplicate protection, separate test and live keys, and a signed webhook. It works on the website and in the Android app.",
+    "cs.kt.b2": "ps_koutonouauth, an authentication module: Google sign-in (OAuth 2.0 and OpenID Connect with PKCE) and mandatory email verification. It plugs into PrestaShop through hooks, needs PHP 8.1 and has no external dependency.",
+    "cs.kt.b3": "Audits and fixes of existing open-source modules, each written up as a report: click-and-collect (security fixes and vendor support), Ever Blog (44 commits) and Cloudflare Turnstile (a patched fork).",
+    "cs.kt.b4": "Amazona, a marketplace theme (Smarty, SCSS). I fixed an override conflict when installing its theme-configuration module by moving the logic to a hook.",
+    "cs.kt.b5": "The marketplace mobile apps for iOS and Android: store-readiness work (navigation security, signing, Google Play and App Store requirements, tests and CI) and publication guides. They are currently being deployed.",
+    "cs.kt.b6": "REST APIs designed and consumed by the apps, database maintenance and performance tuning, plus testing, debugging and code review with the rest of the team.",
+    "cs.kt.headline": "Multi-vendor marketplace: payments, sign-in, modules and mobile apps",
+    "cs.kt.lead": "A multi-vendor marketplace on PrestaShop: a Mobile Money payment module built in-house, Google sign-in, audited and adapted modules, a marketplace theme, and iOS and Android apps.",
+    "cs.kt.context": "Koutonou is a multi-vendor e-commerce marketplace run by Bénin Digital. It had no online payment suited to Benin, no social sign-in, and several modules that needed hardening and vendor support. I worked on the store itself (PHP, PrestaShop) and on its mobile apps for iOS and Android.",
+    "cs.kt.pay.h": "Payments with FedaPay: where it stands",
+    "cs.kt.pay.p": "FedaPay's official PrestaShop module is paid, looked outdated, and the provider did not answer my questions on compatibility, licence and support for six weeks. FedaPay publishes an open API and an MIT-licensed PHP library, so I built the module in-house. On 14 October 2026 it passed end-to-end tests on the production site in FedaPay's test environment: a 28,000 F CFA order from the browser and a 3,500 F CFA order from the Android app, both ending as \"payment accepted\", with confirmation emails to the customer and the vendor. Not done yet: a first real payment (it needs the production key) and splitting payouts between vendors, since every payment currently lands on one FedaPay account.",
+    "cs.kt.m0": "In-house PrestaShop 8 module for Mobile Money and card payments in CFA francs. Validated in FedaPay's test environment; live payments pending.",
+    "cs.kt.m5": "OAuth 2.0 / OpenID Connect with PKCE, mandatory email verification, built on hooks. The Google provider is shipped, five more are planned, and automated tests are the next step.",
+    "cs.kt.m1": "Based on the open-source Ever PS Click & Collect module. 14 commits: security fixes, then a vendor per store, per-vendor email notifications and hooks for the marketplace.",
+    "cs.kt.m2": "Based on the open-source Ever PS Blog module. 44 commits: Bootstrap 4 compatibility, SQL fixes (reserved words, escaping), 235+ French strings and a redesigned listing.",
+    "cs.kt.m3": "Marketplace theme, with a fix for an override conflict in its theme-configuration module.",
+    "cs.kt.m4": "Patched fork of the open-source Pixel Open module (v1.1.7 to v1.2.0): auto-injected widget, server-side checks, safe redirect and multi-shop configuration.",
+    "cs.modules": "Modules & theme",
+    "cs.kt.d1.t": "Build the payment module, do not buy it",
+    "cs.kt.d1.d": "The paid module cost 4,900 F CFA, but with no answer on maintenance or licence it was a dependency I could not trust. A thin module on top of FedaPay's open API keeps the code under our control and opens the way to vendor payouts. The trade-off is that maintenance is now ours and nobody outside has audited it.",
+    "cs.kt.d2.t": "Fork and patch instead of rewriting",
+    "cs.kt.d2.d": "For Cloudflare Turnstile I forked the maintained upstream module (Apache 2.0) and added only what a marketplace needs: auto-injection on login, contact and reset forms, server-side hostname and action checks, a safe redirect after failure, and per-shop configuration. Two review findings were left alone on purpose, with the reasons written down.",
+    "cs.kt.d3.t": "Secure first, then adapt",
+    "cs.kt.d3.d": "The click-and-collect audit started with fixes before any marketplace feature: an XSS in the store notification email, an unvalidated CSV upload and an unchecked date. Only then did I add vendor support: a vendor per store, per-vendor order emails and hooks for the marketplace.",
+    "cs.screens": "App screens",
+    "cs.l.market": "Visit the marketplace",
+    "cs.ke.role": "WordPress developer & matching engineer",
+    "cs.ke.period": "2025 – 2026",
+    "cs.status.live": "Live",
+    "cs.ke.b1": "The institutional website in WordPress and Elementor, with clear service pages and contact flows.",
+    "cs.ke.b2": "A matching engine in FastAPI: it reads offers and CVs from WordPress, indexes CV text and vectors in PostgreSQL with pgvector, scores every CV, and writes the results back into WordPress itself.",
+    "cs.ke.b3": "A score that shares its formula, weights and skills taxonomy with rhconsole, so one CV gets comparable scores on both platforms. The cross-encoder re-reads only the 100 best CVs, and the 300 best results are written back.",
+    "cs.ke.b4": "keoni-bridge, a custom WordPress plugin in PHP: REST endpoints, result tables, an admin screen, a keoni_matching shortcode, and the recruiter screens with a \"Lancer IA\" button, live progress that survives a page reload, and a detailed score view.",
+    "cs.ke.b5": "Text extraction with a per-page OCR fallback for scanned or badly encoded PDFs, and an incremental indexing that skips unchanged CVs.",
+    "cs.ke.b6": "A self-hosted stack on Docker Compose (three containers on a shared VPS) with images in GHCR. GitHub Actions runs the tests, builds the image and deploys over SSH in 7 to 10 minutes. Backup, rollback and monitoring scripts complete it.",
+    "cs.ke.headline": "Corporate website and AI CV matching (Keoni AI)",
+    "cs.ke.lead": "A corporate website, plus a matching engine that ranks the CVs of a WordPress job board for each job offer, with an explanation for every candidate.",
+    "cs.ke.context": "Kéoni Consulting needed a clear online presence and a faster way to shortlist candidates in a pool of more than 32,000 CVs. The goals: cut pre-selection time, improve the relevance of the profiles proposed, and keep control of the data by self-hosting the stack.",
+    "cs.ke.dcap": "Simplified view of the matching flow and the deployment pipeline.",
+    "cs.ke.evo.h": "How it evolved",
+    "cs.ke.evo.p": "The first version (February to March 2026) chained a WordPress hook, an n8n workflow, an in-memory FAISS index and a write back to WordPress. In September 2026 I rewrote the engine around pgvector and text windows, with direct writes into WordPress. Since October the \"Lancer IA\" button calls the engine directly, and n8n is only used for extraction previews.",
+    "cs.ke.d1.t": "Rewrite instead of patching",
+    "cs.ke.d1.d": "The first chain truncated text silently and kept results in memory. The new engine indexes CVs in overlapping text windows (no silent truncation), ranks a candidate on the best window rather than an average, and writes results itself.",
+    "cs.ke.d2.t": "Score everyone, re-read only the best",
+    "cs.ke.d2.d": "Running the cross-encoder on all 33,000 CVs meant an offer never finished. It now re-reads the top 100 only, and every other CV keeps a real score from cosine similarity. Sending one result per CV in a single request was also replaced by writing the 300 best.",
+    "cs.ke.d3.t": "Measure before fixing the OCR",
+    "cs.ke.d3.d": "OCR was timing out on every page. Measurements showed one OCR took 1.1 s, but eight in parallel pushed the server load to 32. Tesseract is multi-threaded, so a wrapper limits it to one thread: the same eight now finish in 2.4 s, and PyTorch keeps its threads.",
+    "cs.ke.d4.t": "No evidence is not a good score",
+    "cs.ke.d4.d": "An audit showed empty or unreadable CVs ranking near the top, because semantic similarity saturates around 73%. A CV with no detected skill is now capped at 30%, generic skills weigh less, and one person gets one line even with several applications.",
+    "cs.l.site": "Visit the website",
+    "cs.l.keorepo": "Source repository"
+    /* wk-translations:end */
   },
   fr: {
     "Home": "Accueil",
@@ -449,7 +603,161 @@ const TRANSLATIONS = {
     "Heritage Copy": "Je suis originaire du peuple Otammari (Batammariba). Notre territoire ancestral, le Koutammakou, est inscrit au patrimoine mondial de l'UNESCO comme paysage culturel vivant. Nos tours de terre traditionnelles, les Tata Somba (takienta), témoignent d'un savoir-faire architectural transmis de génération en génération.",
     "Album Label": "Photos personnelles",
     "View Photo Album": "Voir l'album photo",
-    "Photo Album Heading": "Album photo"
+    "Photo Album Heading": "Album photo",
+    /* wk-translations:start */
+    "View Repo": "Voir le dépôt",
+    "wk.stat1": "Applications en production",
+    "wk.stat2": "Commits sur rhconsole",
+    "wk.stat3": "Pull requests fusionnées en amont",
+    "wk.stat4": "Années d'expérience",
+    "wk.f.all": "Tous",
+    "wk.f.web": "Web",
+    "wk.f.mobile": "Mobile",
+    "wk.f.ngo": "ONG",
+    "wk.f.freelance": "Freelance",
+    "cs.cat.rh": "IA & Backend · Production",
+    "cs.rh.f1": "Commits Git",
+    "cs.rh.f2": "endpoints REST",
+    "cs.rh.f3": "CV réels pour auditer l’extraction",
+    "wk.openapp": "Ouvrir l'application",
+    "wk.read": "Lire l’étude de cas",
+    "wk.prod": "En production",
+    "cs.rh.summary": "Matching CV/emploi par IA pour Bénin Digital : FastAPI, PostgreSQL + pgvector, Redis Streams et un score hybride explicable, sans LLM.",
+    "cs.cat.kt": "E-commerce · Web & Mobile",
+    "cs.kt.f1": "modules et thème",
+    "cs.kt.f2": "commandes de test payées de bout en bout",
+    "cs.kt.f3": "applications mobiles",
+    "wk.openmarket": "Visiter la marketplace",
+    "cs.kt.summary": "La marketplace Koutonou : paiement Mobile Money FedaPay, connexion Google, modules et thème PrestaShop pour plusieurs vendeurs, plus des applications iOS et Android.",
+    "cs.cat.ke": "WordPress · Matching IA",
+    "cs.ke.f1": "CV indexés",
+    "cs.ke.f2": "offres actives",
+    "cs.ke.f3": "tests automatisés réussis",
+    "wk.openweb": "Visiter le site",
+    "cs.ke.summary": "Le site Keoni Consulting sous WordPress, et Keoni AI : un moteur FastAPI + pgvector qui note plus de 32 000 CV pour chaque offre.",
+    "wk.c.mobile": "Application mobile",
+    "wk.g1.t": "A&B Project EE — Application mobile",
+    "wk.g1.d": "Application mobile qui facilite la mise en relation entre donneurs de sang et bénéficiaires.",
+    "wk.g1.r": "Développeur Flutter & Django bénévole",
+    "wk.c.ngosite": "Site associatif",
+    "wk.g2.t": "A&B Project EE — Site web",
+    "wk.g2.d": "Site institutionnel d'une ONG humanitaire, réalisé en autonomie du besoin à la mise en ligne.",
+    "wk.g2.r": "Développeur web bénévole",
+    "wk.c.platform": "Plateforme web",
+    "wk.g3.t": "TugOnn Student Web App",
+    "wk.g3.d": "Projet d'équipe pour une ONG suisso-béninoise : un front Next.js et un back Express + MongoDB, développés avec branches, revues et fusions Git.",
+    "wk.g3.r": "Développeur full-stack bénévole",
+    "wk.c.marketing": "Site vitrine",
+    "wk.g4.t": "Site MC Agence",
+    "wk.g4.d": "Site vitrine pour une agence cliente, conçu et réalisé sous Webflow.",
+    "wk.g4.r": "Lead designer & développeur Webflow",
+    "wk.c.showcase": "Site vitrine",
+    "wk.g5.t": "Site Vino's Makeup",
+    "wk.g5.d": "Site vitrine pour une marque de cosmétiques.",
+    "wk.g5.r": "Développeur freelance",
+    "wk.o.cat": "Open source",
+    "wk.o1.d": "Intégration de Highlight.js dans les en-têtes avec synchronisation du thème, dans une librairie UI pour FastHTML.",
+    "wk.merged": "Fusionnée",
+    "wk.o2.d": "Des workflows GitHub Actions qui lint et testent le paquet, puis le publient sur PyPI.",
+    "wk.o3.d": "Une base pytest avec des tests pour le feature engineer et l'interface LLM.",
+    "wk.tag": "Réalisations choisies",
+    "wk.intro": "Applications en production, contributions open source et projets clients, en commençant par le travail le plus solide.",
+    "wk.featured": "En production",
+    "wk.featured.sub": "Trois projets que j'ai conçus, construits ou livrés de bout en bout, chacun avec une étude de cas complète.",
+    "wk.others": "Autres réalisations",
+    "wk.others.sub": "Sites web et applications mobiles pour des ONG et des clients freelance.",
+    "wk.os": "Open source",
+    "wk.os.sub": "Pull requests relues et fusionnées par des mainteneurs tiers.",
+    "cs.rh.role": "Développeur solo, de bout en bout",
+    "cs.rh.period": "Sept. 2025 – juil. 2026",
+    "cs.status.prod": "En production",
+    "wk.role": "Rôle",
+    "wk.period": "Période",
+    "wk.client": "Client",
+    "wk.status": "Statut",
+    "cs.rh.b1": "Une API REST FastAPI de plus de 40 endpoints, avec authentification JWT à trois rôles, limitation de débit et métriques Prometheus, sur PostgreSQL 16 avec 25 migrations Alembic.",
+    "cs.rh.b2": "Un pipeline événementiel : un watcher de dossiers et un agent de synchronisation autonome alimentent une file Redis Streams, et un worker réessaie avec un backoff exponentiel avant l'extraction, le profilage, les embeddings et le scoring.",
+    "cs.rh.b3": "Une extraction de texte qui lit les CV à deux colonnes colonne par colonne, avec un repli OCR Tesseract page par page pour les PDF scannés, mise au point par des audits sur plus de 13 000 CV réels.",
+    "cs.rh.b4": "Une taxonomie de compétences en quatre couches (2 162 alias revus à la main, ROME 4.0, ESCO, O*NET et e-CF) avec détection par n-grammes et repli tolérant aux fautes de frappe.",
+    "cs.rh.b5": "Un score hybride de 0 à 100 : compétences, expérience, formation, langues et contrat, plus un signal d'embeddings e5 multilingue et un cross-encoder français. Des plafonds de couverture et une pénalité pour les outils clés manquants empêchent une proximité sémantique générale de masquer un manque de compétences.",
+    "cs.rh.b6": "Chaque correspondance vient avec une explication (pourquoi elle correspond, points de vigilance, extraits du CV), trois niveaux de score et des statistiques de retours recruteurs, dans un tableau de bord en JavaScript natif.",
+    "cs.rh.b7": "Docker Compose en local et dans le cloud, un conteneur d'API durci (système de fichiers en lecture seule, aucune capability Linux), et une CI GitHub Actions qui bloque la fusion quand un modèle change sans sa migration.",
+    "cs.back": "Tous les travaux",
+    "cs.rh.headline": "Console RH de matching CV/emploi par IA",
+    "cs.rh.lead": "Une console de recrutement qui note l'adéquation d'un CV à une offre, en temps réel et avec une explication : extraction, profilage, embeddings et score hybride derrière une API REST, sans LLM.",
+    "cs.context": "Contexte",
+    "cs.rh.context": "Recruter, c'est lire beaucoup de CV face à beaucoup d'offres. rhconsole automatise le premier tri : les CV et les offres arrivent dans des dossiers surveillés ou via le tableau de bord, et chaque paire reçoit un score de 0 à 100 avec ses raisons, pour que le recruteur sache quoi vérifier avant d'appeler un candidat.",
+    "cs.built": "Ce que j'ai réalisé",
+    "cs.arch": "Comment ça s'assemble",
+    "cs.rh.dcap": "Vue simplifiée du pipeline de matching.",
+    "cs.rh.sec.h": "Sécurité",
+    "cs.rh.sec.p": "J'ai audité l'application en production selon les pratiques OWASP et corrigé moi-même de vraies failles : un secret JWT laissé en valeur d'exemple, un compte administrateur exposé par défaut, et des identifiants présents dans l'historique Git.",
+    "cs.rh.d1.t": "Un seul jeu de poids, pas un par domaine",
+    "cs.rh.d1.d": "Le score changeait ses poids selon le domaine détecté. Un seul mot ambigu, comme « patient » dans un CV tech, pouvait faire basculer tout le profil sans signal visible. Je l’ai retiré : le domaine reste affiché comme étiquette, et le recruteur peut choisir un profil de pondération explicite par offre.",
+    "cs.rh.d2.t": "Supprimer le code mort qui a l’air actif",
+    "cs.rh.d2.d": "Une fonctionnalité de poids appris avait été construite mais jamais branchée sur le vrai scoring. J’ai supprimé sa table dans une migration plutôt que de laisser des réglages laissant croire qu’elle était active.",
+    "cs.rh.d3.t": "Un signal absent est écarté, pas deviné",
+    "cs.rh.d3.d": "Quand une composante n’a rien à comparer (une offre sans années d’expérience, par exemple), elle est écartée de la moyenne et son poids passe aux autres, au lieu d’une valeur neutre par défaut qui fausserait le score.",
+    "cs.decisions": "Décisions & compromis",
+    "cs.l.app": "Ouvrir l'application",
+    "cs.l.engine": "Dépôt du code",
+    "cs.links": "Liens",
+    "cs.next": "Étude de cas suivante",
+    "cs.kt.role": "Développeur web & mobile",
+    "cs.kt.period": "2025 – 2026",
+    "cs.kt.status": "En ligne · paiement validé en mode test",
+    "cs.kt.b1": "koutonoufedapay, un module de paiement PrestaShop 8 pour FedaPay (Mobile Money et carte, en francs CFA). La commande n'est créée qu'après relecture du paiement auprès de FedaPay, avec contrôle du montant, protection contre les doublons, clés de test et de production séparées, et webhook signé. Il fonctionne sur le site et dans l'application Android.",
+    "cs.kt.b2": "ps_koutonouauth, un module d'authentification : connexion Google (OAuth 2.0 et OpenID Connect avec PKCE) et vérification obligatoire de l'e-mail. Il s'intègre à PrestaShop par des hooks, requiert PHP 8.1 et n'a aucune dépendance externe.",
+    "cs.kt.b3": "Des audits et correctifs de modules open source existants, chacun documenté par un rapport : click-and-collect (correctifs de sécurité et gestion des vendeurs), Ever Blog (44 commits) et Cloudflare Turnstile (un fork corrigé).",
+    "cs.kt.b4": "Amazona, un thème de marketplace (Smarty, SCSS). J'ai corrigé un conflit d'override à l'installation de son module de configuration en déplaçant la logique vers un hook.",
+    "cs.kt.b5": "Les applications mobiles iOS et Android de la marketplace : mise en conformité pour les stores (sécurité de la navigation, signature, exigences Google Play et App Store, tests et CI) et guides de publication. Elles sont en cours de déploiement.",
+    "cs.kt.b6": "Des API REST conçues et consommées par les applications, de la maintenance de bases de données et de l'optimisation des performances, plus des tests, du débogage et de la revue de code avec l'équipe.",
+    "cs.kt.headline": "Marketplace multi-vendeurs : paiement, connexion, modules et applications mobiles",
+    "cs.kt.lead": "Une marketplace multi-vendeurs sur PrestaShop : un module de paiement Mobile Money développé en interne, la connexion Google, des modules audités et adaptés, un thème de marketplace, et des applications iOS et Android.",
+    "cs.kt.context": "Koutonou est une marketplace e-commerce multi-vendeurs de Bénin Digital. Elle n'avait aucun paiement en ligne adapté au Bénin, pas de connexion sociale, et plusieurs modules à renforcer et à adapter aux vendeurs. J'ai travaillé sur la boutique elle-même (PHP, PrestaShop) et sur ses applications mobiles iOS et Android.",
+    "cs.kt.pay.h": "Paiement FedaPay : où en est-on",
+    "cs.kt.pay.p": "Le module PrestaShop officiel de FedaPay est payant, semblait ancien, et le fournisseur n'a pas répondu pendant six semaines à mes questions sur la compatibilité, la licence et le support. FedaPay publie une API ouverte et une bibliothèque PHP sous licence MIT, donc j'ai développé le module en interne. Le 14 octobre 2026, il a passé des essais de bout en bout sur le site de production, dans l'environnement de test de FedaPay : une commande de 28 000 F CFA depuis le navigateur et une de 3 500 F CFA depuis l'application Android, toutes deux en « paiement accepté », avec e-mails de confirmation au client et au vendeur. Reste à faire : un premier paiement réel (il faut la clé de production) et la répartition des paiements entre vendeurs, puisque tout arrive aujourd'hui sur un seul compte FedaPay.",
+    "cs.kt.m0": "Module PrestaShop 8 développé en interne pour les paiements Mobile Money et carte en francs CFA. Validé dans l'environnement de test de FedaPay ; paiements réels à venir.",
+    "cs.kt.m5": "OAuth 2.0 / OpenID Connect avec PKCE, vérification obligatoire de l'e-mail, construit sur des hooks. Le fournisseur Google est livré, cinq autres sont prévus, et les tests automatisés sont la prochaine étape.",
+    "cs.kt.m1": "Basé sur le module open source Ever PS Click & Collect. 14 commits : correctifs de sécurité, puis un vendeur par magasin, des notifications e-mail par vendeur et des hooks pour la marketplace.",
+    "cs.kt.m2": "Basé sur le module open source Ever PS Blog. 44 commits : compatibilité Bootstrap 4, correctifs SQL (mots réservés, échappement), plus de 235 chaînes traduites en français et un listing redessiné.",
+    "cs.kt.m3": "Thème de marketplace, avec un correctif pour un conflit d'override dans son module de configuration.",
+    "cs.kt.m4": "Fork corrigé du module open source de Pixel Open (v1.1.7 vers v1.2.0) : widget injecté automatiquement, contrôles côté serveur, redirection sûre et configuration multi-boutique.",
+    "cs.modules": "Modules & thème",
+    "cs.kt.d1.t": "Développer le module de paiement plutôt que l’acheter",
+    "cs.kt.d1.d": "Le module payant coûtait 4 900 F CFA, mais sans réponse sur la maintenance ou la licence, c’était une dépendance peu fiable. Un module léger au-dessus de l’API ouverte de FedaPay garde le code sous notre contrôle et ouvre la voie au reversement aux vendeurs. En contrepartie, la maintenance est désormais à notre charge et personne d’extérieur ne l’a audité.",
+    "cs.kt.d2.t": "Forker et corriger plutôt que réécrire",
+    "cs.kt.d2.d": "Pour Cloudflare Turnstile, j’ai forké le module amont maintenu (Apache 2.0) et ajouté seulement ce dont une marketplace a besoin : injection automatique sur les formulaires de connexion, contact et réinitialisation, contrôles serveur du hostname et de l’action, redirection sûre après échec, et configuration par boutique. Deux remarques de revue ont été laissées de côté volontairement, avec les raisons documentées.",
+    "cs.kt.d3.t": "Sécuriser d’abord, adapter ensuite",
+    "cs.kt.d3.d": "L’audit de click-and-collect a commencé par des correctifs avant toute fonction marketplace : une XSS dans l’e-mail de notification du magasin, un import CSV non validé et une date non contrôlée. Ensuite seulement j’ai ajouté la gestion des vendeurs : un vendeur par magasin, des e-mails de commande par vendeur et des hooks pour la marketplace.",
+    "cs.screens": "Écrans de l'application",
+    "cs.l.market": "Visiter la marketplace",
+    "cs.ke.role": "Développeur WordPress & ingénieur matching",
+    "cs.ke.period": "2025 – 2026",
+    "cs.status.live": "En ligne",
+    "cs.ke.b1": "Le site institutionnel en WordPress et Elementor, avec des pages de services claires et des parcours de contact.",
+    "cs.ke.b2": "Un moteur de matching en FastAPI : il lit les offres et les CV dans WordPress, indexe le texte et les vecteurs des CV dans PostgreSQL avec pgvector, note chaque CV, et écrit lui-même les résultats dans WordPress.",
+    "cs.ke.b3": "Un score qui partage sa formule, ses poids et sa taxonomie de compétences avec rhconsole, pour qu'un même CV obtienne des scores comparables sur les deux plateformes. Le cross-encoder ne relit que les 100 meilleurs CV, et les 300 meilleurs résultats sont renvoyés.",
+    "cs.ke.b4": "keoni-bridge, un plugin WordPress sur mesure en PHP : endpoints REST, tables de résultats, écran d'administration, shortcode keoni_matching, et les écrans recruteur avec un bouton « Lancer IA », un suivi en direct qui survit au rechargement de la page, et un détail du score.",
+    "cs.ke.b5": "Une extraction de texte avec repli OCR page par page pour les PDF scannés ou mal encodés, et une indexation incrémentale qui ignore les CV inchangés.",
+    "cs.ke.b6": "Une stack auto-hébergée sous Docker Compose (trois conteneurs sur un VPS partagé) avec des images dans GHCR. GitHub Actions exécute les tests, construit l'image et déploie via SSH en 7 à 10 minutes. Des scripts de sauvegarde, de rollback et de supervision complètent le tout.",
+    "cs.ke.headline": "Site vitrine et matching IA des CV (Keoni AI)",
+    "cs.ke.lead": "Un site vitrine, plus un moteur de matching qui classe les CV d'un site d'emploi WordPress pour chaque offre, avec une explication pour chaque candidat.",
+    "cs.ke.context": "Kéoni Consulting avait besoin d'une présence en ligne claire et d'un moyen plus rapide de présélectionner des candidats dans un vivier de plus de 32 000 CV. Les objectifs : réduire le temps de présélection, améliorer la pertinence des profils proposés, et garder le contrôle des données grâce à une stack auto-hébergée.",
+    "cs.ke.dcap": "Vue simplifiée du flux de matching et du pipeline de déploiement.",
+    "cs.ke.evo.h": "Comment ça a évolué",
+    "cs.ke.evo.p": "La première version (février à mars 2026) enchaînait un hook WordPress, un workflow n8n, un index FAISS en mémoire et une écriture dans WordPress. En septembre 2026, j'ai réécrit le moteur autour de pgvector et de fenêtres de texte, avec écriture directe dans WordPress. Depuis octobre, le bouton « Lancer IA » appelle directement le moteur, et n8n ne sert plus qu'aux aperçus d'extraction.",
+    "cs.ke.d1.t": "Réécrire plutôt que rafistoler",
+    "cs.ke.d1.d": "La première chaîne tronquait le texte sans le dire et gardait les résultats en mémoire. Le nouveau moteur indexe les CV en fenêtres de texte (aucune troncature silencieuse), classe un candidat sur sa meilleure fenêtre plutôt que sur une moyenne, et écrit lui-même les résultats.",
+    "cs.ke.d2.t": "Noter tout le monde, ne relire que les meilleurs",
+    "cs.ke.d2.d": "Lancer le cross-encoder sur les 33 000 CV empêchait une offre de se terminer. Il ne relit plus que les 100 meilleurs, et tous les autres CV gardent un vrai score issu de la similarité cosinus. L’envoi d’un résultat par CV dans une seule requête a aussi été remplacé par l’écriture des 300 meilleurs.",
+    "cs.ke.d3.t": "Mesurer avant de corriger l’OCR",
+    "cs.ke.d3.d": "L’OCR expirait sur chaque page. Les mesures ont montré qu’un OCR prenait 1,1 s, mais que huit en parallèle poussaient la charge du serveur à 32. Tesseract est multi-thread, donc un script la limite à un thread : les huit mêmes se terminent en 2,4 s, et PyTorch garde ses threads.",
+    "cs.ke.d4.t": "Aucune preuve ne vaut pas un bon score",
+    "cs.ke.d4.d": "Un audit a montré des CV vides ou illisibles en tête de classement, car la similarité sémantique sature vers 73 %. Un CV sans compétence détectée est maintenant plafonné à 30 %, les compétences génériques pèsent moins, et une personne n’occupe qu’une ligne même avec plusieurs candidatures.",
+    "cs.l.site": "Visiter le site",
+    "cs.l.keorepo": "Dépôt du code"
+    /* wk-translations:end */
   }
 };
 
@@ -530,7 +838,15 @@ function initSplashScreen() {
     return;
   }
 
-  const skipAnimations = prefersReducedMotionQuery.matches;
+  let alreadySeen = false;
+  try {
+    alreadySeen = sessionStorage.getItem('splashSeen') === '1';
+    sessionStorage.setItem('splashSeen', '1');
+  } catch (error) {
+    alreadySeen = false;
+  }
+
+  const skipAnimations = prefersReducedMotionQuery.matches || alreadySeen;
 
   if (skipAnimations) {
     splashScreen.style.display = 'none';
@@ -571,17 +887,29 @@ function initNavbarScrollBehavior() {
   if (!navbar) return;
 
   let lastScrollY = window.scrollY;
+  let ticking = false;
 
-  window.addEventListener('scroll', () => {
+  const update = () => {
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      navbar.style.transform = 'translateY(-100%)';
+      navbar.classList.add('nav-hidden');
     } else {
-      navbar.style.transform = 'translateY(0)';
+      navbar.classList.remove('nav-hidden');
       navbar.classList.toggle('nav-scrolled', currentScrollY > 50);
     }
     lastScrollY = currentScrollY;
-  });
+    ticking = false;
+  };
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    },
+    { passive: true }
+  );
 }
 
 function initMobileMenu() {
@@ -616,8 +944,12 @@ function initScrollAnimations() {
 
   const observer = new IntersectionObserver(
     (entries) => {
+      let staggerIndex = 0;
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // elements revealed together cascade by 40ms (capped), decorative only
+          entry.target.style.animationDelay = `${Math.min(staggerIndex, 6) * 40}ms`;
+          staggerIndex += 1;
           const animation = entry.target.getAttribute('data-animation');
           entry.target.classList.add('animate__animated', `animate__${animation}`);
           observer.unobserve(entry.target);
@@ -673,7 +1005,7 @@ async function loadPartial(name, onLoad) {
   const swapOuter = container.dataset.swap === 'outer';
 
   try {
-    const response = await fetch(`partials/${name}.html`, { cache: 'no-cache' });
+    const response = await fetch(`/partials/${name}.html`, { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const markup = await response.text();
 
@@ -689,6 +1021,100 @@ async function loadPartial(name, onLoad) {
   } catch (error) {
     console.error(`Failed to load partial "${name}"`, error);
   }
+}
+
+function initProjectFilters() {
+  const buttons = document.querySelectorAll('.wk-filter');
+  const cards = document.querySelectorAll('#wk-grid .wk-card');
+  if (!buttons.length || !cards.length) return;
+
+  const grid = document.getElementById('wk-grid');
+  const fadeMs = 150;
+  let pending = 0;
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      buttons.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
+
+      window.clearTimeout(pending);
+      const leaving = [];
+      const entering = [];
+      cards.forEach((card) => {
+        const cats = (card.dataset.cats || '').split(' ');
+        const show = filter === 'all' || cats.includes(filter);
+        if (show) {
+          if (card.hidden) entering.push(card);
+          else card.classList.remove('is-fading');
+        } else if (!card.hidden) {
+          leaving.push(card);
+        }
+      });
+
+      leaving.forEach((card) => card.classList.add('is-fading'));
+      pending = window.setTimeout(() => {
+        leaving.forEach((card) => {
+          card.hidden = true;
+          card.classList.remove('is-fading');
+        });
+        entering.forEach((card) => {
+          card.classList.add('is-fading');
+          card.hidden = false;
+        });
+        void grid.offsetWidth;
+        entering.forEach((card) => card.classList.remove('is-fading'));
+      }, leaving.length ? fadeMs : 0);
+    });
+  });
+}
+
+function initStatCounters() {
+  const counters = document.querySelectorAll('.wk-count[data-count]');
+  if (!counters.length || prefersReducedMotionQuery.matches) return;
+
+  const run = () => {
+    counters.forEach((el, index) => {
+      const target = Number(el.dataset.count);
+      if (!Number.isFinite(target)) return;
+      const duration = 1500;
+      const delay = index * 150;
+      el.textContent = '0';
+      window.setTimeout(() => {
+        let start = null;
+        const tick = (now) => {
+          if (start === null) start = now;
+          const progress = Math.min(Math.max((now - start) / duration, 0), 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = String(Math.round(target * eased));
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        // guarantee the final value even if animation frames are throttled
+        window.setTimeout(() => {
+          el.textContent = String(target);
+        }, duration + 300);
+      }, delay);
+    });
+  };
+
+  const main = document.getElementById('main-content');
+  const started = new IntersectionObserver((entries) => {
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+    started.disconnect();
+    // wait for the splash screen to reveal the page
+    if (main && main.hasAttribute('aria-hidden')) {
+      const reveal = new MutationObserver(() => {
+        if (!main.hasAttribute('aria-hidden')) {
+          reveal.disconnect();
+          run();
+        }
+      });
+      reveal.observe(main, { attributes: true, attributeFilter: ['aria-hidden'] });
+    } else {
+      run();
+    }
+  }, { threshold: 0.4 });
+  started.observe(counters[0]);
 }
 
 function initContactBackgroundFallback() {
@@ -722,6 +1148,8 @@ function initPage() {
   enhanceLazyImages();
   initContactBackgroundFallback();
   initGithubStatsFallback();
+  initProjectFilters();
+  initStatCounters();
   applyLanguage(languageState.current);
 
   const navbarPromise = document.querySelector('[data-partial="navbar"]')

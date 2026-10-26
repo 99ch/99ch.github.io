@@ -18,6 +18,7 @@ I am a **freelance developer** passionate about **full-stack development**, **mo
 ## 🗂️ Structure
 
 - `index.html`, `work.html`, `about.html`, `certifications.html` — the four pages of the site.
+- `work/` — one case-study page per featured project (`rhconsole`, `koutonou`, `keoni`).
 - `assets/css/main.css`, `assets/js/main.js` — shared styles and behavior (theming, i18n, splash screen, navbar/footer partials).
 - `partials/` — HTML fragments (`navbar.html`, `footer.html`) injected at runtime via `fetch()`.
 - `image/` — site assets, each raster image paired with a `.webp` version.
